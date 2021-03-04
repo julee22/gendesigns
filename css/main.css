@@ -1,0 +1,124 @@
+body {
+	box-sizing: border-box;
+	font-family: 'Bahnschrift', 'Inter','Roboto',  sans-serif;
+}
+
+.main-nav {
+	text-align: left;
+	margin-top: 75px;
+}
+
+.main-nav .nav-item {
+	display: inline-block;
+	margin: 10px;
+	letter-spacing: .1em;
+	border-left: 4px solid black;
+}
+
+.main-nav .nav-link {
+	color: inherit;
+	padding: 10px 0px 10px 20px;
+	min-width: 150px;
+	margin: 0px auto;
+
+}
+
+.nav-item:hover{
+	color:white;
+	cursor: pointer;
+	/**min-width: 200px;*/
+}
+
+
+.nav-link:hover .jumbotron {
+	background-image: url("");
+}
+
+.jumbotron {
+	min-height: 100vh;
+	margin-bottom: 0px;
+	background-color: rgba(250,250,250,0.5);
+}
+
+#bg {
+	display: block;
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	min-height: 100vh;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+.fading {
+	animation-name: fadeIn;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.textShad {
+	text-shadow: none;
+	animation-name: floatText;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes floatText {
+	0% {text-shadow: none;}
+	100% {text-shadow: 0px 2px 5px white;}
+}
+
+.row {
+	min-height: 70vh;
+}
+
+.inner {
+	text-align: center;
+	margin-top: 50px;
+	color: black;
+	
+}
+
+.heading {
+	letter-spacing: .1em;
+	margin-bottom: 20px;
+	/*text-shadow: 0px 2px 2px white;*/
+}
+
+.about {
+	display: inline-block;
+	position: fixed;
+	right: 25px;
+	top: 25px;
+	padding: 5px 10px;
+	background-color: rgba(255,255,255,.85);
+	border-radius: 30px;
+	text-decoration: none;
+	z-index: 10;
+}
+
+.about:hover {
+	padding: 5px 15px;
+	background-color: rgba(255,255,255,.85);
+}
+
+.about p {
+	display: inline-block;
+	margin: 5px;
+	font-size: 1em;
+	font-weight: 600;
+	color: black;
+}
+
+.about img {
+	width: 25px;
+	height: 25px;
+}
