@@ -77,10 +77,50 @@ var projectList = [
 	},
 	{
 		name: "hani",
-		bgColorHex: '#ffffff',
-		priColorHex: '#ff0000',
-		accentColorHex: '#f15a24',
-		image: 'url("../images/hani/hani-trans.png")'
+		bgColorHex: '#fff079',
+		priColorHex: '#ff8f00',
+		accentColorHex: '#885a9a',
+		image: 'url("../images/hani/hani-trans.png")',
+		imgArray:  [{
+				name: "img01",
+				link: "../images/hani/earphone sketches_Page_1.jpg",
+				caption: "Preliminary Sketches"
+			},
+			{
+				name: "img02",
+				link: "../images/hani/earphone sketches_Page_2.jpg",
+				caption: 'Preliminary Sketches'
+			},
+			{
+				name: "img03",
+				link: "../images/hani/earphone sketches_Page_3.jpg",
+				caption: 'Preliminary Sketches'
+			},
+			{
+				name: "img04",
+				link: "../images/hani/earphone sketches_Page_4.jpg",
+				caption: 'Preliminary Sketches'
+			},
+			{
+				name: "img05",
+				link: "../images/hani/earphone sketches_Page_5.jpg",
+				caption: 'Preliminary Sketches'
+			},
+			{
+				name: "img06",
+				link: "../images/hani/IMG_3850.jpg",
+				caption: 'Initial Paper Prototypes'
+			},
+			{
+				name: "img07",
+				link: "../images/hani/IMG_3860.jpg",
+				caption: 'Different Artboards & Materials'
+			},
+			{
+				name: "img08",
+				link: "../images/hani/IMG_3893.jpg",
+				caption: 'Prototypes of Plushies'
+			}]
 	},
 	{
 		name: "home",
