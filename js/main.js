@@ -16,7 +16,7 @@ var projectList = [
 	},
 	{
 		name: "hani",
-		color: "#ff0000",
+		color: "#ff8f00",
 		bgImageLink: 'url("images/Hani Main.jpg")'
 	},
 
