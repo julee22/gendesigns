@@ -108,17 +108,17 @@ var projectList = [
 			},
 			{
 				name: "img06",
-				link: "../images/hani/IMG_3850.jpg",
+				link: "../images/hani/IMG_3850.JPG",
 				caption: 'Initial Paper Prototypes'
 			},
 			{
 				name: "img07",
-				link: "../images/hani/IMG_3860.jpg",
+				link: "../images/hani/IMG_3860.JPG",
 				caption: 'Different Artboards & Materials'
 			},
 			{
 				name: "img08",
-				link: "../images/hani/IMG_3893.jpg",
+				link: "../images/hani/IMG_3893.JPG",
 				caption: 'Prototypes of Plushies'
 			}]
 	},
