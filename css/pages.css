@@ -34,9 +34,9 @@ html {
 	background-color: var(--bgColor);
 }
 
-#goalDivider {
-	margin-left: 0px;
-	width: 75px;
+
+.highlight-section {
+	align-items:baseline;
 }
 
 
@@ -46,12 +46,11 @@ html {
   	flex-direction: column;
 	align-content: center;
 	position: fixed;
-	width: 100%;
 	padding: 20px;
 	z-index: 2;
 }
 .menu-bar-bg {
-  transition: 0.5s;
+  transition: 1s;
 
   	/*background-color: var(--bgColor);
   	background-color: rgba(255,255,255,.90);
@@ -68,20 +67,11 @@ html {
 
 .nav-item {
 	align-self: flex-start;
-	margin: 10px 15px;
 	min-width: 150px;
 }
 
-.nav-link:hover {
-	color:white;
+.nav-item:hover {
 	cursor: pointer;
-}
-
-.nav-link {
-	color: black;
-	letter-spacing: .1em;
-	min-width: 100px;
-	border-left: 4px solid black;
 }
 
 
@@ -138,14 +128,15 @@ p {
 .tools {
 	display: inline-block;
 	font-weight: 500;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	border-bottom: 3px solid var(--bgColor);
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	color: var(--priColor);
 }
 
 .tools-list {
 	font-weight: 300;
+	font-size: 0.9em;
 }
 
 .goalList {
@@ -171,12 +162,12 @@ ul {
 	padding-left: 0px;
 }
 
-.moodWords li {
+.moodWords {
 	font-weight: bold;
 }
 
-.tools, .brand-subheading, .moodWords {
-	font-size: 1.1em;
+.brand-subheading, .moodWords {
+	font-size: 1.15em;
 }
 
 .caption {
@@ -192,17 +183,19 @@ ul {
 }
 
 .button-left {
-	padding: 10px 20px;
+	padding: 7px 20px;
 	margin: 25px 10px;
-	border-left: 5px solid var(--accentColor);
+	border-left: 3px solid var(--accentColor);
 	text-decoration: none;
-	color: var(--priColor);
+	color: var(--accentColor);
+	transition: 0.1s ease-in;
 }
 
 .button-left:hover {
 	text-decoration: none;
-	background-color: var(--accentColor);
-	color: white;
+	font-weight: 600;
+	border-left: 6px solid var(--accentColor);
+	color: var(--accentColor);
 }
 
 
@@ -256,7 +249,8 @@ img {
 }
 
 .modal-dialog {
-	max-width: 70%;
+	max-width: initial;
+	margin: 2rem;
 }
 
 #modImg {
@@ -318,13 +312,13 @@ footer {
 	width: 100%;
 }
 
-.carousel-fade .carousel-item {
+.carousel-item .carousel-text {
  opacity: 0;
  transition-duration: .6s;
  transition-property: opacity;
 }
 
-.carousel-fade  .carousel-item.active{
+ .carousel-item.active .carousel-text {
   opacity: 1;
 }
 
@@ -343,6 +337,7 @@ footer {
 
 .carousel-bg {
 	padding: 50px;
+	min-height: 300px;
 }
 
 .carousel-width {
@@ -379,27 +374,15 @@ footer {
 }
 
 /*CAROUSEL IMAGE PLACEMENT*/
-.carousel-top img{
-	top:-50px;
-}
 
 .carousel-mid {
-	top: 100px
+	top: 50px
 }
 
-.carousel-mid img {	
+.carousel-mid .carousel-img img {	
 	top: 50%;
 	transform: translate(0, -50%);
 }
-
-.carousel-bottom {
-	top: 150px
-}
-
-.carousel-bottom img {
-	bottom: -50px;
-}
-
 
 
 .carousel-indicators {
@@ -497,14 +480,14 @@ footer {
 		max-height: 300px;
 	}
 
-	.carousel-bottom img, .carousel-top img, .carousel-mid img {
+	.carousel-mid .carousel-img img {
 		top: initial;
 		bottom: initial;
 		transform: none;
 		margin: 15px 0px;
 	}
 
-	.carousel-mid, .carousel-bottom {
+	.carousel-mid {
 		top: initial;
 		margin-top: initial;
 	}
@@ -519,6 +502,7 @@ footer {
 
   .menu-bar {
   	background-color: var(--bgColor);
+  	width: 100%;
   }
 
   .nav-item {
