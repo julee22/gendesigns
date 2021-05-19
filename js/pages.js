@@ -1,5 +1,11 @@
 var projectList = [
 	{
+		name:"home",
+		bgColorHex: '#ffffff',
+		priColorHex: '#000000',
+		accentColorHex: '#ececec'
+	},
+	{
 		name: "breeze",
 		bgColorHex: '#e6f3f8',
 		priColorHex: '#3893d6',
@@ -59,6 +65,11 @@ var projectList = [
 				name: "img11",
 				link: "../images/breeze/YSDN4004_ChandrG_BREEZE Poster.jpg",
 				caption: 'BREEZE Poster, 24 in x 18 in'
+			},
+			{
+				name: "img12",
+				link: "../images/breeze/Breeze Main.jpg",
+				caption: 'BREEZE App Mock Ups'
 			}]
 	},
 	{
@@ -120,6 +131,36 @@ var projectList = [
 				name: "img08",
 				link: "../images/hani/IMG_3893.JPG",
 				caption: 'Prototypes of Plushies'
+			},
+			{
+				name: "img09",
+				link: "../images/hani/IMG_4175.JPG",
+				caption: ''
+			},
+			{
+				name: "img10",
+				link: "../images/hani/Hani Design Awards Main.jpg",
+				caption: ''
+			},
+			{
+				name: "img11",
+				link: "../images/hani/Hani Design Awards image 2.jpg",
+				caption: ''
+			},
+			{
+				name: "img12",
+				link: "../images/hani/IMG_4220.JPG",
+				caption: ''
+			},
+			{
+				name: "img13",
+				link: "../images/hani/IMG_3997.JPG",
+				caption: ''
+			},
+			{
+				name: "img14",
+				link: "../images/hani/GChandra_Hani Photos_Page_2.jpg",
+				caption: ''
 			}]
 	},
 	{
@@ -129,6 +170,9 @@ var projectList = [
 
 ];
 
+
+
+// Sets the color scheme for each page
 var mainImage;
 var bgColor;
 var priColor;
@@ -146,6 +190,8 @@ function changeProj(projectName) {
 	$(':root').css("--accentColor",accentColor);
 }
 
+
+// For each image that uses lightbox Gallery
 var imageList = [];
 var imageCap;
 var imageLink;
@@ -158,12 +204,11 @@ function changeImg(imageId) {
 }
 
 
+// For setting the NavColor
 var borderColor;
-
 
 function changeNavColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
-	//console.log(projectId);
 	borderColor = project.priColorHex;
 }
 
@@ -171,16 +216,17 @@ function changeNavColor(projectId) {
 $(document).ready(function()
 {
 
-	//populate images
+	// Set cover image to mainImage
+	$("#cover").css("background-image", mainImage);
+
+
+	// Populate images in Lightbox gallery
 	for (var n = 0; n < imageList.length; n++) {
 		//console.log(imageList.length);
 		var popImg = document.getElementById(imageList[n].name);
 		//console.log(imageList[n].link);
 		popImg.src = imageList[n].link;
 	}
-
-	console.log(mainImage);
-	$("#cover").css("background-image", mainImage);
 
 	// Get the modal
 	var modal = document.getElementById("myModal");
@@ -195,50 +241,67 @@ $(document).ready(function()
 		captionText.innerHTML = imageCap;
 	});
 
-	$(".nav-link").hover(
+
+	// Dynamically change color of nav
+	$(".nav-item").hover(
 		function(){
+			// Give changeNavColor function id of hovered nav-item element
 			changeNavColor(this.id);
-  			$(this).css("border-left-color",borderColor);
-  			$(this).css("background-color",borderColor);
+
+			// Change css of hovered nav-item element
+  			$(this).css("border-left","6px solid "+borderColor);
   		}, function(){
   			$(this).removeAttr("style");
 		}
   	);
+
+
+  	//CAROUSEL JS
+  	//Stops auto when carousel out of viewport
+	const slider = document.querySelector('.carousel');
+
+	$(document).scroll(function(){
+
+		const box = slider.getBoundingClientRect();
+	  	if (box.top >= -100 &&
+	        box.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 100)
+	  	{
+			$('.carousel').carousel({interval: 1500, pause: 'hover'});
+		} else {
+			$('.carousel').carousel('pause');
+		}
+	});
+
+
+	// Color Swatches
+	// Select all that have class colorSwatch
+	var colorPalette = document.getElementsByClassName('colorSwatch');
+
+	// Recurse through list of objects
+	for (var n = 0; n < colorPalette.length; n++) {
+
+		// Get hexVal
+		var hexVal = colorPalette[n].innerHTML;
+
+		// Set border-left as hexVal
+		$(colorPalette[n]).css("border-left-color",hexVal);
+
+	}
+
+
+	//mobile swipe
+	//$('.carousel').bcSwipe({ threshold: 50 });
+
 });
 
 // Fade in Scroll
 $('.row').fadeInScroll();
 
-$('.carousel').carousel({
-  interval: false,
+
+// Close pop-up menu when scrolling
+$(window).scroll(function() {
+	//Get menu
+	var navbar = document.getElementById("menu");
+	//remove show class
+	navbar.classList.remove('show');
 });
-
-/* CUSTOM NAV
-
-function mobNav(x) {
-	var y = document.getElementById("menu");
-	var addMenuBg = document.getElementsByClassName("menu-bar");
-	var menuBg = addMenuBg[0];
-
-
-	$(window).resize(function() {
-		menuBg.classList.remove('menu-bar-bg');
-		y.classList.remove('show');
-		y.classList.remove('responsive');
-	});
-
-  	console.log(menuBg);
-	if (x.matches) {
-		if (y.className === "collapse") {
-			y.className += " responsive show";
-			menuBg.classList.toggle("menu-bar-bg");
-		} else {
-			y.className = "collapse";
-			menuBg.classList.toggle("menu-bar-bg");
-		}
-	} else {
-		y.classList.toggle("show");
-		menuBg.classList.toggle("menu-bar-bg");
-	}
-  	console.log(x.matches);
-}*/

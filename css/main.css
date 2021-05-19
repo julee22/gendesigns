@@ -8,25 +8,29 @@ body {
 	margin-top: 75px;
 }
 
-.main-nav .nav-item {
+.nav-item {
 	display: inline-block;
 	margin: 10px;
 	letter-spacing: .1em;
-	border-left: 4px solid black;
+	border-left: 3px solid black;
 }
 
-.main-nav .nav-link {
+.nav-link {
 	color: inherit;
 	padding: 10px 0px 10px 20px;
 	min-width: 150px;
 	margin: 0px auto;
+}
 
+.nav-link:hover {
+	color: inherit;
 }
 
 .nav-item:hover{
-	color:white;
 	cursor: pointer;
-	/**min-width: 200px;*/
+	font-weight: bold;
+	/**background-color: rgba(255,255,255,.85);
+	min-width: 200px;*/
 }
 
 
@@ -98,16 +102,13 @@ body {
 	position: fixed;
 	right: 25px;
 	top: 25px;
-	padding: 5px 10px;
-	background-color: rgba(255,255,255,.85);
 	border-radius: 30px;
-	text-decoration: none;
+	padding: 5px 15px;
 	z-index: 10;
 }
 
 .about:hover {
-	padding: 5px 15px;
-	background-color: rgba(255,255,255,.85);
+	text-decoration: none;
 }
 
 .about p {
@@ -118,7 +119,32 @@ body {
 	color: black;
 }
 
+.about:hover p {
+	border-bottom: 3px solid black;
+}
+
 .about img {
 	width: 25px;
 	height: 25px;
+}
+
+
+.button {
+	text-align: center;
+}
+
+.button a {
+	padding: 7px 20px;
+	margin: 25px 10px;
+	border-left: 3px solid var(--accentColor);
+	text-decoration: none;
+	color: var(--accentColor);
+	transition: 0.1s ease-in;
+}
+
+.button a:hover {
+	text-decoration: none;
+	font-weight: 600;
+	border-left: 6px solid var(--accentColor);
+	color: var(--accentColor);
 }

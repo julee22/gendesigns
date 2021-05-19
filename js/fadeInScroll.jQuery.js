@@ -9,7 +9,7 @@
         
         // SETTINGS ------------------------------------
         var settings = $.extend({
-	        minDistance: 	85 * $(window).height() / 100   //Distance between the browser top scroll and the next element
+	        minDistance: 	90 * $(window).height() / 100   //Distance between the browser top scroll and the next element
         }, options );
         
         
@@ -32,11 +32,13 @@
 		
 			//Get the top of the browser
 			vWindowScrollTop = $(window).scrollTop();
+
 		
 		    //Test if the window TopScroll reachs the element TopScroll minus the minimun distance
 		    $(elements).each(function(){
 			    if( ( (vWindowScrollTop + parseInt(settings.minDistance)) >= $(this).offset().top) ){
 			        $(this).animate({opacity:1});
+
 			    }
 		    });
 		}

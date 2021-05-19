@@ -52,8 +52,7 @@ $(document).ready(function()
 			changeNavColor(this.id);
   			$("#bg").css("background-image",bgImage);
   			$("#bg").addClass("fading");
-  			$(this).css("border-left-color",borderColor);
-  			$(this).css("background-color",borderColor);
+  			$(this).css("border-left","6px solid " + borderColor);
   			$("#jumbotron").css("background-color", "rgba(250,250,250,.5)");
   			//$(":header").addClass("textShad");
   		}, function(){

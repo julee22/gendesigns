@@ -1,0 +1,90 @@
+
+/* BREAKPOINTS */
+@media screen and (min-width: 768px) {
+	#cover {
+		position: absolute;
+		right: 0px;
+		top: 00px;
+		overflow: hidden;
+		width: 50%;
+		min-height: 90vh;
+		background-size: 120%;
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+
+	.container {
+		max-width: 1125px;
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	.divider {
+		width: 200px;
+	}
+
+	.center-section {
+		max-width: initial;
+	}
+
+
+	p {
+		margin-top: 0px;
+	}
+
+
+	.brand-subheading{
+		margin-top: 15px;
+	}
+
+	.carousel {
+		padding-bottom: 25px;
+	}
+
+	.carousel-bg {
+		padding: 50px;
+	}
+
+	.carousel-width {
+		display: flex;
+		flex-wrap: wrap;
+		width: 78%;
+		max-width: 1100px;
+		margin: 0px auto;
+	}
+
+	.carousel-text {
+		padding: 0px 50px;
+	}
+
+	.carousel-img {
+		text-align: initial;
+	}
+
+	.carousel-img img {
+		position: absolute;
+		max-width: 100%;
+		max-height: 65vh;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+
+	.carousel-indicators {
+		padding-bottom: 50px;
+	}
+
+	.carousel-control-prev, .carousel-control-next {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.navbar, #menu {
+		background-color: initial;
+	}
+
+	.navbar-nav .nav-link{
+		width: fit-content;
+	}
+}
