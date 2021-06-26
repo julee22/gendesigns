@@ -145,8 +145,8 @@ $(document).ready(function()
 
 	// console.log("Has Space? " + hasSpace);
 	if (hasSpace > -1) {
-		const firstString = randProj.name.substring(0,hasSpace-1);
-		const secondString = randProj.name.substring(0,hasSpace+1);
+		const firstString = randProj.name.substring(0,hasSpace);
+		const secondString = randProj.name.substring(hasSpace+1,randProj.name.length);
 		randLink.href = firstString + "-" + secondString + ".html";
 		randLinkImg.href = randLink.href;
 	} else {
