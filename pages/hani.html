@@ -7,9 +7,8 @@
 
 <!--StyleSheets-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="../css/main-revised.css">
-		<link rel="stylesheet" type="text/css" href="../css/pages.css">
-		<link rel="stylesheet" type="text/css" href="../css/pages-breakpoint.css">
+	<link rel="stylesheet" type="text/css" href="../css/pages.css">
+	<link rel="stylesheet" type="text/css" href="../css/pages-breakpoint.css">
 
 
 </head>
@@ -29,19 +28,22 @@
 	<div class="collapse navbar-collapse" id="menu">
 		<ul class="navbar-nav">
 			<li class="nav-item" id="home">
-				<a class="nav-link active" href="../index.html" id="home">Home</a>
+				<a class="nav-link active" href="../index-revised.html" id="home">Home</a>
 			</li>
 			<li class="nav-item" id="breeze">
 				<a class="nav-link" href="breeze.html">BREEZE</a>
 			</li>
-			<li class="nav-item" id="deepblue">
-				<a class="nav-link" href="deep-blue.html">Deep Blue</a>
-			</li>
 			<li class="nav-item" id="hani">
 				<a class="nav-link" href="hani.html">HANI</a>
 			</li>
-			<li class="nav-item" id="tdsb">
-				<a class="nav-link" href="tdsb.html">TDSB</a>
+			<li class="nav-item" id="period purse">
+				<a class="nav-link" href="period-purse.html">Period Purse</a>
+			</li>
+			<li class="nav-item" id="bespoke">
+				<a class="nav-link" href="bespoke.html">Bespoke</a>
+			</li>
+			<li class="nav-item" id="data vis">
+				<a class="nav-link" href="data-vis.html">Data Vis</a>
 			</li>
 		</ul>
 	</div>
@@ -49,7 +51,7 @@
 
 <div class="bg-color">
 	<div class="container" id="introduction">
-		<div class="row headingTitle">
+		<div class="row">
 			<div class="col-sm-12 col-md-6">
 				<h1 class="introTitle">HANI Packaging</h1>
 				<h4 class="introSub">Package Design</h4>
@@ -60,14 +62,14 @@
 	</div>
 </div>
 
-<div class="container">
-	<div class="row" style="justify-content: flex-start;">
+<div class="container" id="description">
+	<div class="row">
+		<div id="cover" class="flex-fill bounce-anim"></div>
 		<div class="introDesc col-xs-12 col-md-6">
 			<p>HANI is a cute, simple yet multi-functional reusable and recyclable earphone package. HANI won the 2019 Applied Arts Award for  Single Packaging.</p>
 			<p class="tools">tools used</p>
 			<p class="tools-list">Illustrator, Laser Cutting, Sewing</p>
 		</div>
-		<div id="cover" class="flex-fill"></div>
 	</div>
 </div>
 
@@ -75,10 +77,10 @@
 <div class="container" id="problem">
 	<div class="divider"></div>
 	<div class="row headingTitle">
-		<div class="col-sm-12">
+		<div class="col-12">
 			<h1>the problem</h1>
 		</div>
-		<div class="col-sm-12 center-section">
+		<div class="col-12 center-section">
 			<p>Music lovers can relate with the endless number of earphones that one can cycle through throughout the years. With every pair of earphones, a pointlessly bulky plastic package is discarded. What’s more, earphone storage faces the neverending issue of tangled wires and dirty earbuds.</p>
 			<p class="highlight">How do we improve on earphone packaging?</p>
 		</div>
@@ -112,15 +114,13 @@ The majority of earphone packaging are hung within the store. It is important th
 
 <div class="container">
 	<div class="row bg-color highlight-section">
-		<div class="col-sm-3 col-xs-12">
+		<div class="col-md-3 col-4">
 			<h3>Apple Earphones</h3>
 		</div>
-		<div class="col-sm-6 col-xs-12">
+		<div class="col-md-7 col-8">
 			<p>A notable example is Apple’s EarPods packaging that provides a means of re-wrapping earphone around a plastic core. Unfortunately, the tight spacing makes it very difficult for users to properly re-wrap their earbuds and close the package.</p>
 		</div>
-		<div class="col-sm-3 col-xs-12">
-			<img src="../images/hani/earpods.png">
-		</div>
+		<img  class="col-md-2 col-12" src="../images/hani/earpods.png" style="margin:0px auto;">
 	</div>
 </div>
 
@@ -197,17 +197,19 @@ The majority of earphone packaging are hung within the store. It is important th
 			<h2>Prototypes</h2>
 			<p>The first set of paper prototypes focused on exploring the different concepts along with locking mechanisms. Initial plans were for a single flat piece with ‘legs’ that could turn into a phone stand.</p>
 			<p>The idea of having a plushie for the earphones to wrap around was developed after seeing a plushie with a ribbon on it’s neck. Once this concept was discovered, the flat piece evolved to become a box and the ‘legs’ became a locking mechanism.</p>
-			<div class="row">
-				<img src="" class="hover-shadow clickImg" id="img06" data-toggle="modal" data-target="#myModal">
-			</div>
 		</div>
 		<div class="col-sm-12 col-md-6">
+			<img src="../images/hani/IMG_3850.JPG" alt="Initial Paper Prototypes">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-6 order-lg-2">
 			<h2>Material Exploration</h2>
 			<p>Requirements for the material were its sturdiness, lightness, and bendability. Three different thicknesses of illustration board were experimented with; a thick brown stock, a smoother white varient and a thinner, more flexible brown stock. The final package used P27 Illustration Board.</p>
 			<p>To attach the design, a sticker was printed and then pasted onto the material.</p>
-			<div class="row">
-				<img src="" class="hover-shadow clickImg" id="img07" data-toggle="modal" data-target="#myModal">
-			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 order-lg-1">
+			<img src="../images/hani/IMG_3860.JPG" alt="Different Artboards & Materials">
 		</div>
 	</div>
 	<div class="row">
@@ -217,7 +219,7 @@ The majority of earphone packaging are hung within the store. It is important th
 			<p>The plushies were made by printing the design onto a transfer sheet, ironing the sheet onto a piece of cotton, sewn, and then stuffed. Everything was done by hand.</p>
 		</div>
 		<div class="col-sm-12 col-md-6">
-				<img src="" class="hover-shadow clickImg" id="img08" data-toggle="modal" data-target="#myModal">
+				<img src="../images/hani/IMG_3893.JPG" alt="Prototypes of Plushies">
 		</div>
 	</div>
 </div>
@@ -233,17 +235,10 @@ The majority of earphone packaging are hung within the store. It is important th
 	</div>
 </div>
 <div class="carousel slide" data-ride="carousel" id="solutions">
-	<!-- Indicators -->
-	<ul class="carousel-indicators">
-		<li data-target="#solutions" data-slide-to="0" class="active"></li>
-	 	<li data-target="#solutions" data-slide-to="1"></li>
-	 	<li data-target="#solutions" data-slide-to="2"></li>
-	 	<li data-target="#solutions" data-slide-to="3"></li>
-	 	<li data-target="#solutions" data-slide-to="4"></li>
-	</ul>
+
 	 <!-- The slideshow -->
 	 <div class="carousel-inner">
-    	<div class="carousel-item carousel-mid active">
+    	<div class="carousel-item active">
     		<div class="carousel-bg">
     			<div class="carousel-width">
 	    			<div class="carousel-img col-md-5 col-sm-12">
@@ -256,7 +251,7 @@ The majority of earphone packaging are hung within the store. It is important th
 	    		</div>
 	    	</div>
     	</div>
-	    <div class="carousel-item carousel-mid">
+	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
 	    			<div class="carousel-img col-md-5 col-sm-12">
@@ -269,7 +264,7 @@ The majority of earphone packaging are hung within the store. It is important th
 	    		</div>
     		</div>
 	    </div>
-	    <div class="carousel-item carousel-mid">
+	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
 	    			<div class="carousel-img col-md-6 col-sm-12">
@@ -283,7 +278,7 @@ The majority of earphone packaging are hung within the store. It is important th
 	    		</div>
 	    	</div>
 	    </div>
-	    <div class="carousel-item carousel-mid">
+	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
 	    			<div class="carousel-img col-md-6 col-sm-12">
@@ -296,7 +291,7 @@ The majority of earphone packaging are hung within the store. It is important th
 	    		</div>
 	    	</div>
 	    </div>
-	    <div class="carousel-item carousel-mid">
+	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
 	    			<div class="carousel-img col-md-7 col-sm-12">
@@ -311,15 +306,39 @@ The majority of earphone packaging are hung within the store. It is important th
 	    </div>
 	</div>
 
+
 	<!-- Left and right controls -->
-	<a class="carousel-control-prev" href="#solutions" data-slide="prev">
-		<span class="carousel-control-prev-icon"></span>
-	</a>
-	<a class="carousel-control-next" href="#solutions" data-slide="next">
-	    <span class="carousel-control-next-icon"></span>
-	</a>
+	<div class="carousel-nav">
+		<a class="carousel-control-prev" href="#solutions" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#solutions" data-slide-to="0" class="active"></li>
+		 	<li data-target="#solutions" data-slide-to="1"></li>
+		 	<li data-target="#solutions" data-slide-to="2"></li>
+		 	<li data-target="#solutions" data-slide-to="3"></li>
+		 	<li data-target="#solutions" data-slide-to="4"></li>
+		</ul>
+
+		<a class="carousel-control-next" href="#solutions" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
 </div>
 
+
+<div class="container">
+	<div class="row highlight-section">
+		<div class="col-sm-4">
+			<h3>Strong Customizable Potential</h3>
+		</div>
+		<div class="col-sm-8">
+			<p>The original design focuses on cute characters to attract a younger audience. However, this concept can be easily applicable to other character designs. It has a strong collectible aspect and can be customized into sports players, celebrities, or other fictional characters.</p>
+		</div>
+	</div>
+</div>
 
 <!--BRAND SECTION-->
 <div class="container" id="brand">
@@ -329,50 +348,45 @@ The majority of earphone packaging are hung within the store. It is important th
 		<div class="col-sm-12">
 			<h1>the brand</h1>
 		</div>
+		<img src="../images/hani/Hani-Animation-(white).gif"  alt="HANI Logo Animation" id="projLogo">
+		<!--<iframe src="https://player.vimeo.com/video/519794085" width="1040" height="604" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
 	</div>
 	<div class="row">
-		<iframe src="https://player.vimeo.com/video/519794085" width="1040" height="604" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-	</div>
-	<div class="row">
-		<div class="col-md-4 col-sm-6" id="mood">
-			<p class="brand-subheading">mood</p>
-			<ul class="moodWords">
-				<li>fun</li>
-				<li>cute</li>
-				<li>happy</li>
-				<li>simple</li>
-			</ul>
-		</div>
-		<div class="col-md-4 col-sm-6 order-lg-3" id="typography">
-			<p class="brand-subheading">typography</p>
-			<img src="../images/hani/font.jpg" alt="HANI Typography" width="200">
-		</div>
-		<div class="col-md-4 col-sm-12 order-lg-2" id="colours">
-			<p class="brand-subheading">colours</p>
-			<ul>
-				<li class="colorSwatch">#a88fc3</li>
-				<li class="colorSwatch">#ec1847</li>
-				<li class="colorSwatch">#83d4f6</li>
-				<li class="colorSwatch">#6ebe4e</li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-12">
+		<div class="col-sm-12 col-md-6 ">
 			<h2>Rationale</h2>
-		</div>
-		<div class="col-md-6 col-sm-12">
 			<p>The target audience are between the ages of 6-20 years old. The product is easily affordable wired earphones that are often sold in stores, not the kind with fancy features like Beats. Thus, the focus of HANI is to be fun and cute. The logo features an wide smile, signifying the enjoyment users get from listening to music.</p>
 			<p>I was challenged to make this bi-lingual and chose Korean because I love listening to Korean pop music. Basing the design around a culture helped to form meaning for the brand. HANI is a play on the words <strong>Han</strong> (from the name of South Korea, Han-guk) and  <strong>‘ear’</strong> meaning HANI is the Korean Ear.</p>
-		</div>
-		<div class="col-md-6 col-sm-12">
+
 			<p>HANI has bright, colourful and cute cartoon creatures that would catch people’s eye amidst sleek corporate packaging. They’re inspired by the Korean trigrams, representing <strong>air, fire, water & earth,</strong> and given names similar to the Korean pronounciation. The eyes on each creature imitate the shape of each element. These characters give the product a sense of personality. While this design features a cartoon, this concept can be replicated with other characters or even celebrities.</p>
 			<p>The default form of the brand is black and white to adapt to the various colors available. The font mimics the geometric shapes used to design the characters.</p>
 		</div>
+		<div class="col-sm-12 col-md-6">
+			<div class="row" id="projAssets">
+				<div class="col-6" id="mood">
+					<p class="brand-subheading">mood</p>
+					<ul class="moodWords">
+						<li>fun</li>
+						<li>cute</li>
+						<li>happy</li>
+						<li>simple</li>
+					</ul>
+				</div>
+				<div class="col-6 order-lg-2" id="colours">
+					<p class="brand-subheading">colours</p>
+					<ul>
+						<li class="colorSwatch">#a88fc3</li>
+						<li class="colorSwatch">#ec1847</li>
+						<li class="colorSwatch">#83d4f6</li>
+						<li class="colorSwatch">#6ebe4e</li>
+					</ul>
+				</div>
+				<div class="col-12 order-lg-3" id="typography">
+					<p class="brand-subheading">typography</p>
+					<img src="../images/hani/font.jpg" alt="HANI Typography" width="200">
+				</div>
+			</div>
+		</div>
 	</div>
-
-</div>
-<div class="container">
 	<div class="row">
 		<div class="col-sm-12">
 			<img src="../images/hani/HANI-Panels.gif">
@@ -408,6 +422,9 @@ The majority of earphone packaging are hung within the store. It is important th
 		<div class="col-sm-6">
 			<img src="" class="hover-shadow clickImg" id="img14" data-toggle="modal" data-target="#myModal">
 		</div>
+		<div class="col-sm-12">
+			<img src="" class="hover-shadow clickImg" id="img15" data-toggle="modal" data-target="#myModal">
+		</div>
 	</div>
 </div>
 
@@ -418,8 +435,11 @@ The majority of earphone packaging are hung within the store. It is important th
 	<!--<span id="close"></span>-->
 		<div class="modal-content">
 			<div class="modal-body">
-				<img class="modal-image" id="modImg">
-				<div id="caption"></div>						
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>	
+				<div id="caption"></div>		
+				<img class="modal-image" id="modImg">				
 			</div>	
 		</div>
 	</div>
@@ -427,8 +447,18 @@ The majority of earphone packaging are hung within the store. It is important th
 
 
 
+
 <footer>
-	<p class="caption">All content is the intellectual property of Genice Chandra.</p>
+	<div class="row">
+		<div class="col-md-8 col-sm-12">
+			<h2 class="introSub">Don't forget to <a href="#">say hi</a> & check out <a href="#" id="random-link">my other works</a>!</h2>
+			<p class="caption">All design content is the intellectual property of Genice Chandra.</p>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<a href="#" id="random-link-img">
+			<img id="random-image" class=" bounce-anim"  src=""></a>
+		</div>
+	</div>
 </footer>
 
 <!--JQuery Script-->
@@ -436,6 +466,7 @@ The majority of earphone packaging are hung within the store. It is important th
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="../js/fadeInScroll.jQuery.js"></script>
+<script type="text/javascript" src="../js/content.js"></script>
 <script type="text/javascript" src="../js/pages.js"></script>
 
 <script type="text/javascript">changeProj("hani");

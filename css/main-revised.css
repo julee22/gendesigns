@@ -2,104 +2,85 @@
   --bgColor: grey;
   --priColor: black;
   --accentColor: red;
-  --grey: black;
+  --grey: #606060;
+  --boldWeight: 700;
 }
 
 body {
 	box-sizing: border-box;
 	font-family: 'Bahnschrift', 'Inter','Roboto',  sans-serif;
-	overflow-x: hidden;
+	overflow: hidden;
 }
-
 
 header {
 	display: flex;
-	min-height: 100px;
-	background-color: white;
-	padding: 25px 30px 15px;
-	width: 100%;
-	align-items: baseline;
 	flex-wrap: wrap;
-	z-index: 10;
+	align-items: baseline;
+	padding: 25px;
 }
 
+/* Colored Bar*/
+#background-bar {
+	background-color: white;
+	height: 60vh;
+	transition: .7s;
+	z-index: -100;
+}
+
+header, #background-bar {
+	position: fixed;	
+	width: 100%;
+	top: 0;
+}
+
+	.bounce-anim {
+		position: relative;
+		animation: bounce 2s ease infinite;
+	}
+
+	@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+	}
+
+
 .logo {
-	margin-right: 25px;
 	height: 50px;
 }
 
 
-.headerText {
-	text-align: center;
-	margin: 0px auto;
-	padding: 15px 0px;
+.title, .subtitle, a {
+	letter-spacing: 0.1rem;
+	word-spacing: 0.1rem;
+	text-decoration: none;
 }
 
-.title {
-	font-size: 2rem;
+
+.headerText {	
+	margin: 25px 5px;
+	text-align: center;
 }
+
 
 .subtitle {
 	margin-bottom: 0px;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	text-transform: uppercase;
 	color: var(--bgColor);
 	font-weight: 350;
 }
 
-/** Project Section**/
-
-#projectList {
-	position: relative;
+.navbar-text {
+	display: inline-flex;
+	min-width: 100px;
+	margin-left: auto!important;
 }
-
-.project {
-	padding-bottom: 50px;
-	min-height: 400px;
-}
-
-.project:nth-last=child {
-	padding-bottom: 0px;
-}
-
-
-.img-box {
-	max-width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.main-image {
-	max-height: 400px;
-}
-
-.main-title {
-	cursor: pointer;
-	text-align: center;
-	font-size: 1.5em;
-	margin: 25px 10px;
-}
-
-.main-title a {
-	text-decoration: none;
-	color: var(--grey);
-	padding: 7px 20px;
-	border-left: 3px solid black;
-	transition: 0.3s;
-}
-
-
-.main-title a:hover {
-	text-decoration: initial;
-	font-weight: 600;
-	color: initial;
-}
-
 
 .about {
 	cursor: pointer;
 	text-align: right;
-	padding: 5px 20px;
+	padding: 5px 15px;
 	color: var(--grey);
 	border-right: 3px solid black;
 	transition: 0.1s ease-in;
@@ -107,91 +88,79 @@ header {
 
 .about:hover {
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: var(--boldWeight);
 	border-right: 6px solid black;
 	color: var(--grey);
 }
 
+.main-footer {
+	text-align: center;
+	max-width: 80%;
+	margin: 0px auto;
+}
 
-/* Colored Bar*/
-#background-bar {
-	background-color: white;
-	width: 100%;
-	height: 140px;
-	position: fixed;
-	top: 50%;
-	transition: .7s;
+.main-footer img {
+	margin-bottom: 10px;
+}
+
+.main-footer p {
+	font-size: 0.8rem;
+	color: var(--grey);
+}
+
+/** Project Section**/
+
+#projectList {
+	max-width: 100%;
+  overflow: hidden scroll;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+	scroll-snap-stop: always;
+  height: 100vh;
+  padding-top: 25%;
+}
+
+.project {
+	opacity: 0;
+	transition: 0.1s ease-in;
+	padding-bottom: 50px;
+	scroll-snap-align: end;
+	align-content: flex-end;
+	justify-content: center;
+	height: 100vh;
+	margin: 0px auto;
+}
+
+/*.project:first-child {
+	margin-top: 75%;
+}
+
+.project:nth-last-child(1) {
+	padding-bottom: 50px;
+}*/
+
+.main-image-box {
+	display: flex;
+	justify-content: center;
+}
+
+.main-image {
+	max-height: 45vh;
+}
+
+.main-title {
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: 1pt;
+	margin: 10px;
+	transition: 0.3s;
+	font-size: 1.75em;
 }
 
 
-
-/* BREAKPOINTS */
-@media screen and (min-width: 768px) {
-	header	{
-		position: fixed;
-		padding-top: 50px
-		padding-bottom: 0px;
-	}
-
-	.logo {
-		height: 50px;
-	}
-
-	.headerText {
-		text-align: left;
-		margin: 25px 0px;
-		padding: 0px;
-	}
-
-	.title {
-		font-size: 2.3rem;
-	}
-
-	.subtitle {
-		font-size: 1rem;
-	}
-
-	.project {
-		padding-bottom: 50px;
-		height: 75vh;
-	}
-
-	#projectList {
-		top: 25vh;
-		margin: 0px auto;
-	}
-
-
-	.main-image {
-		max-height: 400px;
-	}
-
-
-	.main-title {
-		text-align: left;
-	}
-}
-
-@media screen and (min-width: 992px) {
-	header {
-		flex-wrap: nowrap;
-		padding: 30px 50px 25px;
-	}
-
-	.logo {
-		height: 75px;
-	}
-
-	#projectList {
-		top: 150px;
-		margin: 0px auto;
-	}
-
-	.project {
-		padding-bottom: 100px;
-	}
-
-	.main-image {
-		max-height: 600px;
-	}
+.main-title a {
+	text-decoration: none;
+	color: black;
+	padding: 7px 35px;
+	border-left: 3px solid black;
 }

@@ -7,7 +7,6 @@
 
 <!--StyleSheets-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../css/main-revised.css">
 	<link rel="stylesheet" type="text/css" href="../css/pages.css">
 	<link rel="stylesheet" type="text/css" href="../css/pages-breakpoint.css">
 
@@ -17,8 +16,9 @@
 
 <body>
 
+
 <!--NAV-->
-<nav class="navbar fixed-top">
+<nav class="navbar fixed-top" >
 	<a href="" id="menu-image" data-toggle="collapse" data-target="#menu"> <!--onclick="mobNav(media)"-->
 		<img src="../images/Genice-Designs-Logo-Square.png" height="50px" style="max-width: initial;">
 	</a>
@@ -28,19 +28,22 @@
 	<div class="collapse navbar-collapse" id="menu">
 		<ul class="navbar-nav">
 			<li class="nav-item" id="home">
-				<a class="nav-link active" href="../index.html" id="home">Home</a>
+				<a class="nav-link active" href="../index-revised.html" id="home">Home</a>
 			</li>
 			<li class="nav-item" id="breeze">
 				<a class="nav-link" href="breeze.html">BREEZE</a>
 			</li>
-			<li class="nav-item" id="deepblue">
-				<a class="nav-link" href="deep-blue.html">Deep Blue</a>
-			</li>
 			<li class="nav-item" id="hani">
 				<a class="nav-link" href="hani.html">HANI</a>
 			</li>
-			<li class="nav-item" id="tdsb">
-				<a class="nav-link" href="tdsb.html">TDSB</a>
+			<li class="nav-item" id="period purse">
+				<a class="nav-link" href="period-purse.html">Period Purse</a>
+			</li>
+			<li class="nav-item" id="bespoke">
+				<a class="nav-link" href="bespoke.html">Bespoke</a>
+			</li>
+			<li class="nav-item" id="data vis">
+				<a class="nav-link" href="data-vis.html">Data Vis</a>
 			</li>
 		</ul>
 	</div>
@@ -50,20 +53,18 @@
 <div class="bg-color">
 	<div class="container" id="introduction">
 		<div class="row">
-			<div class="col-12 col-md-6">
+			<div class="col-12 col-md-6 mr-auto">
 				<h1 class="introTitle">Breeze Fridge Project</h1>
 				<h4 class="introSub">Product, App & Poster Design</h4>
-			</div>
-			<div class="col-md-6">
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container">
-	<div class="row"  style="justify-content: flex-start;">
-		<div id="cover" class="flex-fill" data-rellax-speed="6"></div>
-		<div class="introDesc col-12 col-md-6">
+<div class="container" id="description">
+	<div class="row">
+		<div id="cover" class="flex-fill bounce-anim" ></div>
+		<div class="introDesc col-12 col-lg-6">
 			<p>Breeze is a speculative app and fridge that will help users save their food, time and money. The fridge and app hosts a shared grocery list and an automated inventory list, ensuring that users are well informed about their groceries. Additionally, Breeze provides recipe suggestions using ingredients only found in the fridge. </p>
 			<p class="tools">tools used</p>
 			<p class="tools-list">Photoshop, Illustrator, Maya, Figma</p>
@@ -75,10 +76,10 @@
 <div class="container" id="problem">
 	<div class="divider"></div>
 	<div class="row headingTitle">
-		<div class="col-sm-12 col-12 center-section">
+		<div class="col-12">
 			<h1>the problem</h1>
 		</div>
-		<div class="col-sm-12 col-12 center-section">
+		<div class="col-12 center-section">
 			<p>Foodwaste at the household level is very wasteful for both the environment and the consumer. My household has always suffered from groceries being left and forgotten way past their expiry date.</p>
 			<p class="highlight">How do we reduce unconsumed foodwaste at the household level?</p>
 		</div>
@@ -110,25 +111,25 @@
 		<div class="col-md-12">
 			<h2>Diary Study</h2>
 		</div>
-		<div class="col-md-12 col-sm-12 col-12">
+		<div class="col-12">
 			<p>A 7-day record and analysis of my food-related decisions. The diary alternates between using the 5 Whys method and a Cognitive Map. The resuts of the study matched the research findings; <span class="highlight">convenience is extremely important to the decision making process</span> and <span class="highlight">only what is seen/known is what is considered.</span></p>
 		</div>
-		<div class="col">
+		<div class="col-sm-12 col-md">
 			<div class="imgBox hover-shadow">
 				<img src="" class="hover-shadow clickImg" id="img01" data-toggle="modal" data-target="#myModal">
 			</div>
 		</div>
-		<div class="col">
+		<div class="col-sm-12 col-md">
 			<div class="imgBox hover-shadow">
 				<img src="" class="hover-shadow clickImg" id="img02" data-toggle="modal" data-target="#myModal">
 			</div>
 		</div>
-		<div class="col">
+		<div class="col-sm-12 col-md">
 			<div class="imgBox hover-shadow">
 				<img src="" class="hover-shadow clickImg" id="img03" data-toggle="modal" data-target="#myModal">
 			</div>
 		</div>
-		<div class="col">
+		<div class="col-sm-12 col-md">
 			<div class="imgBox hover-shadow">
 				<img src="" class="hover-shadow clickImg" id="img04" data-toggle="modal" data-target="#myModal">
 			</div>
@@ -142,7 +143,7 @@
 			<img src="../images/breeze/Expiry-Date-Map-Legend.jpg" alt="legend for expiry date map" style="max-width: 300px; margin: 50px 0px;">
 		</div>
 		<div class="col-md-6 col-sm-12 col-12">
-			<img src="../images/breeze/Expiry-Date-Map.jpg" alt="a visual representative of expiry dates in a fridge">
+				<img src="" class="clickImg hover-shadow" id="img12" data-toggle="modal" data-target="#myModal">
 		</div>
 	</div>
 </div>
@@ -164,10 +165,10 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-7 col-sm-12 col-12">
+		<div class="col-md-6 col-sm-12 col-12">
 			<img src="../images/breeze/Fridge+phone.png" width="100%">
 		</div>
-		<div class="col-md-5 col-sm-12 col-12">
+		<div class="col-md-6 col-sm-12 col-12">
 			<ol class="goalList">
 				<li>Keep users aware of what’s inside their fridge</li>
 				<li>Reduce the likelihood of groceries being “buried”</li>
@@ -195,31 +196,29 @@
 		<div class="col-sm-12 col-12 col-md-12">
 			<h2>Sketches</h2>
 		</div>
-		<div class="col">
+		<div class="col-sm-12 col-md">
 			<div class="imgBox hover-shadow">
 				<img src="" class="clickImg" id="img05" data-toggle="modal" data-target="#myModal">
 			</div>
 		</div>
-		<div class="col">
+		<div class="col-sm-12 col-md">
 			<div class="imgBox hover-shadow">
 				<img src="" class="clickImg" id="img06" data-toggle="modal" data-target="#myModal">
 			</div>
 		</div>
-		<div class="col">
+		<div class="col-sm-12 col-md">
 			<div class="imgBox hover-shadow">
 				<img src="" class="clickImg" id="img07" data-toggle="modal" data-target="#myModal">
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-12 col-12 col-md-12">
+		<div class="col-sm-12 col-12 col-md-12 col-lg-6">
 			<h2>Personas</h2>
-		</div>
-		<div class="col-sm-12 col-12 col-md-12 col-lg-5">
 			<p>When designing the fridge, I considered two different audiences; one for the fridge and one for an informative poster. The primary audience is the end-user of the fridge. This could range from young children to adults. Basic requirements were being able to use a fridge and technological familiarity. The focus of the primary audience was to design a product that could reduce food waste. The secondary audience is geared towards those interested in reducing food-waste. The deliverable must entice the secondary audience to purchase the product.</p>
 		</div>
-		<div class="col-sm-12 col-12 col-md-12 col-lg-7">
-			<img src="" class="hover-shadow clickImg" id="img08" data-toggle="modal" data-target="#myModal">
+		<div class="col-sm-12 col-12 col-md-12 col-lg-6">
+			<img src="../images/breeze/User-Persona.jpg" width="100%">
 		</div>
 	</div>
 	<div class="row">
@@ -243,17 +242,7 @@
 	</div>
 </div>
 	
-<div class="carousel slide" data-ride="carousel" id="solutions">
-	<!-- Indicators -->
-	<ul class="carousel-indicators">
-		<li data-target="#solutions" data-slide-to="0" class="active"></li>
-	 	<li data-target="#solutions" data-slide-to="1"></li>
-	 	<li data-target="#solutions" data-slide-to="2"></li>
-	 	<li data-target="#solutions" data-slide-to="3"></li>
-	 	<li data-target="#solutions" data-slide-to="4"></li>
-	 	<li data-target="#solutions" data-slide-to="5"></li>
-	 	<li data-target="#solutions" data-slide-to="6"></li>
-	</ul>
+<div class="carousel slide" data-ride="" id="solutions">
 	 <!-- The slideshow -->
 	 <div class="carousel-inner">
     	<div class="carousel-item active">
@@ -264,8 +253,7 @@
 	    			</div>
 	    			<div class="carousel-text col-md-7 col-sm-12 col-12">
 		    			<h2>Easier access and constant visibility of the fridge’s contents</h2>
-		    			<p>Motion sensor detects movement and lights up the display. Otherwise, it conserves energy by remaining dim and maintaining a ‘sleek’ look.</p>
-	    				<p>Large touch screen interface focused on food-related functions that is mirrored on the mobile app.</p>
+		    			<p>Motion sensor detects movement and lights up the large touch screen display. When idle, the display is dimmed to conserve energy and maintain a modern look.</p>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -299,10 +287,10 @@
 	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
-	    			<div class="carousel-img col-md-5 col-sm-12 col-12">
+	    			<div class="carousel-img col-md-4 col-sm-12 col-12">
 	    				<img src="../images/breeze/phone-shopping.png">
 	    			</div>
-			     	<div class="carousel-text col-md-7 col-sm-12 col-12">
+			     	<div class="carousel-text col-md-8 col-sm-12 col-12">
 		    			<h2>Cross-reference the needs of each member of the household</h2>
 		    			<p>A communal shopping list that can be updated from both the fridge and app which flags users of duplicates purchases, referencing the inventory list. Includes editable groups of items to be easily add at later dates, adapting the app to user’s unique lifestyles.</p>
 	    			</div>
@@ -312,12 +300,16 @@
 	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
-	    			<div class="carousel-img col-md-5 col-sm-12 col-12">
+	    			<div class="carousel-img col-md-4 col-sm-12 col-12">
 	    				<img src="../images/breeze/phone-what-to-eat.png">
 	    			</div>
-			     	<div class="carousel-text col-md-7 col-sm-12 col-12">
+			     	<div class="carousel-text col-md-8 col-sm-12 col-12">
 		    			<h2>Inform users of the possible meals in their fridge</h2>
 		    			<p>Meal recommendations based off of what’s solely inside the fridge. Sortable by cooking time, number of ingredients used, and their expiry dates.</p>
+		    			<div style="display: flex; align-items: end;">
+		    				<img src="../images/breeze/cooking-icon.png" style="margin-right:15px;" width="75px" height="75px">
+		    				<p><span style="font-weight: 400;">With a simple tap right from your fridge, tell members of your household that you’re cooking so they know to expect a home-cooked meal.</span></p>
+		    			</div>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -325,10 +317,10 @@
 	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
-	    			<div class="carousel-img col-md-5 col-sm-12 col-12">
+	    			<div class="carousel-img col-md-4 col-sm-12 col-12">
 	    				<img src="../images/breeze/phone-organization.png">
 	    			</div>
-			     	<div class="carousel-text col-md-7 col-sm-12 col-12">
+			     	<div class="carousel-text col-md-8 col-sm-12 col-12">
 		    			<h2>Clarify misconceptions around shelf life and expiration dates</h2>
 		    			<p>Distinctions between Best Before, Expiry Dates and extended shelf life to remove confusion.</p>
 		    			<p>Plus, track previously bought items to highlight spending habits.</p>
@@ -339,28 +331,40 @@
 	    <div class="carousel-item">
 	    	<div class="carousel-bg">
     			<div class="carousel-width">
-	    			<div class="carousel-img col-md-5 col-sm-12 col-12">
-	    				<img src="../images/breeze/phone-what-to-eat.png">
+	    			<div class="carousel-img col-md-4 col-sm-12">
+	    				<img src="../images/breeze/phone-settings.png">
 	    			</div>
-			     	<div class="carousel-text col-md-7 col-sm-12 col-12">
+			     	<div class="carousel-text col-md-8 col-sm-12">
 		    			<h2>Get The Right notifications</h2>
 		    			<p>Customize the behaviour of the fridge and app to suit your specific lifestyle needs whether it’s how early you receive notifications for expired food to the speed and rotation of your fridge.</p>
-		    			<div style="display: flex; align-items: end;">
-		    				<img src="../images/breeze/cooking-icon.png" style="margin-right:15px;" width="75px" height="75px">
-		    				<p><span style="font-weight: 400;">With a simple tap right from your fridge, tell members of your household that you’re cooking so they know to expect a home-cooked meal.</span></p></div>
 	    			</div>
 	    		</div>
 	    	</div>
-	    </div>
+	    </div> 
 	</div>
 
-	<!--Left and right controls-->
-	<a class="carousel-control-prev" href="#solutions" data-slide="prev">
-		<span class="carousel-control-prev-icon"></span>
-	</a>
-	<a class="carousel-control-next" href="#solutions" data-slide="next">
-	    <span class="carousel-control-next-icon"></span>
-	</a>
+
+	<!-- Left and right controls -->
+	<div class="carousel-nav">
+		<a class="carousel-control-prev" href="#solutions" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#solutions" data-slide-to="0" class="active"></li>
+		 	<li data-target="#solutions" data-slide-to="1"></li>
+		 	<li data-target="#solutions" data-slide-to="2"></li>
+		 	<li data-target="#solutions" data-slide-to="3"></li>
+		 	<li data-target="#solutions" data-slide-to="4"></li>
+		 	<li data-target="#solutions" data-slide-to="5"></li>
+		 	<li data-target="#solutions" data-slide-to="6"></li>
+		</ul>
+
+		<a class="carousel-control-next" href="#solutions" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
 </div>
 
 
@@ -379,50 +383,45 @@
 <div class="container" id="brand">
 	<div class="divider"></div>
 	<div class="row headingTitle">
-		<div class="col-sm-12 col-12">
+		<div class="col-12">
 			<h1>the brand</h1>
 		</div>
+		<img src="../images/breeze/Breeze-Logo.gif" alt="BREEZE Fridge Logo" id="projLogo">
 	</div>
+	
 	<div class="row">
-		<div id="projLogo"> 
-			<img src="" alt="BREEZE Fridge Logo" class="hover-shadow clickImg" id="img10" data-toggle="modal" data-target="#myModal">
-		</div>
-</div>
-	<div class="row">
-		<div class="col-sm-6 col-lg-4" id="mood">
-			<p class="brand-subheading">mood</p>
-			<ul class="moodWords">
-				<li>light</li>
-				<li>simple</li>
-				<li>transparent</li>
-				<li>straightforward</li>
-			</ul>
-		</div>
-		<div class="col-sm-6 col-lg-4 order-lg-3" id="typography">
-			<p class="brand-subheading">typography</p>
-			<p class="moodWords">Avenir LT Std<br>Novecento Wide</span></p>
-		</div>
-		<div class="col-lg-4 order-lg-2" id="colours">
-			<p class="brand-subheading">colours</p>
-			<!--<img src="../images/breeze/color-palette.jpg" alt="BREEZE Colour Palette" width="300">-->
-			<ul class="palette">
-				<li class="colorSwatch">#4febd1</li>
-				<li class="colorSwatch">#3e3e3e</li>
-				<li class="colorSwatch">#c9dfe7</li>
-				<li class="colorSwatch">#f4f4f4</li>
-				<li class="colorSwatch">#ffb45c</li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12 col-12">
+		<div class="col-sm-12 col-md-6">
 			<h2>Rationale</h2>
-		</div>
-		<div class="col-sm-12 col-12 col-md-6">
 			<p>The term “breeze” is associated with lightness and easiness, highlighting how the fridge is meant to integrate into daily routine without impeding the user. The logo is inspired by the moving shelves that differentiate it from traditional fridges. The font is a modified sans serif, it’s rounded edges mimicking the shape of the shelves.</p>
-		</div>
-		<div class="col-sm-12 col-12 col-md-6">
 			<p>The brand aims to appear as non-invasive and unintimidating as possible. The fridge induces change and it is important for the experience to be feel seamless and easy. Due to it’s large and diverse audience, the brand must also maintain a wide appeal through simplicty. The focus is on it’s beneficial functions rather than leisurely, entrusting that it’s game changing features will satisfy its users.</p>
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<div class="row" id="projAssets">
+				<div class="col-6" id="mood">
+					<p class="brand-subheading">mood</p>
+					<ul class="moodWords">
+						<li>light</li>
+						<li>simple</li>
+						<li>transparent</li>
+						<li>straightforward</li>
+					</ul>
+				</div>
+				<div class="col-6" id="colours">
+					<p class="brand-subheading">colours</p>
+					<!--<img src="../images/breeze/color-palette.jpg" alt="BREEZE Colour Palette" width="300">-->
+					<ul class="palette">
+						<li class="colorSwatch">#4febd1</li>
+						<li class="colorSwatch">#3e3e3e</li>
+						<li class="colorSwatch">#c9dfe7</li>
+						<li class="colorSwatch">#f4f4f4</li>
+						<li class="colorSwatch">#ffb45c</li>
+					</ul>
+				</div>
+				<div class="col-12" id="typography">
+					<p class="brand-subheading">typography</p>
+					<p class="moodWords">Avenir LT Std<br>Novecento Wide</span></p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -437,30 +436,31 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-12 col-12">
-			<img src="" class="hover-shadow clickImg" id="img12" data-toggle="modal" data-target="#myModal">
+		<div class="col-md-5 highlight-section">
+			<h3>App Prototype</h3>
+			<p class="tools-list">Figma</p>
+			<p>Experience the potential wonders of the BREEZE Fridge with a Figma prototype. Create a collaborated shopping list, discover relevant recipes, track ingredients and utilize the customization options.</p>
 		</div>
-		<div class="col-12">
-			<div class="button-center">
-				<a href="https://www.figma.com/proto/mu67w1AxDYdLLitt6n4Jlc/BREEZE-Fridge-App?node-id=330%3A632&scaling=scale-down" class="button" target="_blank" rel="external">Explore the Prototype</a>
-			</div>
+		<div class="col-md-7">
+			<!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmu67w1AxDYdLLitt6n4Jlc%2FBREEZE-Fridge-App%3Fnode-id%3D330%253A632%26scaling%3Dcontain" allowfullscreen></iframe> -->
 		</div>
+
 	</div>
 	<div class="row highlight-section">
-		<div class="col-md-3">
-			<h3>Promotional Poster</h3>
-			<p class="tools-list">24 in x 18 in</p>
-		</div>
-		<div class="col-md-9">
-			<p>Since a physical fridge prototype is not possible with my budget, I designed a poster that outlines the different benefits and functionalities of the fridge. This poster was designed to be displayed at a tradeshow in order to attract the attention of investors or prospective buyers.</p>
-		</div>
-	</div>
-	<div class="row">
 		<div class="col-md-12">
 			<img src="" class="hover-shadow clickImg" id="img11" data-toggle="modal" data-target="#myModal">
 		</div>
+		<div class="col-12 spacer"></div>
+			<div class="col-md-3">
+				<h3>Promotional Poster</h3>
+				<p class="tools-list">24 in x 18 in</p>
+			</div>
+			<div class="col-md-9">
+				<p>Since a physical fridge prototype is not possible with my budget, I designed a poster that outlines the different benefits and functionalities of the fridge. This poster was designed to be displayed at a tradeshow in order to attract the attention of investors or prospective buyers.</p>
+			</div>
 	</div>
 </div>
+
 
 
 <!--LIGHT BOX-->
@@ -469,8 +469,11 @@
 	<!--<span id="close"></span>-->
 		<div class="modal-content">
 			<div class="modal-body">
-				<img class="modal-image" id="modImg">
-				<div id="caption"></div>						
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>	
+				<div id="caption"></div>		
+				<img class="modal-image" id="modImg">				
 			</div>	
 		</div>
 	</div>
@@ -479,7 +482,16 @@
 
 
 <footer>
-	<p class="caption">All content is the intellectual property of Genice Chandra.</p>
+	<div class="row">
+		<div class="col-md-8 col-sm-12">
+			<h2 class="introSub">Don't forget to <a href="#">say hi</a> & check out <a href="#" id="random-link">my other works</a>!</h2>
+			<p class="caption">All designed content is the intellectual property of Genice Chandra.</p>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<a href="#" id="random-link-img">
+			<img id="random-image" class=" bounce-anim"  src=""></a>
+		</div>
+	</div>
 </footer>
 
 <!--JQuery Script-->
@@ -489,11 +501,10 @@
 <script src="../js/fadeInScroll.jQuery.js"></script>
 <script src="../js/jquery.bcSwipe.js"></script>
 <script src="../js/jquery.bcSwipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+<script type="text/javascript" src="../js/content.js"></script>
 <script type="text/javascript" src="../js/pages.js"></script>
 
 <script type="text/javascript">changeProj("breeze");
-  var rellax = new Rellax('.rellax');
 
 
 /*var media = window.matchMedia("(max-width: 800px)")

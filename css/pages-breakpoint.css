@@ -1,6 +1,9 @@
 
 /* BREAKPOINTS */
 @media screen and (min-width: 768px) {
+	.navbar {
+	  }
+
 	#cover {
 		position: absolute;
 		right: 0px;
@@ -14,9 +17,23 @@
 	}
 
 	.container {
-		max-width: 1125px;
+		max-width: 90%;
+		padding-top: 50px;
 		padding-left: 35px;
 		padding-right: 35px;
+	}
+
+	.row {
+		padding: 30px 10px 50px;
+	}
+
+	#introduction {
+		padding-top: 100px; 
+	}
+
+	#description .row {
+		position: static;
+		top:  0px;
 	}
 
 	.divider {
@@ -24,21 +41,44 @@
 	}
 
 	.center-section {
-		max-width: initial;
+		max-width: 90%;
 	}
 
 
-	p {
+	p, .button {
+		font-size: 1.1em;
 		margin-top: 0px;
 	}
 
+	.introTitle {
+		font-size: 2.7em;
+	}
+
+	.introDesc {
+		padding-right: 50px;
+	}
 
 	.brand-subheading{
 		margin-top: 15px;
 	}
 
+	#projAssets {
+		padding: 30px 25px;
+	}
+
+	.imgBox {
+		margin: 15px 0px 25px;
+	}
+
+
+	#image-bg-bar {
+		height: 200px;
+		margin-top: 150px;
+	}
+
 	.carousel {
 		padding-bottom: 25px;
+		max-width: 100%;
 	}
 
 	.carousel-bg {
@@ -47,7 +87,7 @@
 
 	.carousel-width {
 		display: flex;
-		flex-wrap: wrap;
+		align-items: center;
 		width: 78%;
 		max-width: 1100px;
 		margin: 0px auto;
@@ -70,21 +110,55 @@
 	}
 
 
-	.carousel-indicators {
-		padding-bottom: 50px;
+	.carousel-indicators li {
+		width: 30px;
 	}
 
-	.carousel-control-prev, .carousel-control-next {
-		display: none;
+	.carousel-indicators .active {
+		width: 75px;
+	}
+
+
+	footer {
+		padding: 50px 10% 20px;
+	}
+
+	#random-image {
+		display: block;
+		position: absolute;
+		bottom: -25px;
+		right: 0px;
 	}
 }
 
 @media screen and (min-width: 992px) {
+
+	.container {
+		max-width: 80%;
+	}
+
+	.navbar {
+	}
+
 	.navbar, #menu {
 		background-color: initial;
 	}
 
 	.navbar-nav .nav-link{
 		width: fit-content;
+	}
+	
+	.modal-dialog {
+		max-width: 80%;
+	}
+
+	#image-bg-bar {
+		height: 370px;
+		margin-top: 150px;
+	}
+
+
+	footer {
+		padding: 50px 12% 20px;
 	}
 }

@@ -36,7 +36,7 @@
 		
 		    //Test if the window TopScroll reachs the element TopScroll minus the minimun distance
 		    $(elements).each(function(){
-			    if( ( (vWindowScrollTop + parseInt(settings.minDistance)) >= $(this).offset().top) ){
+			    if( ( (vWindowScrollTop + parseInt(settings.minDistance)) >= $(this).offset().top) &&  ($(this).offset().top > 0) ){
 			        $(this).animate({opacity:1});
 
 			    }

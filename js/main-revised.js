@@ -6,14 +6,14 @@ var projectList = [
 	},
 	{
 		name: "hani",
-		color: "#ff8f00",
-		bgColorHex: '#fff079',
-	},/*
-	{
-		name: "deepblue",
-		color: "#00008b",
-		bgColorHex: '#ffffff',
+		color: "#ff7900",
+		bgColorHex: '#ffe98d',
 	},
+	{
+		name: "period-purse",
+		color: "#EF3A4C",
+		bgColorHex: '#FCDAEF',
+	},/*
 
 	{
 		name: "tdsb",
@@ -40,14 +40,17 @@ function changeBarColor(projectNum) {
 //JQUERY
 $(document).ready(function()
 {
-
-	$(".main-title a").hover(
+	// Change color of navigation
+	$(".main-title").hover(
 		function(){
-			changeNavColor(this.id);
-  			$(this).css("border-left","6px solid " + borderColor);
+			var mainTitle = $(this).children("a");
+			changeNavColor(mainTitle[0].id);
+  			$(mainTitle[0]).css("border-left","6px solid " + borderColor);
+  			$(mainTitle[0]).css("font-weight","700");
   			//$(":header").addClass("textShad");
   		}, function(){
-  			$(this).removeAttr("style");
+			var mainTitle = $(this).children("a");
+  			$(mainTitle[0]).removeAttr("style");
   			//$(":header").removeClass("textShad");
 		}
 	);
@@ -56,38 +59,41 @@ $(document).ready(function()
 	var bar = document.getElementById("background-bar");
 	var listOfProjects = document.getElementsByClassName("project");
 
-	//Set initial
+	//Set initial bar color
 	changeBarColor(0);
 	$(bar).css("background-color",barColor);
 
-	// Event
-	$(window).scroll(function() {
+	var activeProj = $("#projectList").children(".project");
+	$(activeProj[0]).css("opacity","1");
 
+	// Event changing the bar color
+	$("#projectList").scroll(function() {
 
-		/*for (var i = 0; i < listOfProjects.length; i++) {
-			var projectOffset = listOfProjects[i].getBoundingClientRect();
-			var top = projectOffset.top;
-			console.log(top);
-			if (top >=0 && top <=500) {
-			console.log("I'm visible");
-				changeBarColor(i);
-				$(bar).css("background-color",barColor);
-			}
-
-		}*/
 		for (var i = 0; i < projectList.length; i++){
-			var selectedProject = document.getElementById(projectList[i].name);
+			var selectedProject = activeProj[i];
 			var projectOffset = selectedProject.getBoundingClientRect();
-			var top = projectOffset.top;
-			
-			if (top <= window.innerHeight) {
+			var top = projectOffset.top + 25;
+			var height = projectOffset.bottom;
+
+			if (top < 0) {
+				console.log(i + " is not visible");
+				$(activeProj[i]).removeAttr("style");
+				console.log("opacity removed from " + i);
+			} else 	if ((top <= window.innerHeight && top > 0) || height > 100) {
+				console.log(i + " is visible");
+				console.log(top + " is less than "+ window.innerHeight);
+				console.log(height + " + "+ top + " is the height of the element");
 				changeBarColor(i);
 				$(bar).css("background-color",barColor);
+				$(activeProj[i]).css("opacity","1");
+				console.log("opacity added to " + i);
+				break;
 			}
+
 		}
 	});
-}
-);
 
 
-$('.main-title').fadeInScroll();
+
+});
+

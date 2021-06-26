@@ -1,182 +1,9 @@
-var projectList = [
-	{
-		name:"home",
-		bgColorHex: '#ffffff',
-		priColorHex: '#000000',
-		accentColorHex: '#ececec'
-	},
-	{
-		name: "breeze",
-		bgColorHex: '#e6f3f8',
-		priColorHex: '#3893d6',
-		accentColorHex: '#f15a24',
-		image: 'url("../images/breeze/Breeze-App-Multiple.png")',
-		imgArray:  [{
-				name: "img01",
-				link: "../images/breeze/Primary Research Diary_1.jpg",
-				caption: "Mind Map Diary Study Outline & Example"
-			},
-			{
-				name: "img02",
-				link: "../images/breeze/Primary Research Diary_7.jpg",
-				caption: 'Mind Map Entry'
-			},
-			{
-				name: "img03",
-				link: "../images/breeze/Primary Research Diary_2.jpg",
-				caption: '5 Whys Diary Study Outline & Example'
-			},
-			{
-				name: "img04",
-				link: "../images/breeze/Primary Research Diary_6.jpg",
-				caption: '5 Whys Entry'
-			},
-			{
-				name: "img05",
-				link: "../images/breeze/Fridge Preliminary sketches_Page_1.jpg",
-				caption: 'Product Concept Sketches'
-			},
-			{
-				name: "img06",
-				link: "../images/breeze/Fridge Preliminary sketches_Page_2.jpg",
-				caption: 'UX Concept Sketches'
-			},
-			{
-				name: "img07",
-				link: "../images/breeze/Fridge Preliminary sketches_Page_3.jpg",
-				caption: 'UX Concept Sketches'
-			},
-			{
-				name: "img08",
-				link: "../images/breeze/User-Persona.jpg",
-				caption: 'Sample Persona of Fridge User'
-			},
-			{
-				name: "img09",
-				link: "../images/breeze/Breeze-Info-Architecture.jpg",
-				caption: 'Information Architecture of BREEZE App'
-			},
-			{
-				name: "img10",
-				link: "../images/breeze/Logo Ver 3.png",
-				caption: 'BREEZE Logo Color Version'
-			},
-			{
-				name: "img11",
-				link: "../images/breeze/YSDN4004_ChandrG_BREEZE Poster.jpg",
-				caption: 'BREEZE Poster, 24 in x 18 in'
-			},
-			{
-				name: "img12",
-				link: "../images/breeze/Breeze Main.jpg",
-				caption: 'BREEZE App Mock Ups'
-			}]
-	},
-	{
-		name: "deepblue",
-		bgColorHex: '#ffffff',
-		priColorHex: '#00008b',
-		accentColorHex: '#f15a24',
-		image: 'url("../images/breeze/Breeze-App-Multiple.png")'
-	},
-	{
-		name: "tdsb",
-		bgColorHex: '#ffffff',
-		priColorHex: '#63c900',
-		accentColorHex: '#f15a24',
-		image: 'url("images/Tdsb Main.jpg")'
-	},
-	{
-		name: "hani",
-		bgColorHex: '#fff079',
-		priColorHex: '#ff8f00',
-		accentColorHex: '#885a9a',
-		image: 'url("../images/hani/hani-trans.png")',
-		imgArray:  [{
-				name: "img01",
-				link: "../images/hani/earphone sketches_Page_1.jpg",
-				caption: "Preliminary Sketches"
-			},
-			{
-				name: "img02",
-				link: "../images/hani/earphone sketches_Page_2.jpg",
-				caption: 'Preliminary Sketches'
-			},
-			{
-				name: "img03",
-				link: "../images/hani/earphone sketches_Page_3.jpg",
-				caption: 'Preliminary Sketches'
-			},
-			{
-				name: "img04",
-				link: "../images/hani/earphone sketches_Page_4.jpg",
-				caption: 'Preliminary Sketches'
-			},
-			{
-				name: "img05",
-				link: "../images/hani/earphone sketches_Page_5.jpg",
-				caption: 'Preliminary Sketches'
-			},
-			{
-				name: "img06",
-				link: "../images/hani/IMG_3850.JPG",
-				caption: 'Initial Paper Prototypes'
-			},
-			{
-				name: "img07",
-				link: "../images/hani/IMG_3860.JPG",
-				caption: 'Different Artboards & Materials'
-			},
-			{
-				name: "img08",
-				link: "../images/hani/IMG_3893.JPG",
-				caption: 'Prototypes of Plushies'
-			},
-			{
-				name: "img09",
-				link: "../images/hani/IMG_4175.JPG",
-				caption: ''
-			},
-			{
-				name: "img10",
-				link: "../images/hani/Hani Design Awards Main.jpg",
-				caption: ''
-			},
-			{
-				name: "img11",
-				link: "../images/hani/Hani Design Awards image 2.jpg",
-				caption: ''
-			},
-			{
-				name: "img12",
-				link: "../images/hani/IMG_4220.JPG",
-				caption: ''
-			},
-			{
-				name: "img13",
-				link: "../images/hani/IMG_3997.JPG",
-				caption: ''
-			},
-			{
-				name: "img14",
-				link: "../images/hani/GChandra_Hani Photos_Page_2.jpg",
-				caption: ''
-			}]
-	},
-	{
-		name: "home",
-		priColorHex: '#000000'
-	}
-
-];
-
-
-
 // Sets the color scheme for each page
 var mainImage;
 var bgColor;
 var priColor;
 var accentColor;
+var currProj;
 
 function changeProj(projectName) {
 	var project = projectList.find(project => project.name == projectName);
@@ -188,6 +15,7 @@ function changeProj(projectName) {
 	$(':root').css("--bgColor",bgColor);
 	$(':root').css("--priColor",priColor);
 	$(':root').css("--accentColor",accentColor);
+	currProj = projectName;
 }
 
 
@@ -217,7 +45,7 @@ $(document).ready(function()
 {
 
 	// Set cover image to mainImage
-	$("#cover").css("background-image", mainImage);
+	$("#cover").css("background-image", "url('"+ mainImage+"')");
 
 
 	// Populate images in Lightbox gallery
@@ -242,7 +70,7 @@ $(document).ready(function()
 	});
 
 
-	// Dynamically change color of nav
+	// Dynamically change color of nav items
 	$(".nav-item").hover(
 		function(){
 			// Give changeNavColor function id of hovered nav-item element
@@ -259,18 +87,24 @@ $(document).ready(function()
   	//CAROUSEL JS
   	//Stops auto when carousel out of viewport
 	const slider = document.querySelector('.carousel');
+	$(slider).carousel('pause');
+	console.log("carousel is paused");
 
-	$(document).scroll(function(){
+	if (slider) {
+		$(document).scroll(function(){
 
-		const box = slider.getBoundingClientRect();
-	  	if (box.top >= -100 &&
-	        box.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 100)
-	  	{
-			$('.carousel').carousel({interval: 1500, pause: 'hover'});
-		} else {
-			$('.carousel').carousel('pause');
-		}
-	});
+			const box = slider.getBoundingClientRect();
+		  	if (box.top >= -100 &&
+		        box.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 100)
+		  	{
+				$(slider).carousel({cycle: true, interval: 3000, pause: 'hover'});
+				console.log("carousel is running");
+			} else {
+				console.log("carousel is not in view and paused");
+				$(slider).carousel('pause');
+			}
+		});
+	}
 
 
 	// Color Swatches
@@ -288,6 +122,37 @@ $(document).ready(function()
 
 	}
 
+	// CHANGING FOOTER
+	var randNum = Math.ceil(Math.random() * (projectList.length -1));
+	var randProj = projectList[randNum];
+
+ 	// Ensures the footer project is not the same as the current project page
+	while (currProj == randProj.name) {
+		randNum = Math.ceil(Math.random() * (projectList.length -1));
+		randProj = projectList[randNum];
+	}
+
+	// Setting Image & Text 
+	const randImg = document.getElementById("random-image");
+	const randLink = document.getElementById("random-link");
+	const randLinkImg = document.getElementById("random-link-img");
+
+	randImg.src = randProj.image;
+	randLink.innerHTML = randProj.name;
+
+	// Deals with titles that have spaces
+	var hasSpace = randProj.name.indexOf(' ');
+
+	// console.log("Has Space? " + hasSpace);
+	if (hasSpace > -1) {
+		const firstString = randProj.name.substring(0,hasSpace-1);
+		const secondString = randProj.name.substring(0,hasSpace+1);
+		randLink.href = firstString + "-" + secondString + ".html";
+		randLinkImg.href = randLink.href;
+	} else {
+		randLink.href = randProj.name + ".html";
+		randLinkImg.href = randLink.href;
+	}
 
 	//mobile swipe
 	//$('.carousel').bcSwipe({ threshold: 50 });
@@ -298,10 +163,7 @@ $(document).ready(function()
 $('.row').fadeInScroll();
 
 
-// Close pop-up menu when scrolling
+// Close menu when scrolling
 $(window).scroll(function() {
-	//Get menu
-	var navbar = document.getElementById("menu");
-	//remove show class
-	navbar.classList.remove('show');
+	$('.collapse').collapse('hide');
 });
