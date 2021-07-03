@@ -1,8 +1,6 @@
 
 /* BREAKPOINTS */
 @media screen and (min-width: 768px) {
-	.navbar {
-	  }
 
 	#cover {
 		position: absolute;
@@ -24,7 +22,7 @@
 	}
 
 	.row {
-		padding: 30px 10px 50px;
+		padding: 30px 0px 50px;
 	}
 
 	#introduction {
@@ -135,17 +133,6 @@
 
 	.container {
 		max-width: 80%;
-	}
-
-	.navbar {
-	}
-
-	.navbar, #menu {
-		background-color: initial;
-	}
-
-	.navbar-nav .nav-link{
-		width: fit-content;
 	}
 	
 	.modal-dialog {

@@ -1,5 +1,5 @@
 :root {
-  --bgColor: grey;
+  --bgColor: #CBCBCB;
   --priColor: black;
   --accentColor: red;
   --grey: #606060;
@@ -9,14 +9,13 @@
 body {
 	box-sizing: border-box;
 	font-family: 'Bahnschrift', 'Inter','Roboto',  sans-serif;
-	overflow: hidden;
 }
 
 header {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: baseline;
-	padding: 25px;
+	align-items: center;
+	padding: 100px 0px 15px;
 }
 
 /* Colored Bar*/
@@ -47,6 +46,38 @@ header, #background-bar {
 
 .logo {
 	height: 50px;
+	min-width: 50px;
+	background-image: url("../images/Genice-Designs-Logo-Square.png");
+	background-size: cover;
+}
+
+
+.headerText {	
+	padding: 15px 0px 30px;
+	text-align: center;
+}
+
+.headerText .col-12{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#main {
+	padding-top: 100px; 
+}
+
+.title {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+
+.subtitle {
+	margin-bottom: 0px;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	color: var(--grey);
+	font-weight: 350;
 }
 
 
@@ -56,42 +87,6 @@ header, #background-bar {
 	text-decoration: none;
 }
 
-
-.headerText {	
-	margin: 25px 5px;
-	text-align: center;
-}
-
-
-.subtitle {
-	margin-bottom: 0px;
-	font-size: 0.9rem;
-	text-transform: uppercase;
-	color: var(--bgColor);
-	font-weight: 350;
-}
-
-.navbar-text {
-	display: inline-flex;
-	min-width: 100px;
-	margin-left: auto!important;
-}
-
-.about {
-	cursor: pointer;
-	text-align: right;
-	padding: 5px 15px;
-	color: var(--grey);
-	border-right: 3px solid black;
-	transition: 0.1s ease-in;
-}
-
-.about:hover {
-	text-decoration: none;
-	font-weight: var(--boldWeight);
-	border-right: 6px solid black;
-	color: var(--grey);
-}
 
 .main-footer {
 	text-align: center;
@@ -112,29 +107,23 @@ header, #background-bar {
 
 #projectList {
 	max-width: 100%;
-  overflow: hidden scroll;
-  overscroll-behavior-y: contain;
-  scroll-snap-type: y mandatory;
-	scroll-snap-stop: always;
-  height: 100vh;
-  padding-top: 25%;
+	overflow-x: hidden;
 }
 
 .project {
 	opacity: 0;
 	transition: 0.1s ease-in;
 	padding-bottom: 50px;
-	scroll-snap-align: end;
 	align-content: flex-end;
 	justify-content: center;
-	height: 100vh;
+	/*height: 100vh;*/
 	margin: 0px auto;
 }
 
-/*.project:first-child {
-	margin-top: 75%;
+/*
+.project:first-child {
+	margin-top: 20%;
 }
-
 .project:nth-last-child(1) {
 	padding-bottom: 50px;
 }*/
@@ -145,22 +134,21 @@ header, #background-bar {
 }
 
 .main-image {
-	max-height: 45vh;
+	height: 45vh;
 }
 
 .main-title {
 	cursor: pointer;
 	text-align: center;
 	letter-spacing: 1pt;
-	margin: 10px;
-	transition: 0.3s;
-	font-size: 1.75em;
 }
 
 
 .main-title a {
 	text-decoration: none;
+	font-size: 1.5em;
 	color: black;
-	padding: 7px 35px;
-	border-left: 3px solid black;
+	padding: 10px 35px;
+	border-left: 4px dashed var(--priColor);
+	transition: 0.3s;
 }

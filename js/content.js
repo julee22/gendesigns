@@ -131,7 +131,7 @@ var projectList = [
 			}]
 	},
 	{
-		name: "period purse",
+		name: "period-purse",
 		bgColorHex: '#FCDAEF',
 		priColorHex: '#EF3A4C',
 		accentColorHex: '#339999',
@@ -199,14 +199,14 @@ var projectList = [
 	},
 	{
 		name: "bespoke",
-		bgColorHex: '#ffffff',
-		priColorHex: '#000000',
-		accentColorHex: '#f15a24',
+		bgColorHex: '#4c7fc1',
+		priColorHex: '#184275',
+		accentColorHex: '#FF3333',
 		image: '../images/Genice-Designs-Tilt.png'
 	},
 	{
-		name: "data vis",
-		bgColorHex: '#ffffff',
+		name: "data-vis",
+		bgColorHex: '#CBCBCB',
 		priColorHex: '#000000',
 		accentColorHex: '#f15a24',
 		image: '../images/breeze/Breeze-App-Multiple.png'

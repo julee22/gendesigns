@@ -5,6 +5,8 @@ var priColor;
 var accentColor;
 var currProj;
 
+const lengthProj = projectList.length;
+
 function changeProj(projectName) {
 	var project = projectList.find(project => project.name == projectName);
 		mainImage = project.image;
@@ -123,12 +125,12 @@ $(document).ready(function()
 	}
 
 	// CHANGING FOOTER
-	var randNum = Math.ceil(Math.random() * (projectList.length -1));
+	var randNum = Math.ceil(Math.random() * (lengthProj -1));
 	var randProj = projectList[randNum];
 
  	// Ensures the footer project is not the same as the current project page
 	while (currProj == randProj.name) {
-		randNum = Math.ceil(Math.random() * (projectList.length -1));
+		randNum = Math.ceil(Math.random() * (lengthProj -1));
 		randProj = projectList[randNum];
 	}
 
@@ -136,31 +138,32 @@ $(document).ready(function()
 	const randImg = document.getElementById("random-image");
 	const randLink = document.getElementById("random-link");
 	const randLinkImg = document.getElementById("random-link-img");
-
+	
 	randImg.src = randProj.image;
-	randLink.innerHTML = randProj.name;
+	randLink.href = randProj.name;
 
 	// Deals with titles that have spaces
-	var hasSpace = randProj.name.indexOf(' ');
+	var hasSpace = randProj.name.indexOf('-');
 
 	// console.log("Has Space? " + hasSpace);
 	if (hasSpace > -1) {
 		const firstString = randProj.name.substring(0,hasSpace);
 		const secondString = randProj.name.substring(hasSpace+1,randProj.name.length);
-		randLink.href = firstString + "-" + secondString + ".html";
+		randLink.innerHTML = firstString + " " + secondString;
 		randLinkImg.href = randLink.href;
 	} else {
-		randLink.href = randProj.name + ".html";
+		randLink.innerHTML = randProj.name;
 		randLinkImg.href = randLink.href;
 	}
 
 	//mobile swipe
 	//$('.carousel').bcSwipe({ threshold: 50 });
 
+	// Fade in Scroll
+	$('.row').fadeInScroll();
+
 });
 
-// Fade in Scroll
-$('.row').fadeInScroll();
 
 
 // Close menu when scrolling

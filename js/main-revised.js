@@ -35,58 +35,82 @@ function changeNavColor(projectId) {
 function changeBarColor(projectNum) {
 	var project = projectList[projectNum];
 	barColor = project.bgColorHex;
+	$("#background-bar").css("background-color",barColor);
 }
 
 //JQUERY
 $(document).ready(function()
 {
+	const listOfTitle = document.getElementsByClassName("main-title");
+	var mainTitle;
+	var mainTitleHov;
+
 	// Change color of navigation
+	for (var i = 0; i < listOfTitle.length; i++) {
+		mainTitle = listOfTitle[i].firstElementChild;
+		changeNavColor(mainTitle.id);
+		$(mainTitle).css("border-left","4px dashed " + borderColor);
+		console.log(mainTitle.id);
+	}
+
 	$(".main-title").hover(
 		function(){
-			var mainTitle = $(this).children("a");
-			changeNavColor(mainTitle[0].id);
-  			$(mainTitle[0]).css("border-left","6px solid " + borderColor);
-  			$(mainTitle[0]).css("font-weight","700");
+			mainTitleHov = this.firstElementChild;
+  			changeNavColor(mainTitleHov.id);
+  			$(mainTitleHov).css("border-left","8px solid " + borderColor);
+  			$(mainTitleHov).css("font-weight","700");
   			//$(":header").addClass("textShad");
   		}, function(){
-			var mainTitle = $(this).children("a");
-  			$(mainTitle[0]).removeAttr("style");
-  			//$(":header").removeClass("textShad");
+			mainTitleHov = this.firstElementChild;
+  			changeNavColor(mainTitleHov.id);
+  			$(mainTitleHov).css("border-left","4px dashed " + borderColor);
+  			$(mainTitleHov).css("font-weight","initial");
 		}
 	);
 
 
-	var bar = document.getElementById("background-bar");
-	var listOfProjects = document.getElementsByClassName("project");
-
 	//Set initial bar color
 	changeBarColor(0);
-	$(bar).css("background-color",barColor);
 
 	var activeProj = $("#projectList").children(".project");
 	$(activeProj[0]).css("opacity","1");
 
+	// Changing parameters depending on header
+	var headerHeight;
+	const headerOffset = $("header")[0].getBoundingClientRect();
+	headerHeight = headerOffset.bottom-25;
+
+	window.addEventListener('resize', (event) => {
+		//Get height of header
+		const headerOffset = $("header")[0].getBoundingClientRect();
+		headerHeight = headerOffset.bottom-25;
+		console.log("header height is "+  headerHeight);
+		$("#projectList").css("margin-top",headerHeight);
+	}, true);
+
+	$("#projectList").css("margin-top",headerHeight);
+
+
 	// Event changing the bar color
-	$("#projectList").scroll(function() {
+	$(document).scroll(function() {
 
 		for (var i = 0; i < projectList.length; i++){
 			var selectedProject = activeProj[i];
 			var projectOffset = selectedProject.getBoundingClientRect();
-			var top = projectOffset.top + 25;
+			var top = projectOffset.top;
 			var height = projectOffset.bottom;
 
-			if (top < 0) {
-				console.log(i + " is not visible");
+			// console.log(i + " has top of " + top + " and height "+height);
+			// console.log("window height is "+  window.innerHeight);
+			// console.log("header height is "+  headerHeight);
+
+			if (top < headerHeight /2) {
 				$(activeProj[i]).removeAttr("style");
-				console.log("opacity removed from " + i);
-			} else 	if ((top <= window.innerHeight && top > 0) || height > 100) {
-				console.log(i + " is visible");
-				console.log(top + " is less than "+ window.innerHeight);
-				console.log(height + " + "+ top + " is the height of the element");
+				console.log("hide "+  i);
+			} else if ((top <= window.innerHeight && top > -50) || height > 100) {
 				changeBarColor(i);
-				$(bar).css("background-color",barColor);
 				$(activeProj[i]).css("opacity","1");
-				console.log("opacity added to " + i);
+				console.log("show "+  i);
 				break;
 			}
 
@@ -94,6 +118,17 @@ $(document).ready(function()
 	});
 
 
+	// Dynamically change color of nav items
+	$(".nav-item").hover(
+		function(){
+			// Give changeNavColor function id of hovered nav-item element
+			changeNavColor(this.id);
 
+			// Change css of hovered nav-item element
+  			$(this).css("border-left","6px solid "+borderColor);
+  		}, function(){
+  			$(this).removeAttr("style");
+		}
+  	);
 });
 

@@ -1,23 +1,8 @@
-:root {
-  --bgColor: grey;
-  --priColor: black;
-  --accentColor: red;
-  --grey: #606060;
-  --boldWeight: 700;
-}
 
 body {
 	box-sizing: border-box;
 	font-family: 'Bahnschrift', 'Inter','Roboto',  sans-serif;
 }
-
-
-h1,h2,h3, h4, a {
-	letter-spacing: 0.1rem;
-	word-spacing: 0.1rem;
-	text-decoration: none;
-}
-
 
 
 .bg-color {
@@ -31,7 +16,7 @@ h1,h2,h3, h4, a {
 
 .row {
 	min-height: initial;
-	padding: 15px 5px 30px;
+	padding: 15px 0px 30px;
 	justify-content: center;
 }
 
@@ -47,66 +32,22 @@ h1,h2,h3, h4, a {
 }
 
 
-/*NAVIGATION*/
-.navbar {
-  	background-color: var(--bgColor);
-  	padding: 25px 25px;
-	  top: 0px;
-	  z-index: 1000;
-	  width: 100%;
-
-}
-
-#menu-image img {
-	width: initial;
-	margin: 0px auto;
-}
-
-#menu-image:active img {
-	transition: 0.2s;
-	height: 48px;
-}
-
-#menu {
-	width: -webkit-fill-available;
-}
-
-.navbar-nav {
-	padding-top: 15px;
-}
-
-.navbar-nav .nav-item {
-	font-size: 1.1rem;
-	letter-spacing: 1pt;
-	border-left: 3px solid black;
-	transition: 0.3s;
-}
-
-.navbar-nav .nav-link:hover, .navbar-nav .nav-item:hover{
-	font-weight: 700;
-	color: initial;
-}
-
-.navbar-nav .nav-link {
-	color:  black !important;
-	padding: 10px 0px 10px 20px;
-}
-
 
 /*BUTTONS*/
 
 .button {
-	display: inline-block;
 	text-decoration: none;
-	padding: 7px 20px;
-	border-left: 3px solid var(--accentColor);
+	font-weight: var(--boldWeight);
 	color: var(--accentColor);
-	transition: 0.1s ease-in;
+	display: inline-block;
+	padding: 5px 30px;
+	border-left: 3px dashed var(--accentColor);
+	transition: 5s ease-in, border-left-width 0.1s ease-in,font-weight 0.1s ease-in;
 }
 
 .button:hover {
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: calc(var(--boldWeight) + 400);
 	border-left: 6px solid var(--accentColor);
 	color: var(--accentColor);
 }
@@ -116,28 +57,17 @@ h1,h2,h3, h4, a {
 	margin: 15px 0px;
 }
 
-.about {
-	cursor: pointer;
-	text-align: right;
-	padding: 5px 15px;
-	color: var(--grey);
-	border-right: 3px solid black;
-	transition: 0.1s ease-in;
-}
-
-.about:hover {
-	text-decoration: none;
-	font-weight: var(--boldWeight);
-	border-right: 6px solid black;
-	color: var(--grey);
-}
-
-
 
 /** TEXT */
 
+h1,h2,h3, h4, a {
+	letter-spacing: 0.1rem;
+	word-spacing: 0.1rem;
+	text-decoration: none;
+}
+
 h1 {
-	font-weight: 450;
+	font-weight: var(--boldWeight);
 	text-align: center;
 	color: black;
 	padding-bottom: 15px;
@@ -145,7 +75,7 @@ h1 {
 
 h2 {
 	font-size: 1.45em;
-	font-weight: var(--boldWeight)-300;
+	font-weight: var(--boldWeight)-400;
 	margin-bottom: .7em;
 	color: var(--priColor);
 	text-transform: uppercase;
@@ -157,14 +87,16 @@ h3 {
 
 p {
 	color: var(--grey);
-	font-weight: 350;
-	margin: 10px 0px 25px;
+	margin-bottom: 25px;
+	padding-top: 5px;
+	padding-bottom: 10x;
 }
 
 
 .introTitle, .introSub {
 	text-align: left;
 	padding-bottom: 5px;
+  mix-blend-mode: multiply;
 }
 
 .introSub {
@@ -185,7 +117,7 @@ p {
 
 .tools {
 	display: inline-block;
-	font-weight: 500;
+	font-weight:  var(--boldWeight);
 	padding-bottom: 5px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -194,7 +126,7 @@ p {
 }
 
 .tools-list {
-	font-weight: 300;
+	font-weight:  var(--boldWeight)-400;
 	font-size: 0.9em;
 }
 
@@ -237,7 +169,7 @@ ul {
 }
 
 .caption {
-	font-size: .7em;
+	font-size: .75em;
 	margin-bottom: 0px;
 }
 
@@ -314,13 +246,13 @@ img {
 .close {
 	padding-top: 10px !important;
 	font-size: 2rem;
-	font-weight: 300;
+	font-weight:  var(--boldWeight)-400;
 	color: white;
 	opacity: 1;
 }
 
 .close:hover {
-	font-weight: 600;
+	font-weight:  var(--boldWeight);
 	color: white;
 	opacity: 1;
 }
@@ -337,7 +269,7 @@ img {
 	padding-top: 100px; 
 }
 
-#description .row{
+#description .row {
 	justify-content: flex-start;
 	position: relative;
 	top:  -75px;
@@ -349,7 +281,6 @@ img {
 }
 
 #banner {
-	background-color: var(--bgColor);
 	padding: 100px 50px;
 	text-align: center;
 }
@@ -408,7 +339,7 @@ footer a:hover {
 /*CAROUSEL*/
 .carousel {
 	padding-bottom: 50px;
-	overflow: hidden;
+	overflow-x: clip;
 }
 
 .carousel-inner {
