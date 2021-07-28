@@ -196,7 +196,7 @@ var projectList = [
 				link: "../images/period purse/Period-Purse-Bin.jpg",
 				caption: 'Donation Bin 3D Mockup'
 			}]
-	},
+	}/*,
 	{
 		name: "bespoke",
 		bgColorHex: '#4c7fc1',
@@ -211,5 +211,5 @@ var projectList = [
 		accentColorHex: '#f15a24',
 		image: '../images/breeze/Breeze-App-Multiple.png'
 	}
-
+*/
 ];
