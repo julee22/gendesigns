@@ -41,7 +41,7 @@ body {
 	color: var(--accentColor);
 	display: inline-block;
 	padding: 5px 30px;
-	border-left: 3px dashed var(--accentColor);
+	border-left: 3px solid var(--accentColor);
 	transition: 5s ease-in, border-left-width 0.1s ease-in,font-weight 0.1s ease-in;
 }
 

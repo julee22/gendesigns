@@ -15,11 +15,12 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	padding: 100px 0px 15px;
+	padding-top: 100px;
 }
 
 /* Colored Bar*/
 #background-bar {
+	position: fixed;	
 	background-color: white;
 	height: 60vh;
 	transition: .7s;
@@ -27,7 +28,6 @@ header {
 }
 
 header, #background-bar {
-	position: fixed;	
 	width: 100%;
 	top: 0;
 }
@@ -149,6 +149,6 @@ header, #background-bar {
 	font-size: 1.5em;
 	color: black;
 	padding: 10px 35px;
-	border-left: 4px dashed var(--priColor);
+	border-left: 4px solid var(--priColor);
 	transition: 0.3s;
 }
