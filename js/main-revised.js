@@ -49,7 +49,7 @@ $(document).ready(function()
 	for (var i = 0; i < listOfTitle.length; i++) {
 		mainTitle = listOfTitle[i].firstElementChild;
 		changeNavColor(mainTitle.id);
-		$(mainTitle).css("border-left","4px dashed " + borderColor);
+		$(mainTitle).css("border-left","4px solid " + borderColor);
 		console.log(mainTitle.id);
 	}
 
@@ -63,7 +63,7 @@ $(document).ready(function()
   		}, function(){
 			mainTitleHov = this.firstElementChild;
   			changeNavColor(mainTitleHov.id);
-  			$(mainTitleHov).css("border-left","4px dashed " + borderColor);
+  			$(mainTitleHov).css("border-left","4px solid " + borderColor);
   			$(mainTitleHov).css("font-weight","initial");
 		}
 	);
@@ -81,15 +81,18 @@ $(document).ready(function()
 	headerHeight = headerOffset.bottom-25;
 
 	window.addEventListener('resize', (event) => {
-		//Get height of header
-		const headerOffset = $("header")[0].getBoundingClientRect();
-		headerHeight = headerOffset.bottom-25;
-		console.log("header height is "+  headerHeight);
-		$("#projectList").css("margin-top",headerHeight);
+		if (window.innerWidth >=768) {
+			//Get height of header
+			const headerOffset = $("header")[0].getBoundingClientRect();
+			headerHeight = headerOffset.bottom-25;
+			console.log("header height is "+  headerHeight);
+			$("#projectList").css("margin-top",headerHeight);
+		}
 	}, true);
 
-	$("#projectList").css("margin-top",headerHeight);
-
+	if (window.innerWidth >=768) {
+		$("#projectList").css("margin-top",headerHeight);
+	}
 
 	// Event changing the bar color
 	$(document).scroll(function() {
