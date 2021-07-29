@@ -168,17 +168,17 @@ var projectList = [
 			},
 			{
 				name: "img07",
-				link: "../images/period purse/Period-Purse-Cards.JPG",
+				link: "../images/period purse/Period-Purse-Cards.jpg",
 				caption: 'Information Cards with Handwritten Messages. Dimensions: 3.5"x2.5" '
 			},
 			{
 				name: "img08",
-				link: "../images/period purse/Sticker.JPG",
+				link: "../images/period purse/Sticker.jpg",
 				caption: 'Circular Promotional Stickers'
 			},
 			{
 				name: "img09",
-				link: "../images/period purse/Period-Purse-Money-Box.JPG",
+				link: "../images/period purse/Period-Purse-Money-Box.jpg",
 				caption: 'Donation Box 3D Mockup'
 			},
 			{
