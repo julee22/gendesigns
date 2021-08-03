@@ -22,7 +22,11 @@
 	}
 
 	.row {
-		padding: 30px 0px 50px;
+		padding-top: 40px;
+	}
+
+	.headingTitle {
+		padding-bottom: 15px;
 	}
 
 	#introduction {
@@ -34,22 +38,21 @@
 		top:  0px;
 	}
 
-	.divider {
-		width: 200px;
-	}
-
 	.center-section {
 		max-width: 90%;
 	}
 
+	h2 {
+		font-size: 2.25em;
+	}
 
-	p, .button {
-		font-size: 1.1em;
+	p, .button, li {
+		font-size: 1.1rem;
 		margin-top: 0px;
 	}
 
 	.introTitle {
-		font-size: 2.7em;
+		font-size: 2.75em;
 	}
 
 	.introDesc {
@@ -146,6 +149,6 @@
 
 
 	footer {
-		padding: 50px 12% 20px;
+		padding: 50px 12% 30px;
 	}
 }

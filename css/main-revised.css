@@ -1,14 +1,6 @@
-:root {
-  --bgColor: #CBCBCB;
-  --priColor: black;
-  --accentColor: red;
-  --grey: #606060;
-  --boldWeight: 700;
-}
-
 body {
 	box-sizing: border-box;
-	font-family: 'Bahnschrift', 'Inter','Roboto',  sans-serif;
+	font-family: 'Barlow', 'Bahnschrift', 'Inter','Roboto',  sans-serif;
 }
 
 header {
@@ -67,17 +59,15 @@ header, #background-bar {
 }
 
 .title {
-	font-weight: bold;
-	font-size: 2rem;
+	font-weight: var(--boldWeight);
+	font-size: 2.5em;
 }
 
 
 .subtitle {
-	margin-bottom: 0px;
-	font-size: 0.9rem;
 	text-transform: uppercase;
 	color: var(--grey);
-	font-weight: 350;
+	font-size: .9em;
 }
 
 
@@ -88,17 +78,8 @@ header, #background-bar {
 }
 
 
-.main-footer {
+footer .caption {
 	text-align: center;
-	max-width: 80%;
-	margin: 0px auto;
-}
-
-.main-footer img {
-	margin-bottom: 10px;
-}
-
-.main-footer p {
 	font-size: 0.8rem;
 	color: var(--grey);
 }
@@ -125,7 +106,7 @@ header, #background-bar {
 	margin-top: 20%;
 }
 .project:nth-last-child(1) {
-	padding-bottom: 50px;
+	padding-bottom: 0px;
 }*/
 
 .main-image-box {
@@ -145,10 +126,12 @@ header, #background-bar {
 
 
 .main-title a {
+	display: inline-block;
 	text-decoration: none;
 	font-size: 1.5em;
+	font-weight: calc(var(--boldWeight) - 100);
 	color: black;
-	padding: 10px 35px;
+	padding: 2px 30px;
 	border-left: 4px solid var(--priColor);
 	transition: 0.3s;
 }

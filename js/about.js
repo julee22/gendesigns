@@ -45,28 +45,17 @@ $(document).ready(function()
 		console.log(i + " is less than " + lengthProj);
 		tempProj = projectList[i];
 		$('.bg-color').css("background-color",tempProj.bgColorHex);
-		$('.button').css("color",tempProj.accentColorHex);
 		$('.button').css("border-left-color",tempProj.accentColorHex);
-		$('.navbar').css("background-color",tempProj.bgColorHex);
+
+		//Checks if mobile
+		if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			$('.navbar').css("background-color",tempProj.bgColorHex);
+		}
 		console.log("changing background to " + tempProj.name);
 		i++;
 	}
 	
 	setInterval(() => { changeBgAnim() }, 5000);
-
-
-	// Dynamically change color of nav items
-	$(".nav-item").hover(
-		function(){
-			// Give changeNavColor function id of hovered nav-item element
-			changeNavColor(this.id);
-
-			// Change css of hovered nav-item element
-  			$(this).css("border-left","6px solid "+borderColor);
-  		}, function(){
-  			$(this).removeAttr("style");
-		}
-  	);
 
 });
 

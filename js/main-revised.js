@@ -41,11 +41,15 @@ function changeBarColor(projectNum) {
 //JQUERY
 $(document).ready(function()
 {
+
+	// If mobile
+	const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 	const listOfTitle = document.getElementsByClassName("main-title");
 	var mainTitle;
 	var mainTitleHov;
 
-	// Change color of navigation
+	// Change color of all titles
 	for (var i = 0; i < listOfTitle.length; i++) {
 		mainTitle = listOfTitle[i].firstElementChild;
 		changeNavColor(mainTitle.id);
@@ -58,13 +62,13 @@ $(document).ready(function()
 			mainTitleHov = this.firstElementChild;
   			changeNavColor(mainTitleHov.id);
   			$(mainTitleHov).css("border-left","8px solid " + borderColor);
-  			$(mainTitleHov).css("font-weight","700");
+  			$(mainTitleHov).css("font-weight","600");
   			//$(":header").addClass("textShad");
   		}, function(){
 			mainTitleHov = this.firstElementChild;
   			changeNavColor(mainTitleHov.id);
   			$(mainTitleHov).css("border-left","4px solid " + borderColor);
-  			$(mainTitleHov).css("font-weight","initial");
+  			$(mainTitleHov).css("font-weight","500");
 		}
 	);
 
@@ -73,12 +77,23 @@ $(document).ready(function()
 	changeBarColor(0);
 
 	var activeProj = $("#projectList").children(".project");
-	$(activeProj[0]).css("opacity","1");
+
+	if (isMobile) {
+		for (var i = 0; i < projectList.length; i++) {
+			$(activeProj[i]).css("opacity","1");
+		}
+	} else {
+		$(activeProj[0]).css("opacity","1");
+	}
 
 	// Changing parameters depending on header
 	var headerHeight;
 	const headerOffset = $("header")[0].getBoundingClientRect();
 	headerHeight = headerOffset.bottom-25;
+
+	if (window.innerWidth >=768) {
+		$("#projectList").css("margin-top",headerHeight);
+	} 
 
 	window.addEventListener('resize', (event) => {
 		if (window.innerWidth >=768) {
@@ -87,12 +102,11 @@ $(document).ready(function()
 			headerHeight = headerOffset.bottom-25;
 			console.log("header height is "+  headerHeight);
 			$("#projectList").css("margin-top",headerHeight);
+		}	else {
+			$("#projectList").css("margin-top","0");
 		}
 	}, true);
 
-	if (window.innerWidth >=768) {
-		$("#projectList").css("margin-top",headerHeight);
-	}
 
 	// Event changing the bar color
 	$(document).scroll(function() {
@@ -108,15 +122,18 @@ $(document).ready(function()
 			// console.log("header height is "+  headerHeight);
 
 			if (top < headerHeight /2) {
-				$(activeProj[i]).removeAttr("style");
-				console.log("hide "+  i);
+				if (!isMobile && window.innerWidth >=768) {
+					$(activeProj[i]).removeAttr("style");
+					console.log("hide "+  i);
+				}
 			} else if ((top <= window.innerHeight && top > -50) || height > 100) {
 				changeBarColor(i);
-				$(activeProj[i]).css("opacity","1");
-				console.log("show "+  i);
+				if (!isMobile) {
+					$(activeProj[i]).css("opacity","1");
+					console.log("show "+  i);
+				}
 				break;
 			}
-
 		}
 	});
 

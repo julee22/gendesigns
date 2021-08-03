@@ -140,7 +140,9 @@ $(document).ready(function()
 	const randLinkImg = document.getElementById("random-link-img");
 	
 	randImg.src = randProj.image;
-	randLink.href = randProj.name;
+	randLink.href = randProj.name + ".html";
+	randLinkImg.href = randLink.href;
+
 
 	// Deals with titles that have spaces
 	var hasSpace = randProj.name.indexOf('-');
@@ -150,12 +152,10 @@ $(document).ready(function()
 		const firstString = randProj.name.substring(0,hasSpace);
 		const secondString = randProj.name.substring(hasSpace+1,randProj.name.length);
 		randLink.innerHTML = firstString + " " + secondString;
-		randLinkImg.href = randLink.href;
 	} else {
 		randLink.innerHTML = randProj.name;
-		randLinkImg.href = randLink.href;
 	}
-
+	
 	//mobile swipe
 	//$('.carousel').bcSwipe({ threshold: 50 });
 

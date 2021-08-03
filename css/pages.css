@@ -1,7 +1,7 @@
 
 body {
 	box-sizing: border-box;
-	font-family: 'Bahnschrift', 'Inter','Roboto',  sans-serif;
+	font-family: 'Barlow', 'Bahnschrift', 'Inter','Roboto',  sans-serif;
 }
 
 
@@ -21,14 +21,16 @@ body {
 }
 
 .divider {
-	max-width: 200px;
-	margin: 0px auto;
+	width: 200px;
+	margin: 0px auto 30px;
 	height: 5px;
 	background-color: var(--bgColor);
 }
 
 .highlight-section {
 	align-items: flex-start;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 
@@ -37,19 +39,21 @@ body {
 
 .button {
 	text-decoration: none;
-	font-weight: var(--boldWeight);
-	color: var(--accentColor);
+	letter-spacing: 0.1rem;
+	word-spacing: 0.1rem;
+	font-weight: calc(var(--boldWeight) - 100);
+	color: inherit;
 	display: inline-block;
 	padding: 5px 30px;
 	border-left: 3px solid var(--accentColor);
-	transition: 5s ease-in, border-left-width 0.1s ease-in,font-weight 0.1s ease-in;
+	transition: 0.1s ease-in;
 }
 
 .button:hover {
 	text-decoration: none;
-	font-weight: calc(var(--boldWeight) + 400);
+	font-weight: var(--boldWeight);
 	border-left: 6px solid var(--accentColor);
-	color: var(--accentColor);
+	color: initial;
 }
 
 .button-center {
@@ -60,49 +64,54 @@ body {
 
 /** TEXT */
 
-h1,h2,h3, h4, a {
+h1,h2,h3, h4 {
 	letter-spacing: 0.1rem;
 	word-spacing: 0.1rem;
-	text-decoration: none;
+	text-transform: uppercase;
 }
 
-h1 {
+h2 {
 	font-weight: var(--boldWeight);
 	text-align: center;
 	color: black;
 	padding-bottom: 15px;
-}
-
-h2 {
-	font-size: 1.45em;
-	font-weight: var(--boldWeight)-400;
-	margin-bottom: .7em;
-	color: var(--priColor);
-	text-transform: uppercase;
+	letter-spacing: 0.3rem;
 }
 
 h3 {
+	font-size: 1.5em;
+	margin-bottom: .5em;
+	color: var(--priColor);
+}
+
+h4 {
+	text-transform: initial;
 	font-size: 1.2em;
 }
 
 p {
-	color: var(--grey);
 	margin-bottom: 25px;
-	padding-top: 5px;
-	padding-bottom: 10x;
+}
+
+strong {
+	font-weight: var(--boldWeight);
 }
 
 
 .introTitle, .introSub {
-	text-align: left;
 	padding-bottom: 5px;
   mix-blend-mode: multiply;
+}
+
+.introTitle {
+	font-weight: var(--boldWeight);
+	text-transform: capitalize;
 }
 
 .introSub {
 	color: var(--grey);
 	text-transform: uppercase;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 
 .headingTitle {
@@ -110,19 +119,16 @@ p {
 }
 
 
-.highlight {
+.highlight, .label {
 	font-weight: var(--boldWeight);
 	color: var(--accentColor);
 }
 
-.tools {
-	display: inline-block;
-	font-weight:  var(--boldWeight);
+.label {
+	display: block;
 	padding-bottom: 5px;
 	margin-top: 10px;
-	margin-bottom: 10px;
-	border-bottom: 3px solid var(--bgColor);
-	color: var(--priColor);
+	margin-bottom: 5px;
 }
 
 .tools-list {
@@ -133,20 +139,16 @@ p {
 .goalList {
 	font-weight:  var(--boldWeight);
 	margin: 25px 0px 50px;
-	font-size: 1.2em;
-	padding-left: 1em;
-	color: var(--priColor);	
+	padding-left: 1em;	/*border-left: 5px solid var(--bgColor);*/
+	list-style: square;
+	
 }
 
 .goalList li {
+	padding-left: 0.75em;
 	margin-bottom: 25px;
 }
 
-.brand-subheading {
-	font-weight: var(--boldWeight);
-	margin-bottom: 10px;
-	color: var(--accentColor);
-}
 
 ul {
 	list-style: none;
@@ -157,12 +159,10 @@ ul {
 	font-weight: var(--boldWeight);
 }
 
-.brand-subheading, .moodWords {
-	font-size: 1.2em;
-}
 
 .colorSwatch {
 	font-weight: var(--boldWeight);
+	text-transform: lowercase;
 	margin-bottom: 10px;
 	padding-left: 10px;
 	border-left: 25px solid white;
