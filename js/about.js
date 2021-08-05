@@ -33,6 +33,8 @@ function changeNavColor(projectId) {
 
 $(document).ready(function()
 {
+	var isMobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 	// Change Background
 	var tempProj;
 	var i =  1;
@@ -48,13 +50,17 @@ $(document).ready(function()
 		$('.button').css("border-left-color",tempProj.accentColorHex);
 
 		//Checks if mobile
-		if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		if(isMobile || window.innerWidth <=764) {
 			$('.navbar').css("background-color",tempProj.bgColorHex);
 		}
 		console.log("changing background to " + tempProj.name);
 		i++;
 	}
-	
+	window.addEventListener('resize', (event) => {
+		if (!isMobile || window.innerWidth >= 764){
+			$('.navbar').css("background-color",'transparent');
+		}
+	}, true);
 	setInterval(() => { changeBgAnim() }, 5000);
 
 });

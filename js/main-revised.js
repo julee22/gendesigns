@@ -53,24 +53,24 @@ $(document).ready(function()
 	for (var i = 0; i < listOfTitle.length; i++) {
 		mainTitle = listOfTitle[i].firstElementChild;
 		changeNavColor(mainTitle.id);
-		$(mainTitle).css("border-left","4px solid " + borderColor);
+		$(mainTitle).css("border-left-color",borderColor);
 		console.log(mainTitle.id);
 	}
 
-	$(".main-title").hover(
-		function(){
-			mainTitleHov = this.firstElementChild;
-  			changeNavColor(mainTitleHov.id);
-  			$(mainTitleHov).css("border-left","8px solid " + borderColor);
-  			$(mainTitleHov).css("font-weight","600");
-  			//$(":header").addClass("textShad");
-  		}, function(){
-			mainTitleHov = this.firstElementChild;
-  			changeNavColor(mainTitleHov.id);
-  			$(mainTitleHov).css("border-left","4px solid " + borderColor);
-  			$(mainTitleHov).css("font-weight","500");
-		}
-	);
+	// $(".main-title").hover(
+	// 	function(){
+	// 		mainTitleHov = this.firstElementChild;
+ //  			changeNavColor(mainTitleHov.id);
+ //  			$(mainTitleHov).css("border-left","8px solid " + borderColor);
+ //  			$(mainTitleHov).css("font-weight","600");
+ //  			//$(":header").addClass("textShad");
+ //  		}, function(){
+	// 		mainTitleHov = this.firstElementChild;
+ //  			changeNavColor(mainTitleHov.id);
+ //  			$(mainTitleHov).css("border-left","4px solid " + borderColor);
+ //  			$(mainTitleHov).css("font-weight","500");
+	// 	}
+	// );
 
 
 	//Set initial bar color

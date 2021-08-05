@@ -5,13 +5,21 @@
 	#cover {
 		position: absolute;
 		right: 0px;
-		top: 00px;
+		top: 0px;
 		overflow: hidden;
 		width: 50%;
 		min-height: 90vh;
 		background-size: 120%;
 		background-repeat: no-repeat;
 		background-position: left center;
+	}
+
+	#about #cover { 
+		top: 100px;
+		right: 5%;
+		width: 40%;
+		min-height: 90vh;
+		background-size: contain;
 	}
 
 	.container {
@@ -33,7 +41,7 @@
 		padding-top: 100px; 
 	}
 
-	#description .row {
+	#description .row, #about .row:first-child  {
 		position: static;
 		top:  0px;
 	}
@@ -53,6 +61,10 @@
 
 	.introTitle {
 		font-size: 2.75em;
+	}
+
+	.introSub {
+		font-size: 1.2rem;
 	}
 
 	.introDesc {
@@ -149,6 +161,6 @@
 
 
 	footer {
-		padding: 50px 12% 30px;
+		padding: 30px 12% 30px;
 	}
 }

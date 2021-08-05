@@ -61,6 +61,9 @@ body {
 	margin: 15px 0px;
 }
 
+#about .button {
+	transition:  border-color 5s ease-in;
+}
 
 /** TEXT */
 
@@ -105,13 +108,13 @@ strong {
 
 .introTitle {
 	font-weight: var(--boldWeight);
-	text-transform: capitalize;
+	text-transform: initial;
 }
 
 .introSub {
 	color: var(--grey);
 	text-transform: uppercase;
-	font-size: 1.2em;
+	font-size: 0.9rem;
 }
 
 .headingTitle {
@@ -180,11 +183,10 @@ img {
 	max-width: 100%;
 }
 
-
-	.bounce-anim {
-		position: relative;
-		animation: bounce 2s ease infinite;
-	}
+.bounce-anim {
+	position: relative;
+	animation: bounce 2s ease infinite;
+}
 
 	@keyframes bounce {
     0%   { transform: translateY(0); }
@@ -205,14 +207,17 @@ img {
 	min-height: 40vh;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
+}
 
+#about #cover { 
+	min-height: 60vh;
 }
 
 .gallery > div {
 	padding-bottom: 15px;
 	padding-top: 15px;
 }
-
 
 
 
@@ -266,14 +271,15 @@ img {
 
 /*SECTIONS*/
 #introduction {
-	padding-top: 100px; 
+	padding-top: 80px; 
 }
 
-#description .row {
+#description .row, #about .row:first-child  {
 	justify-content: flex-start;
 	position: relative;
 	top:  -75px;
 }
+
 
 .center-section {
 	margin: 15px auto 25px;
@@ -311,7 +317,7 @@ img {
 
 footer {
 	margin-top: 25px;
-	padding: 50px 25px 15px;
+	padding: 50px 30px 15px;
 	background-color: var(--bgColor);
 }
 

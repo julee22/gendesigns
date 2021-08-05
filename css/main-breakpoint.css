@@ -15,7 +15,8 @@
 	}
 
 	.headerText {
-		text-align: left;		
+		text-align: left;
+		padding-top: 15px;
 		margin: 25px 50px;
 		max-width: 100%;
 		order: 2;
@@ -36,13 +37,13 @@
 	}
 
 
-	.main-image {
+	.main-image-box {
 		height: 50vh;
 	}
 
 	.main-title a {
 		font-size: 2rem;
-		padding: 10px 0px 10px 40px;
+		padding: 5px 0px 5px 40px;
 	}
 
 	.main-footer {
@@ -85,7 +86,11 @@
 		text-align: left;
 	}
 
-	.main-image {
+	.main-title a {
+		display: block;
+	}
+
+	.main-image-box {
 		height: 500px;
 	}
 }

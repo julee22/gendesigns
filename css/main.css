@@ -1,0 +1,235 @@
+:root {
+  --bgColor: grey;
+  --priColor: black;
+  --accentColor: red;
+  --grey: #606060;
+  --boldWeight: 700;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Bahnschrift', 'Inter','Roboto',  sans-serif;
+	overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+}
+
+
+header {
+	display: flex;
+	position: sticky;
+	top: 0;
+	min-height: 100px;
+	background-color: white;
+	padding: 25px 25px 15px;
+	width: 100%;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+
+.logo {
+	height: 50px;
+}
+
+
+h1,h2,h3, h4, a {
+	letter-spacing: 0.1rem;
+	word-spacing: 0.1rem;
+	text-decoration: none;
+}
+
+
+.headerText {
+	max-width: 90%;
+	text-align: center;
+	margin: 15px auto 25px;
+}
+
+
+.subtitle {
+	margin-bottom: 0px;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	color: var(--bgColor);
+	font-weight: 350;
+}
+
+
+.about {
+	cursor: pointer;
+	text-align: right;
+	padding: 5px 15px;
+	color: var(--grey);
+	border-right: 3px solid black;
+	transition: 0.1s ease-in;
+}
+
+.about:hover {
+	text-decoration: none;
+	font-weight: var(--boldWeight);
+	border-right: 6px solid black;
+	color: var(--grey);
+}
+
+.main-footer {
+	text-align: center;
+	max-width: 80%;
+	margin: 0px auto;
+}
+
+.main-footer img {
+	margin-bottom: 10px;
+}
+
+.main-footer p {
+	font-size: 0.8rem;
+	color: var(--grey);
+}
+
+/** Project Section**/
+
+#projectList {
+}
+
+.project {
+	padding-bottom: 50px;
+	min-height: 400px;
+	scroll-snap-align: center;
+}
+
+.project:nth-last-child(1) {
+	padding-bottom: 50px;
+}
+
+.main-image-box {
+	display: flex;
+	justify-content: center;
+}
+
+.main-image {
+	max-height: 300px;
+}
+
+.main-title {
+	cursor: pointer;
+	text-align: center;
+	font-size: 1.25em;
+	letter-spacing: 1pt;
+	margin: 10px;
+	transition: 0.3s;
+}
+
+
+.main-title a {
+	text-decoration: none;
+	color: black;
+	padding: 7px 0px 7px 25px;
+	border-left: 3px solid black;
+}
+
+
+/* Colored Bar*/
+#background-bar {
+	background-color: white;
+	width: 100%;
+	height: 175px;
+	position: fixed;
+	top: 40%;
+	transition: .7s;
+}
+
+	.bounce-anim {
+		position: relative;
+		animation: bounce 2s ease infinite;
+	}
+
+	@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+	}
+
+
+
+/* BREAKPOINTS */
+@media screen and (min-width: 768px) {
+	header	{
+		position: fixed;
+		padding-bottom: 0px;
+	}
+
+	.logo {
+		height: 50px;
+	}
+
+	.headerText {
+		text-align: left;
+		margin-top: 75px;
+		margin-bottom: 25px;
+		padding: 15px 10px;
+		max-width: 100%;
+
+	}
+
+	.title {
+		font-size: 2.7rem;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+	}
+
+
+	#projectList {
+		margin: 0px auto;
+	}
+	
+	.project:nth-last-child(1) {
+		padding-bottom: 30px;
+	}
+
+	.main-image {
+		max-height: 400px;
+	}
+
+
+	.main-title {
+		text-align: left;
+		font-size: 1.5em;
+	}
+
+
+	#background-bar {
+		top: 25vh;
+		margin-top: 175px;
+	}
+
+	.main-footer {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	header {
+		flex-wrap: nowrap;
+		padding: 30px 30px 25px;
+	}
+
+	.logo {
+		height: 50px;
+	}
+
+	.project {
+		padding-bottom: 100px;
+	}
+
+	.main-image {
+		max-height: 500px;
+	}
+
+	#background-bar {
+		top: 150px;
+		margin-top: 225px;
+	}
+}
