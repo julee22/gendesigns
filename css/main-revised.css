@@ -6,8 +6,7 @@ body {
 header {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	padding-top: 100px;
+	padding-top: 70px;
 }
 
 /* Colored Bar*/
@@ -45,8 +44,7 @@ header, #background-bar {
 
 
 .headerText {	
-	padding: 15px 0px 30px;
-	text-align: center;
+	padding: 30px 10px;
 }
 
 .headerText .col-12{
@@ -60,14 +58,14 @@ header, #background-bar {
 
 .title {
 	font-weight: var(--boldWeight);
-	font-size: 2.5em;
+	font-size: 2.4rem;
 }
 
 
 .subtitle {
 	text-transform: uppercase;
 	color: var(--grey);
-	font-size: .9em;
+	font-size: 0.9rem;
 }
 
 
@@ -77,6 +75,9 @@ header, #background-bar {
 	text-decoration: none;
 }
 
+footer {
+	padding: 0px 30px 20px;
+}
 
 footer .caption {
 	text-align: center;
@@ -88,7 +89,7 @@ footer .caption {
 
 #projectList {
 	max-width: 100%;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .project {
@@ -112,10 +113,12 @@ footer .caption {
 .main-image-box {
 	display: flex;
 	justify-content: center;
+	height: 40vh;
 }
 
-.main-image {
-	height: 45vh;
+.main-image-box:hover .main-image {
+	transition: 0.2s ease-in;
+	transform: scale(1.02);
 }
 
 .main-title {
@@ -123,7 +126,6 @@ footer .caption {
 	text-align: center;
 	letter-spacing: 1pt;
 }
-
 
 .main-title a {
 	display: inline-block;
@@ -134,4 +136,9 @@ footer .caption {
 	padding: 2px 30px;
 	border-left: 4px solid var(--priColor);
 	transition: 0.3s;
+}
+
+.main-title a:hover {
+	font-weight: var(--boldWeight);
+	border-left-width: 6px;
 }
