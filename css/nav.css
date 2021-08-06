@@ -1,7 +1,7 @@
 /*NAVIGATION*/
 .navbar {
   	background-color: var(--bgColor);
-  	padding: 25px 25px;
+  	padding: 15px;
 	  top: 0px;
 	  z-index: 1000;
 	  width: 100%;
@@ -14,18 +14,18 @@
 }
 
 #menu-image:active img {
-	transition: 0.2s;
-	height: 48px;
+	transition: 0.1s;
+	transform: scale(.9);
 }
 
 #menu {
 	width: -webkit-fill-available;
 }
 
+/*
 .navbar-nav {
 	padding-top: 15px;
 }
-/*
 
 .navbar-nav .nav-item {
 	font-size: 1.1rem;
@@ -50,7 +50,7 @@
 	margin-left: auto!important;
 }
 
-.about {
+.say-hi {
 	font-weight: calc(var(--boldWeight) - 100);
 	letter-spacing: 0.1rem;
 	word-spacing: 0.1rem;
@@ -62,19 +62,21 @@
 	transition: 0.1s ease-in;
 }
 
-.about:hover {
+.say-hi:hover {
 	font-weight: var(--boldWeight);
 	border-right: 6px solid black;
 	text-decoration: none;
 	color: initial;
 }
 
-
-
-@media screen and (min-width: 992px) {	
-	.navbar, #menu {
+@media screen and (min-width: 768px) {	
+	.navbar {
 		background-color: initial;
+		padding: 25px 25px;
 	}
+}
+
+@media screen and (min-width: 992px) {
 
 	.navbar-nav .nav-link{
 		width: fit-content;
