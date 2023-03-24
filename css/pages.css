@@ -246,7 +246,7 @@ img {
 #cover {
 	position: relative;
 	width: 100%;
-	min-height: 40vh;
+	min-height: 20vh;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
