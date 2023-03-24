@@ -68,15 +68,6 @@ $(document).ready(function()
 	//Set initial bar color
 	changeBarColor(0);
 
-	var activeProj = $("#projectList").children(".project");
-
-	if (isMobile) {
-		for (var i = 0; i < projectList.length; i++) {
-			$(activeProj[i]).css("opacity","1");
-		}
-	} else {
-		$(activeProj[0]).css("opacity","1");
-	}
 
 	// Changing parameters depending on header
 	var headerHeight;
@@ -106,7 +97,6 @@ $(document).ready(function()
 		console.log("clicked");
 
 		console.log(projectList);
-
 		for (var i = 0; i < projectList.length; i++){
 			var activeProject = projectList[i];
 			console.log(activeProject);
