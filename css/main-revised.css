@@ -75,6 +75,10 @@ header, #background-bar {
 	text-decoration: none;
 }
 
+.small-text {
+	font-size: small;
+}
+
 footer {
 	padding: 0px 30px 20px;
 }
@@ -93,7 +97,7 @@ footer .caption {
 }
 
 .project {
-	opacity: 0;
+	/* opacity: 0; */
 	transition: 0.1s ease-in;
 	padding-bottom: 50px;
 	align-content: flex-end;
@@ -141,4 +145,44 @@ footer .caption {
 .main-title a:hover {
 	font-weight: var(--boldWeight);
 	border-left-width: 6px;
+}
+
+.main-title.other-project a::after {
+	content: 'Project';
+	font-size: small;
+	display: block;
+}
+.main-title.work-project a::after {
+	content: 'Work';
+	font-size: small;
+	display: block;
+}
+
+/* Carousel */
+
+.carousel-nav {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+
+}
+
+.carousel-indicators {
+	position: relative;
+	margin: 15px;
+	bottom: 0px;
+}
+
+.carousel-indicators li {
+	background-color: var(--priColor);
+	margin: 0px 5px;
+	width: 15px;
+	height: 4px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.carousel-indicators .active {
+	background-color: var(--priColor);
+	width: 30px;
 }

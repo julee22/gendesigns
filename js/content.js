@@ -196,14 +196,39 @@ var projectList = [
 				link: "../images/period purse/Period-Purse-Bin.jpg",
 				caption: 'Donation Bin 3D Mockup'
 			}]
-	}/*,
+	},
 	{
 		name: "bespoke",
-		bgColorHex: '#4c7fc1',
-		priColorHex: '#184275',
-		accentColorHex: '#FF3333',
-		image: '../images/Genice-Designs-Tilt.png'
-	},
+		bgColorHex: '#d2ceca',
+		priColorHex: '#4c7fc1',
+		accentColorHex: '#184275',
+		image: '../images/bespoke/Feature-Sheet-Mockup.png',
+		imgArray:  [{
+				name: "img01",
+				link: "../images/bespoke/Bespoke-Website.jpg",
+				caption: "Various websites made for the Bespoke Team"
+			},
+			{
+				name: "img02",
+				link: "../images/bespoke/Bespoke-Card.jpg",
+				caption: 'Business cards'
+			},
+			{
+				name: "img03",
+				link: "../images/bespoke/Bespoke-Card.jpg",
+				caption: 'Preliminary Sketches'
+			},
+			{
+				name: "img04",
+				link: "../images/bespoke/Bespoke-Card.jpg",
+				caption: 'Preliminary Sketches'
+			},
+			{
+				name: "img05",
+				link: "../images/bespoke/Bespoke-Card.jpg",
+				caption: 'Preliminary Sketches'
+			}]
+	}/*,
 	{
 		name: "data-vis",
 		bgColorHex: '#CBCBCB',

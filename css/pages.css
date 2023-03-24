@@ -11,13 +11,17 @@ body {
 
 .container {
 	max-width: 95%;
-	padding-bottom: 50px;
+	padding-bottom: 35px;
 }
 
 .row {
 	min-height: initial;
 	padding: 15px 0px 30px;
 	justify-content: center;
+}
+
+.row.headingTitle ~ .row {
+	padding-top: 0px;
 }
 
 .divider {
@@ -43,17 +47,50 @@ body {
 	word-spacing: 0.1rem;
 	font-weight: calc(var(--boldWeight) - 100);
 	color: inherit;
+	background-color: transparent;
 	display: inline-block;
 	padding: 5px 30px;
+	border: none;
 	border-left: 3px solid var(--accentColor);
 	transition: 0.1s ease-in;
+	cursor: pointer;
+}
+
+button.button {
+	/* border-left: none;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid var(--priColor);
+	padding: 5px 15px; */
+	border-right: 3px solid var(--priColor);
+	border-left-color: var(--priColor);
+}
+
+button.button.active {
+	/* border-top-color: var(--priColor);
+	border-bottom-color: transparent; */
+	border-left-width: 6px; 
+	border-right-width: 6px;
+	/* border-right: 3px solid var(--priColor); */
+	font-weight: var(--boldWeight);
 }
 
 .button:hover {
 	text-decoration: none;
 	font-weight: var(--boldWeight);
-	border-left: 6px solid var(--accentColor);
+	border-left-width: 6px;
 	color: initial;
+}
+
+ button.button:hover {
+	border-right-width: 6px;
+}
+
+/*
+button.button.active:hover {
+	border-top-width: 6px;
+} */
+.button.long {
+	width: 100%;
 }
 
 .button-center {
@@ -85,6 +122,11 @@ h3 {
 	font-size: 1.5em;
 	margin-bottom: .5em;
 	color: var(--priColor);
+}
+
+.button.accordion h3 {
+	font-size: 1.2em;
+	margin-bottom: 0em;
 }
 
 h4 {
@@ -436,4 +478,22 @@ footer a:hover {
 
 .carousel-control-prev-icon {
 	background-image: url("../images/carousel-left-icon.png");
+}
+
+
+/* ACCORDION */
+.accordion-content {
+  display: none;
+}
+
+.accordion-content.active:not(.row) {
+	display: block !important;
+}
+
+.accordion-content.active {
+	display: flex !important;
+}
+
+.accordion-content *:first-child {
+	padding-top: 15px;
 }

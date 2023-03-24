@@ -44,8 +44,8 @@
 <div class="container" id="description">
 	<div class="row">
 		<div id="cover" class="flex-fill bounce-anim" ></div>
-		<div class="introDesc col-12 col-lg-6">
-			<p>Breeze is a speculative app and fridge that will help users save their food, time and money. The fridge and app hosts a shared grocery list and an automated inventory list, ensuring that users are well informed about their groceries. Additionally, Breeze provides recipe suggestions using ingredients only found in the fridge. </p>
+		<div class="introDesc col-12 col-md-6">
+			<p>Breeze is a speculative app and fridge designed to help users reduce food waste. The fridge's interior is redesigned for better access and syncs with the app to ensure that users are well informed about their groceries.</p>
 			<p class="label">tools used</p>
 			<p class="tools-list">Photoshop, Illustrator, Maya, Figma</p>
 		</div>
@@ -74,61 +74,83 @@
 		<div class="divider"></div>
 		<div class="col-sm-12 col-12">
 			<h2>research</h2>
+			<p class="text-center">I used secondary research, a diary study and a visualization to guide my design solution. My research concluded that <strong>convenience is extremely important to the decision making process</strong> and <strong>only food that is known is considered.</strong></p>
+			<!-- <div class="button-center">
+				<button class="button accordion" onclick="openAcc('acc-1')">More</button>
+			</div> -->
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
-			<h3>Secondary Research</h3>
+		<div class="col-12 button-center">
+			<button class="button accordion" onclick="openAcc('sec-research')">
+				<h3>Secondary Research</h3>
+			</button>
 		</div>
-		<div class="col-md-6 col-sm-12 col-12">
-			<p>Studies have determined that food waste at the household level was the complex result of routine, preference, social expectation and convenience. Grocery shopping routines greatly contribute to food waste habits. A common hypothesis was the theory of planned behaviour where the intention and ease of doing something does not align.</p>
-		</div>
-		<div class="col-md-6 col-sm-12 col-12">
-			<div class="button-center" >
-				<a class="button" href="../assets/YSDN4004_ChandrG_Research Report Draft.pdf" target="_blank" rel="external">Read the Research</a>
+		<div class="accordion-content col-12" id="sec-research">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 col-12">
+					<p>Studies have determined that food waste at the household level was the complex result of routine, preference, social expectation and convenience. Grocery shopping routines greatly contribute to food waste habits.</p>
+				</div>
+				<div class="col-md-6 col-sm-12 col-12">
+					<div class="button-center" >
+						<a class="button" href="../assets/YSDN4004_ChandrG_Research Report Draft.pdf" target="_blank" rel="external">Read the Research</a>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<h3>Diary Study</h3>
+
+		<div class="col-12 button-center">
+			<button class="button accordion" onclick="openAcc('dairy-study')">
+				<h3>Diary Study</h3>
+			</button>
 		</div>
-		<div class="col-12">
-			<p>A 7-day record and analysis of my food-related decisions. The diary alternates between using the 5 Whys method and a Cognitive Map. The resuts of the study matched the research findings; <strong>convenience is extremely important to the decision making process</strong> and <strong>only what is seen/known is what is considered.</strong></p>
-		</div>
-		<div class="col-sm-12 col-md">
-			<div class="imgBox hover-shadow">
-				<img src="" class="hover-shadow clickImg" id="img01" data-toggle="modal" data-target="#myModal">
+		<div class="accordion-content col-12" id="dairy-study">
+			<div class="row">
+				<div class="col-12">
+					<p>A 7-day record and analysis of my food-related decisions. The diary alternates between using the 5 Whys method and a Cognitive Map.</p>
+				</div>
+				<div class="col-sm-12 col-md">
+					<div class="imgBox hover-shadow">
+						<img src="" class="hover-shadow clickImg" id="img01" data-toggle="modal" data-target="#myModal">
+					</div>
+				</div>
+				<div class="col-sm-12 col-md">
+					<div class="imgBox hover-shadow">
+						<img src="" class="hover-shadow clickImg" id="img02" data-toggle="modal" data-target="#myModal">
+					</div>
+				</div>
+				<div class="col-sm-12 col-md">
+					<div class="imgBox hover-shadow">
+						<img src="" class="hover-shadow clickImg" id="img03" data-toggle="modal" data-target="#myModal">
+					</div>
+				</div>
+				<div class="col-sm-12 col-md">
+					<div class="imgBox hover-shadow">
+						<img src="" class="hover-shadow clickImg" id="img04" data-toggle="modal" data-target="#myModal">
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="col-sm-12 col-md">
-			<div class="imgBox hover-shadow">
-				<img src="" class="hover-shadow clickImg" id="img02" data-toggle="modal" data-target="#myModal">
+
+		<div class="col-12 button-center">
+			<button class="button accordion" onclick="openAcc('expiry-map')">
+				<h3>Expiry Date Map</h3>
+			</button>
+		</div>
+		<div class="accordion-content col-12" id="expiry-map">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 col-12">
+					<p>A visualization of the expiry dates of items in my fridge. Each box represents an item. The expiry dates listed above the items are ordered by depth-items placed farther back are listed first.</p>
+					<img src="../images/breeze/Expiry-Date-Map-Legend.jpg" alt="legend for expiry date map" style="max-width: 300px; margin: 10px 0px 50px;">
+				</div>
+				<div class="col-md-6 col-sm-12 col-12">
+						<img src="" class="clickImg hover-shadow" id="img12" data-toggle="modal" data-target="#myModal">
+				</div>
 			</div>
-		</div>
-		<div class="col-sm-12 col-md">
-			<div class="imgBox hover-shadow">
-				<img src="" class="hover-shadow clickImg" id="img03" data-toggle="modal" data-target="#myModal">
-			</div>
-		</div>
-		<div class="col-sm-12 col-md">
-			<div class="imgBox hover-shadow">
-				<img src="" class="hover-shadow clickImg" id="img04" data-toggle="modal" data-target="#myModal">
-			</div>
-			
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6 col-sm-12 col-12">
-			<h3>Expiry Date Map</h3>
-			<p>This is a visualization of the expiry dates of items in my fridge. Each box represents an item. The expiry dates listed above the items are ordered by depth-items placed farther back are listed first.</p>
-			<img src="../images/breeze/Expiry-Date-Map-Legend.jpg" alt="legend for expiry date map" style="max-width: 300px; margin: 10px 0px 50px;">
-		</div>
-		<div class="col-md-6 col-sm-12 col-12">
-				<img src="" class="clickImg hover-shadow" id="img12" data-toggle="modal" data-target="#myModal">
 		</div>
 	</div>
 </div>
+
 
 <div class="container">
 	<div class="row bg-color">
@@ -138,9 +160,9 @@
 	</div>
 </div>
 
+
 <!--GOALS SECTION-->
 <div class="container" id="goals">
-	
 	<div class="row  headingTitle">
 		<div class="divider"></div>
 		<div class="col-sm-12 col-12">
@@ -148,10 +170,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-lg-6 col-12">
-			<img src="../images/breeze/Fridge+phone.png" width="100%">
-		</div>
-		<div class="col-lg-6 col-12">
+		<div class="col-lg-6 order-lg-2 col-12">
 			<ul class="goalList">
 				<li>Keep users aware of what’s inside their fridge</li>
 				<li>Reduce the likelihood of groceries being “buried”</li>
@@ -164,56 +183,12 @@
 				<a href="../assets/YSDN4004_ChandrG_Design Project Proposal.pdf" class="button" target="_blank" rel="external">Read The Proposal</a>
 			</div>
 		</div>
+		<div class="col-lg-6 order-lg-1 col-12">
+			<img src="../images/breeze/Fridge+phone.png" width="100%">
+		</div>
 	</div>
 </div>
 
-<!--PROCESS SECTION-->
-<div class="container" id="process">
-	
-	<div class="row headingTitle">
-		<div class="divider"></div>
-		<div class="col-sm-12 col-12">
-			<h2>process</h2>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12 col-12 col-md-12">
-			<h3>Sketches</h3>
-		</div>
-		<div class="col-sm-12 col-md">
-			<div class="imgBox hover-shadow">
-				<img src="" class="clickImg" id="img05" data-toggle="modal" data-target="#myModal">
-			</div>
-		</div>
-		<div class="col-sm-12 col-md">
-			<div class="imgBox hover-shadow">
-				<img src="" class="clickImg" id="img06" data-toggle="modal" data-target="#myModal">
-			</div>
-		</div>
-		<div class="col-sm-12 col-md">
-			<div class="imgBox hover-shadow">
-				<img src="" class="clickImg" id="img07" data-toggle="modal" data-target="#myModal">
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12 col-12 col-md-12 col-lg-6">
-			<h3>Personas</h3>
-			<p>When designing the fridge, I considered two different audiences; one for the fridge and one for an informative poster. The primary audience is the end-user of the fridge. This could range from young children to adults. Basic requirements were being able to use a fridge and technological familiarity. The focus of the primary audience was to design a product that could reduce food waste. The secondary audience is geared towards those interested in reducing food-waste. The deliverable must entice the secondary audience to purchase the product.</p>
-		</div>
-		<div class="col-sm-12 col-12 col-md-12 col-lg-6">
-			<img src="../images/breeze/User-Persona.jpg" width="100%">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12 col-12 col-md-12">
-			<h3>Information Architecture</h3>
-		</div>
-		<div class="col-sm-12 col-12 col-md-12">
-				<img src="" class="hover-shadow clickImg" id="img09" data-toggle="modal" data-target="#myModal">
-		</div>
-	</div>
-</div>
 
 <!--SOLUTION SECTION-->
 <div class="container" id="solution">
@@ -228,7 +203,8 @@
 		</div>
 	</div>
 </div>
-	
+
+
 <div class="carousel slide" data-ride="" id="solutions">
 	 <!-- The slideshow -->
 	 <div class="carousel-inner">
@@ -293,7 +269,7 @@
 			     	<div class="carousel-text col-md-8 col-sm-12 col-12">
 		    			<h3>Inform users of the possible meals in their fridge</h3>
 		    			<p>Meal recommendations based off of what’s solely inside the fridge. Sortable by cooking time, number of ingredients used, and their expiry dates.</p>
-		    			<div style="display: flex; align-items: end;">
+		    			<div style="display: flex; justify-content: center;">
 		    				<img src="../images/breeze/cooking-icon.png" style="margin-right:15px;" width="75px" height="75px">
 		    				<p><span style="font-weight: 400;">With a simple tap right from your fridge, tell members of your household that you’re cooking so they know to expect a home-cooked meal.</span></p>
 		    			</div>
@@ -354,15 +330,115 @@
 	</div>
 </div>
 
-
 <div class="container">
 	<div class="row highlight-section">
 		<div class="col-sm-5">
 			<h4>Why don't current apps work?</h4>
 		</div>
 		<div class="col-sm-7">
-			<p>Many grocery tracking and grocery list applications already exist. However, they require users to manually upkeep them. This considerable workload repels users with a busy lifestyle and becomes obsolete when not consistently maintained. BREEZE solves this issue by having the fridge do the work automatically.</p>
+			<p>Many grocery tracking and grocery list applications already exist. However, they require users to manually upkeep them. This workload repels users with a busy lifestyle and becomes obsolete when not consistently maintained. BREEZE solves this issue by having the fridge do the work automatically.</p>
 		</div>
+	</div>
+</div>
+
+<!--PROCESS SECTION-->
+<div class="container" id="process">
+	
+	<div class="row headingTitle">
+		<div class="divider"></div>
+		<div class="col-sm-12 col-12">
+			<h2>process</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 button-center">
+			<button class="button accordion" onclick="openAcc('sketches')">
+				<h3>Sketches</h3>
+			</button>
+		</div>
+		
+		<div class="accordion-content col-12" id="sketches">
+			<div class="row">
+				<div class="col-sm-12 col-md">
+					<div class="imgBox hover-shadow">
+						<img src="" class="clickImg" id="img05" data-toggle="modal" data-target="#myModal">
+					</div>
+				</div>
+				<div class="col-sm-12 col-md">
+					<div class="imgBox hover-shadow">
+						<img src="" class="clickImg" id="img06" data-toggle="modal" data-target="#myModal">
+					</div>
+				</div>
+				<div class="col-sm-12 col-md">
+					<div class="imgBox hover-shadow">
+						<img src="" class="clickImg" id="img07" data-toggle="modal" data-target="#myModal">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-12 button-center">
+			<button class="button accordion" onclick="openAcc('personas')">
+				<h3>Personas</h3>
+			</button>
+		</div>
+		<div class="accordion-content col-12" id="personas">
+			<div class="row">
+				<div class="col-sm-12 col-12 col-md-12 col-lg-6">
+					<p>When designing the fridge, I considered two different audiences; one for the fridge and one for an informative poster. The primary audience is the end-user of the fridge. This could range from young children to adults. Basic requirements were being able to use a fridge and technological familiarity. The focus of the primary audience was to design a product that could reduce food waste. The secondary audience is geared towards those interested in reducing food-waste. The deliverable must entice the secondary audience to purchase the product.</p>
+				</div>
+				<div class="col-sm-12 col-12 col-md-12 col-lg-6">
+					<img src="../images/breeze/User-Persona.jpg" width="100%">
+				</div>
+			</div>
+		</div>
+		<div class="col-12 button-center">
+			<button class="button accordion" onclick="openAcc('info-architecture')">
+				<h3>Information Architecture</h3>
+			</button>
+		</div>
+		<div class="accordion-content col-12" id="info-architecture">
+			<div class="row">
+				<div class="col-sm-12 col-12 col-md-12">
+						<img src="" class="hover-shadow clickImg" id="img09" data-toggle="modal" data-target="#myModal">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--FINAL PRODUCTS SECTION-->
+<div class="container" id="Final Products">
+	
+	<div class="row headingTitle">
+		<div class="divider"></div>
+		<div class="col-sm-12 col-12">
+			<h2>Final Products</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5 highlight-section">
+			<h4>App Prototype</h4>
+			<p class="tools-list">Figma</p>
+			<p>Experience the potential wonders of the BREEZE Fridge with a Figma prototype. Create a collaborated shopping list, discover relevant recipes, track ingredients and utilize the customization options.</p>
+		</div>
+		<div class="col-md-7">
+			<!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmu67w1AxDYdLLitt6n4Jlc%2FBREEZE-Fridge-App%3Fnode-id%3D330%253A632%26scaling%3Dcontain" allowfullscreen></iframe> -->
+		</div>
+
+	</div>
+	<div class="row highlight-section">
+		<div class="col-md-12">
+			<img src="" class="hover-shadow clickImg" id="img11" data-toggle="modal" data-target="#myModal">
+		</div>
+		<div class="col-12 spacer"></div>
+			<div class="col-md-3">
+				<h4>Promotional Poster</h4>
+				<p class="tools-list">24 in x 18 in</p>
+			</div>
+			<div class="col-md-9">
+				<p>Since a physical fridge prototype is not possible with my budget, I designed a poster that outlines the different benefits and functionalities of the fridge. This poster was designed to be displayed at a tradeshow in order to attract the attention of investors or prospective buyers.</p>
+			</div>
 	</div>
 </div>
 
@@ -380,8 +456,7 @@
 	<div class="row">
 		<div class="col-sm-12 col-md-6">
 			<h3>Rationale</h3>
-			<p>The term “breeze” is associated with lightness and easiness, highlighting how the fridge is meant to integrate into daily routine without impeding the user. The logo is inspired by the moving shelves that differentiate it from traditional fridges. The font is a modified sans serif, it’s rounded edges mimicking the shape of the shelves.</p>
-			<p>The brand aims to appear as non-invasive and unintimidating as possible. The fridge induces change and it is important for the experience to be feel seamless and easy. Due to it’s large and diverse audience, the brand must also maintain a wide appeal through simplicty. The focus is on it’s beneficial functions rather than leisurely, entrusting that it’s game changing features will satisfy its users.</p>
+			<p>The term “breeze” is associated with lightness and ease which is reflected in the light color palatte. The brand aims to appear as non-intimidating as possible as the proposed concept relies on changin daily routines without impeding the user. The logo is inspired by the moving shelves that differentiate it from traditional fridges. The font is a modified sans serif, it’s rounded edges mimicking the shape of the shelves.</p>
 		</div>
 		<div class="col-sm-12 col-md-6">
 			<div class="row" id="projAssets">
@@ -413,43 +488,6 @@
 		</div>
 	</div>
 </div>
-
-
-<!--DELIVERABLES SECTION-->
-<div class="container" id="deliverables">
-	
-	<div class="row headingTitle">
-		<div class="divider"></div>
-		<div class="col-sm-12 col-12">
-			<h2>deliverables</h2>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-5 highlight-section">
-			<h4>App Prototype</h4>
-			<p class="tools-list">Figma</p>
-			<p>Experience the potential wonders of the BREEZE Fridge with a Figma prototype. Create a collaborated shopping list, discover relevant recipes, track ingredients and utilize the customization options.</p>
-		</div>
-		<div class="col-md-7">
-			<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmu67w1AxDYdLLitt6n4Jlc%2FBREEZE-Fridge-App%3Fnode-id%3D330%253A632%26scaling%3Dcontain" allowfullscreen></iframe>
-		</div>
-
-	</div>
-	<div class="row highlight-section">
-		<div class="col-md-12">
-			<img src="" class="hover-shadow clickImg" id="img11" data-toggle="modal" data-target="#myModal">
-		</div>
-		<div class="col-12 spacer"></div>
-			<div class="col-md-3">
-				<h4>Promotional Poster</h4>
-				<p class="tools-list">24 in x 18 in</p>
-			</div>
-			<div class="col-md-9">
-				<p>Since a physical fridge prototype is not possible with my budget, I designed a poster that outlines the different benefits and functionalities of the fridge. This poster was designed to be displayed at a tradeshow in order to attract the attention of investors or prospective buyers.</p>
-			</div>
-	</div>
-</div>
-
 
 
 <!--LIGHT BOX-->

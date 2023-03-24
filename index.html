@@ -16,36 +16,27 @@
 
 
 <body>
-<nav class="navbar fixed-top" style="background-color:transparent;">
+<nav class="navbar fixed-top" style="background-color:transparent;" id="navbar">
 	<a href="#" id="menu-image" data-toggle="collapse" data-target="#menu"> <!--onclick="mobNav(media)"-->
 		<img src="images/Genice-Designs-Logo-Square.png" height="50px" style="max-width: initial;">
 	</a>
 	<div class="navbar-text">
 			<a class="say-hi" href="pages/about.html">Say Hi</a>
 	</div>
-	<!--
-	<div class="collapse navbar-collapse" id="menu">
+	
+	<!-- <div class="collapse navbar-collapse" id="menu">
 		<ul class="navbar-nav">
-			<li class="nav-item" id="home">
+			<li class="nav-item">
 				<a class="nav-link active" href="index-revised.html" id="home">Home</a>
 			</li>
-			<li class="nav-item" id="breeze">
-				<a class="nav-link" href="pages/breeze.html">BREEZE</a>
+			<li class="nav-item">
+				<a class="nav-link" href="pages/work.html">Work</a>
 			</li>
-			<li class="nav-item" id="hani">
-				<a class="nav-link" href="pages/hani.html">HANI</a>
-			</li>
-			<li class="nav-item" id="period-purse">
-				<a class="nav-link" href="pages/period-purse.html">Period Purse</a>
-			</li>
-			<li class="nav-item" id="bespoke">
-				<a class="nav-link" href="pages/bespoke.html">Bespoke</a>
-			</li>
-			<li class="nav-item" id="data-vis">
-				<a class="nav-link" href="pages/data-vis.html">Data Vis</a>
+			<li class="nav-item" >
+				<a class="nav-link" href="pages/passion-projects.html">Projects</a>
 			</li>
 		</ul>
-	</div>-->
+	</div> -->
 </nav>
 
 <header class="bg-color">
@@ -53,7 +44,7 @@
 		<div class="row headerText">
 			<div class="col-12">
 				<h1 class="title">Hi, my name is Genice</h1>
-				<h3 class="subtitle">A Multi-disciplinary graphic Designer with clever solutions</h3>
+				<h3 class="subtitle">A multi-disciplinary graphic designer with clever solutions</h3>
 			</div>
 		</div>
 	</div>
@@ -62,51 +53,85 @@
 
 <div id="background-bar"></div>
 
-<div class="container" id="projectList">
-	<div class="row project" >
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/breeze.html">
-				<div class="main-image-box bounce-anim">
-						<img src="images/breeze/Breeze Main Image Trans.png" class="main-image">
+<div class="carousel slide" data-ride="" id="projectList">
+	<!-- The slideshow -->
+	<div class="carousel-inner" >
+	   <div class="carousel-item active">
+		   <div class="carousel-bg">
+			   <div class="row project">
+					<div class="col-12 col-lg-7 order-lg-2">
+						<a href="pages/bespoke.html">
+							<div class="main-image-box bounce-anim">
+									<img src="images/bespoke/Bespoke Official Logo.png" class="main-image">
+							</div>
+						</a>
+					</div>
+					<div class="col align-self-center">
+						<div class="main-title work-project">
+							<a href="pages/bespoke.html" id="bespoke">Bespoke</a>
+						</div>
+					</div>
+			   </div>
+		   </div>
+	   </div>
+	   <div class="carousel-item">
+		   <div class="carousel-bg">
+			   <div class="row project">
+					<div class="col-12 col-lg-7 order-lg-2">
+						<a href="pages/hani.html">
+							<div class="main-image-box bounce-anim">
+								<img src="images/hani/Hani Main Image Trans.png" class="main-image">
+							</div>
+						</a>
+					</div>
+					<div class="col align-self-center">
+						<div class="main-title other-project">
+							<a href="pages/hani.html" id="hani">HANI</a>
+						</div>
+					</div>
+			   </div>
+		   </div>
+	   </div>
+	   <div class="carousel-item">
+			<div class="row project">
+				<div class="col-12 col-lg-7 order-lg-2">
+					<a href="pages/period-purse.html">
+						<div class="main-image-box bounce-anim">
+							<img src="images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image"  href="pages/period-purse.html">
+						</div>
+					</a>
 				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title">
-				<a href="pages/breeze.html" id="breeze">Breeze</a>
+				<div class="col align-self-center">
+					<div class="main-title other-project">
+						<a href="pages/period-purse.html" id="period-purse">The Period Purse</a>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
+	   </div>
+   </div>
 
-	<div class="row project" >
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/hani.html">
-				<div class="main-image-box bounce-anim">
-					<img src="images/hani/Hani Main Image Trans.png" class="main-image">
-				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title">
-				<a href="pages/hani.html" id="hani">HANI</a>
-			</div>
-		</div>
-	</div>
 
-	<div class="row project" >
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/period-purse.html">
-				<div class="main-image-box bounce-anim">
-					<img src="images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image"  href="pages/period-purse.html">
-				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title">
-				<a href="pages/period-purse.html" id="period-purse">The Period Purse</a>
-			</div>
-		</div>
-	</div>
+   <!-- Left and right controls -->
+   <div class="carousel-nav">
+	   <a class="carousel-control-prev" href="#projectList" data-slide="prev">
+		   <span class="carousel-control-prev-icon"></span>
+	   </a>
+
+	   <!-- Indicators -->
+	   <ul class="carousel-indicators">
+		   <li data-target="#projectList" data-slide-to="0" class="active"></li>
+			<li data-target="#projectList" data-slide-to="1"></li>
+			<li data-target="#projectList" data-slide-to="2"></li>
+			<li data-target="#projectList" data-slide-to="3"></li>
+			<li data-target="#projectList" data-slide-to="4"></li>
+			<li data-target="#projectList" data-slide-to="5"></li>
+			<li data-target="#projectList" data-slide-to="6"></li>
+	   </ul>
+
+	   <a class="carousel-control-next" href="#projectList" data-slide="next">
+		   <span class="carousel-control-next-icon"></span>
+	   </a>
+   </div>
 </div>
 
 <footer class="container">

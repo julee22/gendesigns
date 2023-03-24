@@ -1,5 +1,10 @@
 var projectList = [
 	{
+		name: "bespoke",
+		color: "#4c7fc1",
+		bgColorHex: '#d2ceca',
+	},
+	{
 		name: "breeze",
 		color: "#3893d6",
 		bgColorHex: '#e6f3f8',
@@ -13,29 +18,31 @@ var projectList = [
 		name: "period-purse",
 		color: "#EF3A4C",
 		bgColorHex: '#FCDAEF',
-	},/*
-
-	{
-		name: "tdsb",
-		color: "#63c900",
-		bgColorHex: '#ffffff',
 	},
-*/];
+];
 
 var borderColor;
 var barColor;
 
 
-function changeNavColor(projectId) {
+
+
+function changePageLinkColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
 	borderColor = project.color;
 }
 
+// function changeNavBgColor(projectNum) {
+// 	var project = projectList[projectNum];
+// 	barColor = project.bgColorHex;
+// }
 
 function changeBarColor(projectNum) {
 	var project = projectList[projectNum];
 	barColor = project.bgColorHex;
 	$("#background-bar").css("background-color",barColor);
+	// also change menu bar color
+	$("#navbar").css("background-color",barColor+"F7");
 }
 
 //JQUERY
@@ -52,25 +59,10 @@ $(document).ready(function()
 	// Change color of all titles
 	for (var i = 0; i < listOfTitle.length; i++) {
 		mainTitle = listOfTitle[i].firstElementChild;
-		changeNavColor(mainTitle.id);
+		changePageLinkColor(mainTitle.id);
 		$(mainTitle).css("border-left-color",borderColor);
 		console.log(mainTitle.id);
 	}
-
-	// $(".main-title").hover(
-	// 	function(){
-	// 		mainTitleHov = this.firstElementChild;
- //  			changeNavColor(mainTitleHov.id);
- //  			$(mainTitleHov).css("border-left","8px solid " + borderColor);
- //  			$(mainTitleHov).css("font-weight","600");
- //  			//$(":header").addClass("textShad");
- //  		}, function(){
-	// 		mainTitleHov = this.firstElementChild;
- //  			changeNavColor(mainTitleHov.id);
- //  			$(mainTitleHov).css("border-left","4px solid " + borderColor);
- //  			$(mainTitleHov).css("font-weight","500");
-	// 	}
-	// );
 
 
 	//Set initial bar color
@@ -108,7 +100,7 @@ $(document).ready(function()
 	}, true);
 
 
-	// Event changing the bar color
+	// Event changing the bar color and nav color
 	$(document).scroll(function() {
 
 		for (var i = 0; i < projectList.length; i++){
@@ -128,6 +120,7 @@ $(document).ready(function()
 				}
 			} else if ((top <= window.innerHeight && top > -50) || height > 100) {
 				changeBarColor(i);
+				// changeNavBgColor(i);
 				if (!isMobile) {
 					$(activeProj[i]).css("opacity","1");
 					console.log("show "+  i);
@@ -138,17 +131,12 @@ $(document).ready(function()
 	});
 
 
-	// Dynamically change color of nav items
-	$(".nav-item").hover(
-		function(){
-			// Give changeNavColor function id of hovered nav-item element
-			changeNavColor(this.id);
-
-			// Change css of hovered nav-item element
-  			$(this).css("border-left","6px solid "+borderColor);
-  		}, function(){
-  			$(this).removeAttr("style");
-		}
-  	);
+	// Shift page down when menu  opened
+	// $(".menu-image").click(
+	// 	function(){
+			
+	// 	$("#projectList").css("margin-top",headerHeight);
+  	// 	}
+  	// );
 });
 
