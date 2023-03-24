@@ -99,6 +99,26 @@ $(document).ready(function()
 		}
 	}, true);
 
+	var projectList = $("#projectList").children(".project");
+	const sliderNav = document.querySelectorAll('.carousel-indicators li');
+
+	$(sliderNav).click(function() {
+		console.log("clicked");
+
+		console.log(projectList);
+
+		for (var i = 0; i < projectList.length; i++){
+			var activeProject = projectList[i];
+			console.log(activeProject);
+			if (activeProject.classList.contains("active")) {
+				console.log("this is the active class");
+				changeBarColor(i);
+			}
+
+		}
+
+		changeBarColor(i);
+	});
 
 	// Event changing the bar color and nav color
 	$(document).scroll(function() {
