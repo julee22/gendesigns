@@ -46,6 +46,22 @@ function changeBarColor(projectId) {
 	$("#navbar").css("background-color",barColor+"F7");
 }
 
+function generateCarouselIndicators(numberOfSlides, targetCarousel) {
+	var indicatorWrapper = document.querySelector(".carousel-indicators");
+	
+	for (var i = 0; i < numberOfSlides; i++) {
+		var newIndicator = document.createElement('li');
+		newIndicator.setAttribute("data-target", targetCarousel);
+		newIndicator.setAttribute("data-slide-to", i);
+
+		if (i == 0) {
+			newIndicator.classList.add("active");
+		}
+
+		indicatorWrapper.appendChild(newIndicator);
+	}
+}
+
 //JQUERY
 $(document).ready(function() {
 
@@ -90,6 +106,7 @@ $(document).ready(function() {
 		}
 	}, true);
 
+	// Carousel
 	const carousel = document.querySelector('#projectList');
 	const carouselItems = document.querySelectorAll(".carousel-item");
 
@@ -109,5 +126,9 @@ $(document).ready(function() {
 
 		}
 	});
+
+	// Generates carousel indicators automatically
+	const listOfSlides = document.querySelectorAll(".carousel-item");
+	generateCarouselIndicators(listOfSlides.length,"#projectList");
 });
 
