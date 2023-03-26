@@ -30,9 +30,8 @@
 		font-size: 1.2rem;
 	}
 
-
-	#projectList {
-		max-width: 95%;
+	.carousel-inner .carousel-item {
+		max-width: 90%;
 		margin: 0px auto;
 	}
 
@@ -70,6 +69,11 @@
 
 	#background-bar {
 		height: 50%;
+	}
+
+	.carousel-nav .carousel-control-prev,
+	.carousel-nav .carousel-control-next {
+		/* display: none; */
 	}
 
 	.project {

@@ -1,7 +1,7 @@
 // Project Content Files
 var projectList = [
 	{
-		name:"home",
+		name:"default",
 		bgColorHex: '#ffffff',
 		priColorHex: '#000000',
 		accentColorHex: '#ececec'

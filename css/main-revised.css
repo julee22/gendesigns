@@ -163,8 +163,27 @@ footer .caption {
 .carousel-nav {
 	display: flex;
 	justify-content: center;
-	margin-top: 15px;
+	margin-bottom: 15px;
+}
 
+.carousel-control-prev, .carousel-control-next {
+	position: static;
+	display: inline-flex;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+	min-width: 30px;
+	min-height: 30px;
+	background-color: var(--priColor);
+	background-size: cover;
+}
+
+.carousel-control-next-icon {
+	background-image: url("../images/carousel-right-icon.png");
+}
+
+.carousel-control-prev-icon {
+	background-image: url("../images/carousel-left-icon.png");
 }
 
 .carousel-indicators {
