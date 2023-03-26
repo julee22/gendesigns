@@ -5,7 +5,7 @@
 	top: 0px;
 	z-index: 1000;
 	width: 100%;
-	transition: background-color 1s;
+	transition: background-color .7s;
 }
 
 #menu-image img {
