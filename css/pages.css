@@ -72,6 +72,7 @@ button.button.active {
 	border-right-width: 6px;
 	/* border-right: 3px solid var(--priColor); */
 	font-weight: var(--boldWeight);
+	width: 100%;
 }
 
 .button:hover {
@@ -256,9 +257,11 @@ img {
 	min-height: 60vh;
 }
 
-.gallery > div {
-	padding-bottom: 15px;
-	padding-top: 15px;
+.gallery img {
+	/* padding-bottom: 15px;
+	padding-top: 15px; */
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
 
@@ -494,6 +497,6 @@ footer a:hover {
 	display: flex !important;
 }
 
-.accordion-content *:first-child {
+/* .accordion-content *:first-child {
 	padding-top: 15px;
-}
+} */
