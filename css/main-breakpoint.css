@@ -104,13 +104,12 @@
 
 @media screen and (min-height: 768px){
 	.project {
-		align-content: flex-end;
+		align-content: center;
 		padding-bottom: 75px;
+		height: 75vh;
 	}
 }
 
 
 @media screen and (min-height: 992px){
-	.project {
-	}
 }
