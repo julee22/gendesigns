@@ -30,9 +30,8 @@
 		font-size: 1.2rem;
 	}
 
-
-	#projectList {
-		max-width: 95%;
+	.carousel-inner .carousel-item {
+		max-width: 90%;
 		margin: 0px auto;
 	}
 
@@ -72,6 +71,11 @@
 		height: 50%;
 	}
 
+	.carousel-nav .carousel-control-prev,
+	.carousel-nav .carousel-control-next {
+		/* display: none; */
+	}
+
 	.project {
 		padding-bottom: 50px;
 		margin-left: 90px;
@@ -91,11 +95,9 @@
 	}
 
 	.main-image-box {
-		height: 500px;
+		height: 55vh;
 	}
 }
-
-
 
 
 /* HEIGHT BREAKPOINTS*/

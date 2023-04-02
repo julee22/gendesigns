@@ -72,6 +72,24 @@ function openAcc(accordionId) {
 	window.scrollTo({behavior: "smooth", top: y,});
 }
 
+// Generates carousel indicators automatically
+function generateCarouselIndicators(numberOfSlides, targetCarousel) {
+	console.log(numberOfSlides, targetCarousel);
+	var indicatorWrapper = document.querySelector(".carousel-indicators");
+	
+	for (var i = 0; i < numberOfSlides; i++) {
+		var newIndicator = document.createElement('li');
+		newIndicator.setAttribute("data-target", targetCarousel);
+		newIndicator.setAttribute("data-slide-to", i);
+
+		if (i == 0) {
+			newIndicator.classList.add("active");
+		}
+
+		indicatorWrapper.appendChild(newIndicator);
+	}
+}
+
 
 $(document).ready(function()
 {
@@ -102,21 +120,12 @@ $(document).ready(function()
 	});
 
 
-	// Dynamically change color of nav items
-	// $(".nav-item").hover(
-	// 	function(){
-	// 		// Give changeNavColor function id of hovered nav-item element
-	// 		changeNavColor(this.id);
-
-	// 		// Change css of hovered nav-item element
-  	// 		$(this).css("border-left","6px solid "+borderColor);
-  	// 	}, function(){
-  	// 		$(this).removeAttr("style");
-	// 	}
-  	// );
-
-
   	//CAROUSEL JS
+	// Generates carousel indicators automatically
+	const listOfSlides = document.querySelectorAll(".carousel-item");
+	generateCarouselIndicators(listOfSlides.length, "#solutions");
+
+
   	//Stops auto when carousel out of viewport
 	const slider = document.querySelector('.carousel');
 	$(slider).carousel('pause');
@@ -177,7 +186,6 @@ $(document).ready(function()
 
 		// Set border-left as hexVal
 		$(colorPalette[n]).css("border-left-color",hexVal);
-
 	}
 
 	// CHANGING FOOTER

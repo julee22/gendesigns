@@ -2,10 +2,10 @@
 .navbar {
   	background-color: var(--bgColor);
   	padding: 15px;
-	  top: 0px;
-	  z-index: 1000;
-	  width: 100%;
-	  transition: background-color 5s;
+	top: 0px;
+	z-index: 1000;
+	width: 100%;
+	transition: background-color .7s;
 }
 
 #menu-image img {
@@ -22,27 +22,25 @@
 	width: -webkit-fill-available;
 }
 
-/*
-.navbar-nav {
-	padding-top: 15px;
-}
-
-.navbar-nav .nav-item {
-	font-size: 1.1rem;
-	letter-spacing: 1pt;
+/* #menu .nav-item{
 	border-left: 3px solid black;
-	transition: 0.3s;
-	margin-bottom: 2px;
-}
-.navbar-nav .nav-link:hover, .navbar-nav .nav-item:hover{
-	font-weight: var(--boldWeight);
-	color: initial;
+	padding-left: 1em;
+	margin: .25em 0px;
 }
 
-.navbar-nav .nav-link {
-	color:  black !important;
-	padding: 10px 0px 10px 20px;
-}*/
+#menu .nav-item:hover {
+	border-left-width: 6px;
+}
+
+#menu .nav-item a {
+	color: black;
+}
+
+#menu .nav-item a:hover {
+	font-weight: var(--boldWeight);
+	text-decoration: none;
+	color: initial;
+} */
 
 .navbar-text {
 	display: inline-flex;
@@ -64,7 +62,7 @@
 
 .say-hi:hover {
 	font-weight: var(--boldWeight);
-	border-right: 6px solid black;
+	border-right-width: 6px;
 	text-decoration: none;
 	color: initial;
 }

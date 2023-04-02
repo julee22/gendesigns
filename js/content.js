@@ -1,7 +1,7 @@
 // Project Content Files
 var projectList = [
 	{
-		name:"home",
+		name:"default",
 		bgColorHex: '#ffffff',
 		priColorHex: '#000000',
 		accentColorHex: '#ececec'
@@ -196,14 +196,70 @@ var projectList = [
 				link: "../images/period purse/Period-Purse-Bin.jpg",
 				caption: 'Donation Bin 3D Mockup'
 			}]
-	}/*,
+	},
 	{
 		name: "bespoke",
-		bgColorHex: '#4c7fc1',
-		priColorHex: '#184275',
-		accentColorHex: '#FF3333',
-		image: '../images/Genice-Designs-Tilt.png'
-	},
+		bgColorHex: '#d2ceca',
+		priColorHex: '#4c7fc1',
+		accentColorHex: '#184275',
+		image: '../images/bespoke/Feature-Sheet-Mockup.png',
+		imgArray:  [{
+				name: "img01",
+				link: "../images/bespoke/Feature-Sheet-Old.png",
+				caption: "Old Bespoke Real Estate Feature Sheet"
+			},
+			{
+				name: "img02",
+				link: "../images/bespoke/Instagram Old.png",
+				caption: 'Old Bespoke Real Estate Team Instagram page'
+			},
+			{
+				name: "img03",
+				link: "../images/bespoke/Instagram New.png",
+				caption: 'Redesigned Bespoke Real Estate Team Instagram page'
+			},
+			{
+				name: "img11",
+				link: "../images/bespoke/Sign.jpg",
+				caption: 'Mock of For Sale signage'
+			},
+			{
+				name: "img04",
+				link: "../images/bespoke/Sign-Comparison.jpg",
+				caption: 'Side by side comparison between old and new sign design'
+			},
+			{
+				name: "img12",
+				link: "../images/bespoke/Style-Guide.jpg",
+				caption: 'Style Guide sample'
+			},
+			{
+				name: "img06",
+				link: "../images/bespoke/Bespoke-Website.jpg",
+				caption: "3 different Wordpress website templates; E-mail blast, Property website, Promotional website"
+			},
+			{
+				name: "img07",
+				link: "../images/bespoke/Business-Card.jpg",
+				caption: 'Business card, 2.5" x 3"'
+			},
+			{
+				name: "img10",
+				link: "../images/bespoke/Folder.jpg",
+				caption: 'Folder with pocket inserts'
+			},
+			{
+				name: "img09",
+				link: "../images/bespoke/Bespoke-Main.jpg",
+				caption: 'Mock of multiple assets (Left to right: Lawn sign, Marketing flyer, Feature Sheet, Folder, Feature Sheet inerior, Gift card)'
+			},
+			{
+				name: "img08",
+				link: "../images/bespoke/Form.jpg",
+				caption: 'Business documents'
+			}
+		]
+	}/*,
 	{
 		name: "data-vis",
 		bgColorHex: '#CBCBCB',

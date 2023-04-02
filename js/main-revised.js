@@ -1,5 +1,15 @@
 var projectList = [
 	{
+		name: "default",
+		color: "#000000",
+		bgColorHex: '#d2ceca',
+	},
+	{
+		name: "bespoke",
+		color: "#4c7fc1",
+		bgColorHex: '#d2ceca',
+	},
+	{
 		name: "breeze",
 		color: "#3893d6",
 		bgColorHex: '#e6f3f8',
@@ -13,34 +23,47 @@ var projectList = [
 		name: "period-purse",
 		color: "#EF3A4C",
 		bgColorHex: '#FCDAEF',
-	},/*
-
-	{
-		name: "tdsb",
-		color: "#63c900",
-		bgColorHex: '#ffffff',
 	},
-*/];
+];
 
 var borderColor;
 var barColor;
 
 
-function changeNavColor(projectId) {
+
+
+function changePageLinkColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
 	borderColor = project.color;
 }
 
 
-function changeBarColor(projectNum) {
-	var project = projectList[projectNum];
+function changeBarColor(projectId) {
+	var project = projectList.find(project => project.name == projectId);
 	barColor = project.bgColorHex;
 	$("#background-bar").css("background-color",barColor);
+	// also change menu bar color
+	$("#navbar").css("background-color",barColor+"F7");
+}
+
+function generateCarouselIndicators(numberOfSlides, targetCarousel) {
+	var indicatorWrapper = document.querySelector(".carousel-indicators");
+	
+	for (var i = 0; i < numberOfSlides; i++) {
+		var newIndicator = document.createElement('li');
+		newIndicator.setAttribute("data-target", targetCarousel);
+		newIndicator.setAttribute("data-slide-to", i);
+
+		if (i == 0) {
+			newIndicator.classList.add("active");
+		}
+
+		indicatorWrapper.appendChild(newIndicator);
+	}
 }
 
 //JQUERY
-$(document).ready(function()
-{
+$(document).ready(function() {
 
 	// If mobile
 	const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -52,39 +75,15 @@ $(document).ready(function()
 	// Change color of all titles
 	for (var i = 0; i < listOfTitle.length; i++) {
 		mainTitle = listOfTitle[i].firstElementChild;
-		changeNavColor(mainTitle.id);
+		changePageLinkColor(mainTitle.id);
 		$(mainTitle).css("border-left-color",borderColor);
 		console.log(mainTitle.id);
 	}
 
-	// $(".main-title").hover(
-	// 	function(){
-	// 		mainTitleHov = this.firstElementChild;
- //  			changeNavColor(mainTitleHov.id);
- //  			$(mainTitleHov).css("border-left","8px solid " + borderColor);
- //  			$(mainTitleHov).css("font-weight","600");
- //  			//$(":header").addClass("textShad");
- //  		}, function(){
-	// 		mainTitleHov = this.firstElementChild;
- //  			changeNavColor(mainTitleHov.id);
- //  			$(mainTitleHov).css("border-left","4px solid " + borderColor);
- //  			$(mainTitleHov).css("font-weight","500");
-	// 	}
-	// );
-
 
 	//Set initial bar color
-	changeBarColor(0);
+	changeBarColor("default");
 
-	var activeProj = $("#projectList").children(".project");
-
-	if (isMobile) {
-		for (var i = 0; i < projectList.length; i++) {
-			$(activeProj[i]).css("opacity","1");
-		}
-	} else {
-		$(activeProj[0]).css("opacity","1");
-	}
 
 	// Changing parameters depending on header
 	var headerHeight;
@@ -107,48 +106,29 @@ $(document).ready(function()
 		}
 	}, true);
 
+	// Carousel
+	const carousel = document.querySelector('#projectList');
+	const carouselItems = document.querySelectorAll(".carousel-item");
 
-	// Event changing the bar color
-	$(document).scroll(function() {
+	$(carousel).on('slid.bs.carousel', function() {
+		console.log("clicked", carouselItems);
+		
+		for (var i = 0; i < carouselItems.length; i++){
+			var activeProject = carouselItems[i];
+			
+			if (activeProject.classList.contains("active")) {
+				console.log("this is the active class");
 
-		for (var i = 0; i < projectList.length; i++){
-			var selectedProject = activeProj[i];
-			var projectOffset = selectedProject.getBoundingClientRect();
-			var top = projectOffset.top;
-			var height = projectOffset.bottom;
-
-			// console.log(i + " has top of " + top + " and height "+height);
-			// console.log("window height is "+  window.innerHeight);
-			// console.log("header height is "+  headerHeight);
-
-			if (top < headerHeight /2) {
-				if (!isMobile && window.innerWidth >=768) {
-					$(activeProj[i]).removeAttr("style");
-					console.log("hide "+  i);
-				}
-			} else if ((top <= window.innerHeight && top > -50) || height > 100) {
-				changeBarColor(i);
-				if (!isMobile) {
-					$(activeProj[i]).css("opacity","1");
-					console.log("show "+  i);
-				}
-				break;
+				var activeProjectId = activeProject.querySelector(".main-title a").id;
+				console.log(activeProjectId);
+				changeBarColor(activeProjectId);
 			}
+
 		}
 	});
 
-
-	// Dynamically change color of nav items
-	$(".nav-item").hover(
-		function(){
-			// Give changeNavColor function id of hovered nav-item element
-			changeNavColor(this.id);
-
-			// Change css of hovered nav-item element
-  			$(this).css("border-left","6px solid "+borderColor);
-  		}, function(){
-  			$(this).removeAttr("style");
-		}
-  	);
+	// Generates carousel indicators automatically
+	const listOfSlides = document.querySelectorAll(".carousel-item");
+	generateCarouselIndicators(listOfSlides.length,"#projectList");
 });
 
