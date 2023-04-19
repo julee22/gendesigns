@@ -219,11 +219,6 @@ var projectList = [
 				caption: 'Redesigned Bespoke Real Estate Team Instagram page'
 			},
 			{
-				name: "img11",
-				link: "../images/bespoke/Sign.jpg",
-				caption: 'Mock of For Sale signage'
-			},
-			{
 				name: "img04",
 				link: "../images/bespoke/Sign-Comparison.jpg",
 				caption: 'Side by side comparison between old and new sign design'
@@ -257,7 +252,12 @@ var projectList = [
 				name: "img08",
 				link: "../images/bespoke/Form.jpg",
 				caption: 'Business documents'
-			}
+			},
+			{
+				name: "img11",
+				link: "../images/bespoke/Postcard.jpg",
+				caption: 'Sample of a Just Sold postcard'
+			},
 		]
 	}/*,
 	{
