@@ -64,6 +64,8 @@ function openAcc(accordionId) {
 		accordionContent.classList.add("active");
 	}
 
+	$(accordionContent.children[0]).animate({opacity:1});
+
 
 	// offsets scroll to element
 	const y = accordionContent.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 150;
@@ -123,7 +125,7 @@ $(document).ready(function()
   	//CAROUSEL JS
 	// Generates carousel indicators automatically
 	const listOfSlides = document.querySelectorAll(".carousel-item");
-	generateCarouselIndicators(listOfSlides.length, "#solutions");
+	generateCarouselIndicators(listOfSlides.length, "#feature-slider");
 
 
   	//Stops auto when carousel out of viewport
