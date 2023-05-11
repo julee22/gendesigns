@@ -176,18 +176,19 @@ strong {
 
 .solution-statement {
 	font-weight:  var(--boldWeight);
+	font-size: 1.3rem;
 }
 
 .goalList {
-	margin: 1em 0px 1.5em;
+	margin: 1em 0px 1.75em;
 	padding-left: 1em;	/*border-left: 5px solid var(--bgColor);*/
 	list-style: square;
-	
+	font-weight:  var(--boldWeight);
 }
 
 .goalList li {
 	padding-left: 0.75em;
-	margin-bottom: .75em;
+	margin-bottom: 1em;
 }
 
 .goalList li::marker {
@@ -315,6 +316,10 @@ img {
 /*SECTIONS*/
 #introduction {
 	padding-top: 80px; 
+}
+
+#introduction, #description {
+	max-width: 80%;
 }
 
 #description .row, #about .row:first-child  {

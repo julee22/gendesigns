@@ -147,7 +147,7 @@
 @media screen and (min-width: 992px) {
 
 	.container {
-		max-width: 80%;
+		max-width: 1024px;
 	}
 	
 	.modal-dialog {
