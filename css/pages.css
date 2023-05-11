@@ -56,23 +56,22 @@ body {
 	cursor: pointer;
 }
 
-button.button {
+.button.accordion {
 	/* border-left: none;
-	border-top: 3px solid transparent;
-	border-bottom: 3px solid var(--priColor);
-	padding: 5px 15px; */
-	border-right: 3px solid var(--priColor);
+	border-bottom: 3px dashed var(--accentColor); */
+	/* border-right: 3px solid var(--priColor); */
 	border-left-color: var(--priColor);
+	border-left-style: dashed;
+	text-align: left;
 }
 
-button.button.active {
-	/* border-top-color: var(--priColor);
-	border-bottom-color: transparent; */
+.button.accordion.active {
+	border-left-style: solid;
+	/* border-bottom-style: solid; 
+	width: 100%;*/
 	border-left-width: 6px; 
-	border-right-width: 6px;
-	/* border-right: 3px solid var(--priColor); */
+	/* border-right-width: 6px; */
 	font-weight: var(--boldWeight);
-	width: 100%;
 }
 
 .button:hover {
@@ -82,14 +81,6 @@ button.button.active {
 	color: initial;
 }
 
- button.button:hover {
-	border-right-width: 6px;
-}
-
-/*
-button.button.active:hover {
-	border-top-width: 6px;
-} */
 .button.long {
 	width: 100%;
 }
@@ -127,10 +118,11 @@ h3 {
 
 .button.accordion h3 {
 	font-size: 1.2em;
+	font-weight: inherit;
 	margin-bottom: 0em;
 }
 
-h4 {
+h4, .h4 {
 	text-transform: initial;
 	font-size: 1.2em;
 }
@@ -182,17 +174,25 @@ strong {
 	font-size: 0.9em;
 }
 
-.goalList {
+.solution-statement {
 	font-weight:  var(--boldWeight);
-	margin: 25px 0px 50px;
+	font-size: 1.3rem;
+}
+
+.goalList {
+	margin: 1em 0px 1.75em;
 	padding-left: 1em;	/*border-left: 5px solid var(--bgColor);*/
 	list-style: square;
-	
+	font-weight:  var(--boldWeight);
 }
 
 .goalList li {
 	padding-left: 0.75em;
-	margin-bottom: 25px;
+	margin-bottom: 1em;
+}
+
+.goalList li::marker {
+	color: var(--priColor);
 }
 
 
@@ -318,6 +318,10 @@ img {
 	padding-top: 80px; 
 }
 
+#introduction, #description {
+	max-width: 80%;
+}
+
 #description .row, #about .row:first-child  {
 	justify-content: flex-start;
 	position: relative;
@@ -345,7 +349,7 @@ img {
 }
 
 #projAssets {
-	padding: 30px 0px;
+	padding: 30px 0px 0px;
 }
 
 #image-bg-bar {
@@ -490,6 +494,8 @@ footer a:hover {
 
 .accordion-content.active:not(.row) {
 	display: block !important;
+	margin-top: 15px;
+	padding: 0px 20px;
 }
 
 .accordion-content.active {
