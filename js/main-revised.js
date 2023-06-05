@@ -43,73 +43,71 @@ function changeBarColor(projectId) {
 }
 
 
-	// Main function to show project
-	function showProject() {
-		
-		var activeProj = $("#projectList").children(".project");
-
-		// If mobile
-		const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-		
-		// Changing parameters depending on header height
-		var headerHeight;
-		const headerOffset = $("header")[0].getBoundingClientRect();
-		headerHeight = headerOffset.bottom-25;
+// Main function to show project
+function showProject() {
 	
+	var activeProj = $("#projectList").children(".project");
+
+	// If mobile
+	const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	
+	// Changing parameters depending on header height
+	var headerHeight;
+	const headerOffset = $("header")[0].getBoundingClientRect();
+	headerHeight = headerOffset.bottom-25;
+
+	if (window.innerWidth >=768) {
+		$("#projectList").css("margin-top",headerHeight);
+	} 
+
+	window.addEventListener('resize', (event) => {
 		if (window.innerWidth >=768) {
+			//Get height of header
+			// const headerOffset = $("header")[0].getBoundingClientRect();
+			// headerHeight = headerOffset.bottom-25;
+			console.log("header height is "+  headerHeight);
 			$("#projectList").css("margin-top",headerHeight);
-		} 
-	
-		window.addEventListener('resize', (event) => {
-			if (window.innerWidth >=768) {
-				//Get height of header
-				// const headerOffset = $("header")[0].getBoundingClientRect();
-				// headerHeight = headerOffset.bottom-25;
-				console.log("header height is "+  headerHeight);
-				$("#projectList").css("margin-top",headerHeight);
-			}	else {
-				$("#projectList").css("margin-top","0");
-			}
-		}, true);
-
-		// shows all projects immediately if mobile
-		if (isMobile) {
-			for (var i = 0; i < projectList.length; i++) {
-				$(activeProj[i]).css("opacity","1");
-			}
-		} else {
-			$(activeProj[0]).css("opacity","1");
+		}	else {
+			$("#projectList").css("margin-top","0");
 		}
+	}, true);
 
-		// Checks if project is in view and decides fades in/out
-		for (var i = 0; i < projectList.length; i++){
-			var selectedProject = activeProj[i];
-			var projectOffset = selectedProject.getBoundingClientRect();
-			var top = projectOffset.top;
-			var height = projectOffset.bottom;
-	
-	
-			if (top < headerHeight /2 - 25) {
-				if (!isMobile && window.innerWidth >=768) {
-					$(activeProj[i]).removeAttr("style");
-					console.log("hide "+  i);
-				}
-			} else if ((top <= window.innerHeight && top > -50) || height > 100) {
-				changeBarColor(projectList[i].name);
-				if (!isMobile) {
-					$(activeProj[i]).css("opacity","1");
-					console.log("show "+  i);
-				}
-				break;
+	// shows all projects immediately if mobile
+	if (isMobile) {
+		for (var i = 0; i < projectList.length; i++) {
+			$(activeProj[i]).css("opacity","1");
+		}
+	// } else {
+	// 	$(activeProj[0]).css("opacity","1");
+	}
+
+	// Checks if project is in view and decides fades in/out
+	for (var i = 0; i < projectList.length; i++){
+		var selectedProject = activeProj[i];
+		var projectOffset = selectedProject.getBoundingClientRect();
+		var top = projectOffset.top;
+		var height = projectOffset.bottom;
+
+
+		if (top < headerHeight /2 - 25) {
+			if (!isMobile && window.innerWidth >=768) {
+				$(activeProj[i]).removeAttr("style");
+				console.log("hide "+  i);
 			}
+		} else if ((top <= window.innerHeight && top > -50) || height > 100) {
+			changeBarColor(projectList[i].name);
+			if (!isMobile) {
+				$(activeProj[i]).css("opacity","1");
+				console.log("show "+  i);
+			}
+			break;
 		}
 	}
+}
 
 
 //JQUERY
 $(document).ready(function() {
-
-	
 
 	const listOfTitle = document.getElementsByClassName("main-title");
 	var mainTitle;
@@ -124,11 +122,12 @@ $(document).ready(function() {
 	}
 
 	// Sets project background and shows image
-	showProject()
+	showProject();
 
-	// Event changing the bar color and image
-	$(document).scroll(function() {
-		showProject();
-	});
 });
 
+
+// Event changing the bar color and image
+$(document).scroll(function() {
+	showProject();
+});
