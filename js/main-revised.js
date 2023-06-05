@@ -106,29 +106,34 @@ $(document).ready(function() {
 		}
 	}, true);
 
-	// Carousel
-	const carousel = document.querySelector('#projectList');
-	const carouselItems = document.querySelectorAll(".carousel-item");
+	
+	// Event changing the bar color
+	$(document).scroll(function() {
 
-	$(carousel).on('slid.bs.carousel', function() {
-		console.log("clicked", carouselItems);
-		
-		for (var i = 0; i < carouselItems.length; i++){
-			var activeProject = carouselItems[i];
-			
-			if (activeProject.classList.contains("active")) {
-				console.log("this is the active class");
+		for (var i = 0; i < projectList.length; i++){
+			var selectedProject = activeProj[i];
+			var projectOffset = selectedProject.getBoundingClientRect();
+			var top = projectOffset.top;
+			var height = projectOffset.bottom;
 
-				var activeProjectId = activeProject.querySelector(".main-title a").id;
-				console.log(activeProjectId);
-				changeBarColor(activeProjectId);
+			// console.log(i + " has top of " + top + " and height "+height);
+			// console.log("window height is "+  window.innerHeight);
+			// console.log("header height is "+  headerHeight);
+
+			if (top < headerHeight /2) {
+				if (!isMobile && window.innerWidth >=768) {
+					$(activeProj[i]).removeAttr("style");
+					console.log("hide "+  i);
+				}
+			} else if ((top <= window.innerHeight && top > -50) || height > 100) {
+				changeBarColor(i);
+				if (!isMobile) {
+					$(activeProj[i]).css("opacity","1");
+					console.log("show "+  i);
+				}
+				break;
 			}
-
 		}
 	});
-
-	// Generates carousel indicators automatically
-	const listOfSlides = document.querySelectorAll(".carousel-item");
-	generateCarouselIndicators(listOfSlides.length,"#projectList");
 });
 
