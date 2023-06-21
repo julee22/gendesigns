@@ -17,8 +17,8 @@ function changeProj(projectName) {
 	$(':root').css("--bgColor",bgColor);
 	$(':root').css("--priColor",priColor);
 	$(':root').css("--accentColor",accentColor);
-	$(':root').css("--cursor-img","url(../images/cursor-"+projectName+".png), url(../images/cursor.png), auto");
-	$(':root').css("--pointer-img","url(../images/pointer-"+projectName+".png), url(../images/pointer.png), auto");
+	$(':root').css("--cursor-img","url(../images/cursor-"+projectName+".png), url(../images/cursor-default.png), auto");
+	$(':root').css("--pointer-img","url(../images/pointer-"+projectName+".png), url(../images/pointer-default.png), auto");
 	currProj = projectName;
 }
 
