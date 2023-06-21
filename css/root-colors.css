@@ -4,6 +4,6 @@
   --accentColor: red;
   --grey: #606060;
   --boldWeight: 500;
-  --cursor-img: url("../images/cursor.png"), auto;
-  --pointer-img: url("../images/pointer.png"), auto;
+  --cursor-img: url("../images/cursor-default.png"), auto;
+  --pointer-img: url("../images/pointer-default.png"), auto;
 }
