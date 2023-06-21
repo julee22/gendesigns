@@ -1,6 +1,7 @@
 body {
 	box-sizing: border-box;
 	font-family: 'Barlow', 'Bahnschrift', 'Inter','Roboto',  sans-serif;
+	cursor: var(--cursor-img);
 }
 
 header {
@@ -8,6 +9,7 @@ header {
 	flex-wrap: wrap;
 	padding-top: 70px;
 }
+
 
 /* Colored Bar*/
 #background-bar {
@@ -75,6 +77,10 @@ header, #background-bar {
 	text-decoration: none;
 }
 
+a:hover {	
+	cursor: var(--pointer-img);
+}
+
 .small-text {
 	font-size: small;
 }
@@ -122,10 +128,11 @@ footer .caption {
 .main-image-box:hover .main-image {
 	transition: 0.2s ease-in;
 	transform: scale(1.02);
+	cursor: var(--pointer-img);
 }
 
 .main-title {
-	cursor: pointer;
+	cursor: var(--pointer-img);
 	text-align: center;
 	letter-spacing: 1pt;
 }
@@ -139,6 +146,7 @@ footer .caption {
 	padding: 2px 30px;
 	border-left: 4px solid var(--priColor);
 	transition: 0.3s;
+	cursor: var(--pointer-img);
 }
 
 .main-title a:hover {
