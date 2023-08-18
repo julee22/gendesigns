@@ -1,5 +1,10 @@
 var projectList = [
 	{
+		name: "rich-media",
+		color: "#000000",
+		bgColorHex: '#ffc425',
+	},
+	{
 		name: "bespoke",
 		color: "#4c7fc1",
 		bgColorHex: '#d2ceca',
