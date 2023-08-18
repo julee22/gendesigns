@@ -150,6 +150,10 @@
 		padding-top: 35px;
 		max-width: 1024px;
 	}
+
+	#about.container {
+		max-width: 80%;
+	}
 	
 	.modal-dialog {
 		max-width: 80%;
