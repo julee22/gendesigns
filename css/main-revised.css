@@ -170,7 +170,7 @@ footer .caption {
 }
 
 .main-title.other-project a::after {
-	content: 'Project';
+	content: 'Personal';
 	font-size: small;
 	display: block;
 }

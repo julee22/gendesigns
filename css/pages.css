@@ -225,6 +225,7 @@ ul {
 
 img {
 	max-width: 100%;
+	display: block;
 }
 
 .bounce-anim {
@@ -307,13 +308,22 @@ img {
 	font-weight:  var(--boldWeight);
 	color: white;
 	opacity: 1;
-	cursor: var(--pointer-img);
+	cursor: var(--pointer-img) !important;
 }
 
 #caption {
 	display: inline-block;
 	color: white;
 	padding: 10px 0px 10px 10px;
+}
+
+#caption a {
+	color: white;
+	font-weight: 500;
+}
+#caption a:hover {
+	text-decoration: underline;
+	cursor: var(--pointer-img) !important;
 }
 
 
