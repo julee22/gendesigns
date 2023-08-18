@@ -129,6 +129,55 @@ $(document).ready(function() {
 	// Sets project background and shows image
 	showProject();
 
+	//Set initial bar color
+	changeBarColor("default");
+
+
+	// Changing parameters depending on header
+	var headerHeight;
+	const headerOffset = $("header")[0].getBoundingClientRect();
+	headerHeight = headerOffset.bottom-25;
+
+	if (window.innerWidth >=768) {
+		$("#projectList").css("margin-top",headerHeight);
+	} 
+
+	window.addEventListener('resize', (event) => {
+		if (window.innerWidth >=768) {
+			//Get height of header
+			const headerOffset = $("header")[0].getBoundingClientRect();
+			headerHeight = headerOffset.bottom-25;
+			console.log("header height is "+  headerHeight);
+			$("#projectList").css("margin-top",headerHeight);
+		}	else {
+			$("#projectList").css("margin-top","0");
+		}
+	}, true);
+
+	// Carousel
+	const carousel = document.querySelector('#projectList');
+	const carouselItems = document.querySelectorAll(".carousel-item");
+
+	$(carousel).on('slid.bs.carousel', function() {
+		console.log("clicked", carouselItems);
+		
+		for (var i = 0; i < carouselItems.length; i++){
+			var activeProject = carouselItems[i];
+			
+			if (activeProject.classList.contains("active")) {
+				console.log("this is the active class");
+
+				var activeProjectId = activeProject.querySelector(".main-title a").id;
+				console.log(activeProjectId);
+				changeBarColor(activeProjectId);
+			}
+
+		}
+	});
+
+	// Generates carousel indicators automatically
+	const listOfSlides = document.querySelectorAll(".carousel-item");
+	generateCarouselIndicators(listOfSlides.length,"#projectList");
 });
 
 
