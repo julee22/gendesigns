@@ -11,6 +11,7 @@
 #menu-image img {
 	width: initial;
 	margin: 0px auto;
+	cursor: var(--pointer-img);
 }
 
 #menu-image:active img {
@@ -53,7 +54,7 @@
 	letter-spacing: 0.1rem;
 	word-spacing: 0.1rem;
 	color: inherit;
-	cursor: pointer;
+	cursor: var(--pointer-img);
 	text-align: right;
 	padding: 5px 20px;
 	border-right: 3px solid black;

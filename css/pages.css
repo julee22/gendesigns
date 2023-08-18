@@ -2,6 +2,7 @@
 body {
 	box-sizing: border-box;
 	font-family: 'Barlow', 'Bahnschrift', 'Inter','Roboto',  sans-serif;
+	cursor: var(--cursor-img);
 }
 
 
@@ -53,7 +54,7 @@ body {
 	border: none;
 	border-left: 3px solid var(--accentColor);
 	transition: 0.1s ease-in;
-	cursor: pointer;
+	cursor: var(--pointer-img);
 }
 
 .button.accordion {
@@ -224,6 +225,7 @@ ul {
 
 img {
 	max-width: 100%;
+	display: block;
 }
 
 .bounce-anim {
@@ -271,6 +273,7 @@ img {
   position: relative;
   top: 0px;
   border: .5px solid rgba(0, 0, 0, .1);
+  cursor: var(--pointer-img);
 }
 
 .hover-shadow:hover {
@@ -279,7 +282,7 @@ img {
 }
 
 .clickImg {
-	cursor: pointer;
+	cursor: var(--pointer-img);
 }
 
 .modal-body, .modal-content {
@@ -298,18 +301,29 @@ img {
 	font-weight:  var(--boldWeight)-400;
 	color: white;
 	opacity: 1;
+	cursor: var(--pointer-img);
 }
 
 .close:hover {
 	font-weight:  var(--boldWeight);
 	color: white;
 	opacity: 1;
+	cursor: var(--pointer-img) !important;
 }
 
 #caption {
 	display: inline-block;
 	color: white;
 	padding: 10px 0px 10px 10px;
+}
+
+#caption a {
+	color: white;
+	font-weight: 500;
+}
+#caption a:hover {
+	text-decoration: underline;
+	cursor: var(--pointer-img) !important;
 }
 
 
@@ -376,6 +390,7 @@ footer .introSub {
 
 footer a {
 	color: var(--priColor);
+	cursor: var(--pointer-img);
 }
 
 footer a:hover {
@@ -449,6 +464,7 @@ footer a:hover {
 	position: relative;
 	margin: 15px;
 	bottom: 0px;
+	cursor: var(--pointer-img);
 }
 
 .carousel-indicators li {
@@ -456,8 +472,8 @@ footer a:hover {
 	margin: 0px 5px;
 	width: 15px;
 	height: 4px;
-	cursor: pointer;
 	transition: .3s;
+	cursor: var(--pointer-img);
 }
 
 .carousel-indicators .active {
@@ -468,6 +484,7 @@ footer a:hover {
 .carousel-control-prev, .carousel-control-next {
 	position: static;
 	display: inline-flex;
+	cursor: var(--pointer-img);
 } 
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
