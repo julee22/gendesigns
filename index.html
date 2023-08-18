@@ -53,82 +53,115 @@
 
 <div id="background-bar"></div>
 
-<div class="container" id="projectList">
-	
-	<div class="row project">
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/rich-media.html">
-				<div class="main-image-box bounce-anim">
-					<img src="images/rich media/rich-media-logo.png" class="main-image" height="95%">
+<div class="carousel slide" data-ride="carousel"  id="projectList">
+	<!-- The slideshow -->
+	<div class="carousel-inner" >
+		<div class="carousel-item ">
+			<div class="carousel-bg">
+				<div class="row project">
+					 <div class="col-12 col-lg-7 order-lg-2">
+						 <a href="pages/rich-media.html">
+							 <div class="main-image-box bounce-anim">
+									 <img src="images/rich media/rich-media-logo.png" class="main-image">
+							 </div>
+						 </a>
+					 </div>
+					 <div class="col align-self-center">
+						 <div class="main-title work-project">
+							 <a href="pages/rich-media.html" id="rich-media">Rich Media</a>
+						 </div>
+					 </div>
 				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title work-project">
-				<a href="pages/rich-media.html" id="rich-media">Rich Media</a>
 			</div>
 		</div>
-	</div>
-
-	<div class="row project">
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/bespoke.html">
-				<div class="main-image-box bounce-anim">
-						<img src="images/bespoke/Bespoke Official Logo.png" class="main-image">
+	   <div class="carousel-item active">
+		   <div class="carousel-bg">
+			   <div class="row project">
+					<div class="col-12 col-lg-7 order-lg-2">
+						<a href="pages/bespoke.html">
+							<div class="main-image-box bounce-anim">
+									<img src="images/bespoke/Bespoke Official Logo.png" class="main-image">
+							</div>
+						</a>
+					</div>
+					<div class="col align-self-center">
+						<div class="main-title work-project">
+							<a href="pages/bespoke.html" id="bespoke">Bespoke</a>
+						</div>
+					</div>
+			   </div>
+		   </div>
+	   </div>
+	   <div class="carousel-item">
+			<div class="row project">
+				<div class="col-12 col-lg-7 order-lg-2">
+					<a href="pages/breeze.html">
+						<div class="main-image-box bounce-anim">
+								<img src="images/breeze/Breeze Main Image Trans.png" class="main-image">
+						</div>
+					</a>
 				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title work-project">
-				<a href="pages/bespoke.html" id="bespoke">Bespoke</a>
+				<div class="col align-self-center">
+					<div class="main-title other-project">
+						<a href="pages/breeze.html" id="breeze">Breeze</a>
+					</div>
+				</div>
 			</div>
-		</div>
+	   </div>
+	   <div class="carousel-item">
+		   <div class="carousel-bg">
+			   <div class="row project">
+					<div class="col-12 col-lg-7 order-lg-2">
+						<a href="pages/hani.html">
+							<div class="main-image-box bounce-anim">
+								<img src="images/hani/Hani Main Image Trans.png" class="main-image">
+							</div>
+						</a>
+					</div>
+					<div class="col align-self-center">
+						<div class="main-title other-project">
+							<a href="pages/hani.html" id="hani">HANI</a>
+						</div>
+					</div>
+			   </div>
+		   </div>
+	   </div>
+	   <div class="carousel-item">
+			<div class="row project">
+				<div class="col-12 col-lg-7 order-lg-2">
+					<a href="pages/period-purse.html">
+						<div class="main-image-box bounce-anim">
+							<img src="images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image"  href="pages/period-purse.html">
+						</div>
+					</a>
+				</div>
+				<div class="col align-self-center">
+					<div class="main-title other-project">
+						<a href="pages/period-purse.html" id="period-purse">The Period Purse</a>
+					</div>
+				</div>
+			</div>
+	   </div>
    </div>
 
-	<div class="row project" >
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/breeze.html">
-				<div class="main-image-box bounce-anim">
-						<img src="images/breeze/Breeze Main Image Trans.png" class="main-image">
-				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title other-project">
-				<a href="pages/breeze.html" id="breeze">Breeze</a>
-			</div>
-		</div>
-	</div>
+   <!-- Left and right controls -->
+   <div class="carousel-nav">
+	   <a class="carousel-control-prev" href="#projectList" data-slide="prev">
+		   <span class="carousel-control-prev-icon"></span>
+	   </a>
 
-	<div class="row project" >
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/hani.html">
-				<div class="main-image-box bounce-anim">
-					<img src="images/hani/Hani Main Image Trans.png" class="main-image">
-				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title other-project">
-				<a href="pages/hani.html" id="hani">HANI</a>
-			</div>
-		</div>
-	</div>
+	   <!-- Indicators -->
+	   <ul class="carousel-indicators">
+		   <!-- <li data-target="#projectList" data-slide-to="0" class="active"></li>
+			<li data-target="#projectList" data-slide-to="1"></li>
+			<li data-target="#projectList" data-slide-to="2"></li>
+			<li data-target="#projectList" data-slide-to="3"></li> -->
+	   </ul>
 
-	<div class="row project" >
-		<div class="col-12 col-lg-7 order-lg-2">
-			<a href="pages/period-purse.html">
-				<div class="main-image-box bounce-anim">
-					<img src="images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image"  href="pages/period-purse.html">
-				</div>
-			</a>
-		</div>
-		<div class="col align-self-center">
-			<div class="main-title other-project">
-				<a href="pages/period-purse.html" id="period-purse">The Period Purse</a>
-			</div>
-		</div>
-	</div>
+	   <a class="carousel-control-next" href="#projectList" data-slide="next">
+		   <span class="carousel-control-next-icon"></span>
+	   </a>
+   </div>
 </div>
 
 <footer class="container">
