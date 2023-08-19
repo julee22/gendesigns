@@ -17,7 +17,7 @@
 	.headerText {
 		text-align: left;
 		padding-top: 15px;
-		margin: 25px 55px;
+		margin: 25px 50px;
 		max-width: 100%;
 		order: 2;
 	}
@@ -29,6 +29,12 @@
 	.subtitle {
 		font-size: 1.2rem;
 	}
+
+	.carousel-inner .carousel-item {
+		max-width: 90%;
+		margin: 0px auto;
+	}
+
 
 	.main-image-box {
 		height: 50vh;
@@ -65,10 +71,19 @@
 		height: 50%;
 	}
 
+	.carousel-nav .carousel-control-prev,
+	.carousel-nav .carousel-control-next {
+		/* display: none; */
+	}
+
 	.project {
 		padding-bottom: 50px;
 		margin-left: 90px;
 		margin-right: 90px;
+	}
+
+	.project:nth-last-child(1) {
+		padding-bottom: 0px;
 	}
 
 	.main-title {

@@ -103,7 +103,7 @@ footer .caption {
 }
 
 .project {
-	opacity: 0;
+	/* opacity: 0; */
 	transition: 0.1s ease-in;
 	padding-bottom: 50px;
 	align-content: flex-end;
@@ -178,4 +178,52 @@ footer .caption {
 	content: 'Work';
 	font-size: small;
 	display: block;
+}
+
+/* Carousel */
+
+.carousel-nav {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+	position: static;
+	display: inline-flex;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+	min-width: 30px;
+	min-height: 30px;
+	background-color: var(--priColor);
+	background-size: cover;
+}
+
+.carousel-control-next-icon {
+	background-image: url("../images/carousel-right-icon.png");
+}
+
+.carousel-control-prev-icon {
+	background-image: url("../images/carousel-left-icon.png");
+}
+
+.carousel-indicators {
+	position: relative;
+	margin: 15px;
+	bottom: 0px;
+}
+
+.carousel-indicators li {
+	background-color: var(--priColor);
+	margin: 0px 5px;
+	width: 15px;
+	height: 4px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.carousel-indicators .active {
+	background-color: var(--priColor);
+	width: 30px;
 }
