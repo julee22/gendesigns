@@ -219,7 +219,7 @@ footer .caption {
 	margin: 0px 5px;
 	width: 15px;
 	height: 4px;
-	cursor: pointer;
+	cursor: var(--pointer-img);
 	transition: .3s;
 }
 
