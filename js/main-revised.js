@@ -1,8 +1,8 @@
 var projectList = [
 	{
-		name: "rich-media",
-		color: "#000000",
-		bgColorHex: '#ffc425',
+		name: "manulife-vitality",
+		color: "#f15d22",
+		bgColorHex: '#00bf66',
 	},
 	{
 		name: "bespoke",
