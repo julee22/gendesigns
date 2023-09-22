@@ -260,54 +260,54 @@ var projectList = [
 			},
 		]
 	},
-	{
-		name: "rich-media",
-		bgColorHex: '#ffc425',
-		priColorHex: '#000000',
-		accentColorHex: '#000000',
-		image: '../images/rich media/rich-media-projects.png',
-		imgArray:  [{
-			name: "img01",
-			link: "../images/rich media/Manulife-Vitality-landing.jpg",
-			caption: "Manulife Vitality Landing page"
-		},
-		{
-			name: "img02",
-			link: "../images/rich media/Manulife-Vitality-rewards.jpg",
-			caption: 'Manulife Vitality Rewards page'
-		},
-		{
-			name: "img03",
-			link: "../images/rich media/Manulife-Vitality-questionnaire.jpg",
-			caption: 'Manulife Vitality Questionnaire page'
-		},
-		{
-			name: "img04",
-			link: "../images/rich media/Manulife-Vitality-results.jpg",
-			caption: 'Manulife Vitality Results page'
-		},
-		{
-			name: "img05",
-			link: "../images/rich media/Scotia-iTrade-1.jpg",
-			caption: 'Scotiabank ETF Finder tool'
-		},
-		{
-			name: "img06",
-			link: "../images/rich media/MBNA-Balance-Transfer.jpg",
-			caption: 'MBNA Credit Card Balance Transfer Calculator (<a href="https://www.mbna.ca/en/credit-cards/low-interest/true-line-mastercard" target="_blank">view</a>)'
-		},
-		{
-			name: "img07",
-			link: "../images/rich media/Sunlife-RollMax.jpg",
-			caption: 'Sun Life U.S. Dental RollMax Calculator (<a href="https://www.sunlife.com/us/en/tools/dental-rollmax-calculator/" target="_blank">view</a>)'
-		},
-		{
-			name: "img08",
-			link: "../images/rich media/rich-media-social.png",
-			caption: 'Rich Media Chinese New Years Instagram Post (<a href="https://www.instagram.com/p/CnpnHlyOHnB/?hl=en" target="_blank">view</a>)'
-		}
-	]
-	},
+	// {
+	// 	name: "rich-media",
+	// 	bgColorHex: '#ffc425',
+	// 	priColorHex: '#000000',
+	// 	accentColorHex: '#000000',
+	// 	image: '../images/rich media/rich-media-projects.png',
+	// 	imgArray:  [{
+	// 		name: "img01",
+	// 		link: "../images/rich media/Manulife-Vitality-landing.jpg",
+	// 		caption: "Manulife Vitality Landing page"
+	// 	},
+	// 	{
+	// 		name: "img02",
+	// 		link: "../images/rich media/Manulife-Vitality-rewards.jpg",
+	// 		caption: 'Manulife Vitality Rewards page'
+	// 	},
+	// 	{
+	// 		name: "img03",
+	// 		link: "../images/rich media/Manulife-Vitality-questionnaire.jpg",
+	// 		caption: 'Manulife Vitality Questionnaire page'
+	// 	},
+	// 	{
+	// 		name: "img04",
+	// 		link: "../images/rich media/Manulife-Vitality-results.jpg",
+	// 		caption: 'Manulife Vitality Results page'
+	// 	},
+	// 	{
+	// 		name: "img05",
+	// 		link: "../images/rich media/Scotia-iTrade-1.jpg",
+	// 		caption: 'Scotiabank ETF Finder tool'
+	// 	},
+	// 	{
+	// 		name: "img06",
+	// 		link: "../images/rich media/MBNA-Balance-Transfer.jpg",
+	// 		caption: 'MBNA Credit Card Balance Transfer Calculator (<a href="https://www.mbna.ca/en/credit-cards/low-interest/true-line-mastercard" target="_blank">view</a>)'
+	// 	},
+	// 	{
+	// 		name: "img07",
+	// 		link: "../images/rich media/Sunlife-RollMax.jpg",
+	// 		caption: 'Sun Life U.S. Dental RollMax Calculator (<a href="https://www.sunlife.com/us/en/tools/dental-rollmax-calculator/" target="_blank">view</a>)'
+	// 	},
+	// 	{
+	// 		name: "img08",
+	// 		link: "../images/rich media/rich-media-social.png",
+	// 		caption: 'Rich Media Chinese New Years Instagram Post (<a href="https://www.instagram.com/p/CnpnHlyOHnB/?hl=en" target="_blank">view</a>)'
+	// 	}
+	// ]
+	// },
 	{
 		name: "manulife-vitality",
 		bgColorHex: '#00bf66',
@@ -329,14 +329,36 @@ var projectList = [
 			name: "img04",
 			link: "../images/rich media/Manulife-Vitality-results.jpg",
 			caption: 'Manulife Vitality Results page'
-		},{
+		},
+		{
 			name: "img05",
 			link: "../images/rich media/Manulife-Vitality-video-screens.jpg",
 			caption: 'Manulife Vitality Video Storyboard'
-		},{
+		},
+		{
 			name: "img06",
 			link: "../images/rich media/Manulife-Vitality-pdf.jpg",
 			caption: 'Manulife Vitality PDF sample'
+		},
+		{
+			name: "img07",
+			link: "../images/rich media/Scotia-iTrade-1.jpg",
+			caption: 'Scotiabank ETF Finder tool'
+		},
+		{
+			name: "img08",
+			link: "../images/rich media/MBNA-Balance-Transfer.jpg",
+			caption: 'MBNA Credit Card Balance Transfer Calculator'
+		},
+		{
+			name: "img09",
+			link: "../images/rich media/Sunlife-RollMax.jpg",
+			caption: 'Sun Life U.S. Dental RollMax Calculator'
+		},
+		{
+			name: "img10",
+			link: "../images/rich media/Sonnet-video.jpg",
+			caption: 'Sonnet Shift User Based Insurance Video'
 		}
 	]
 	}
