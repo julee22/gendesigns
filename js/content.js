@@ -310,9 +310,9 @@ var projectList = [
 	},
 	{
 		name: "manulife-vitality",
-		bgColorHex: '#00bf66',
-		priColorHex: '#f15d22',
-		accentColorHex: '#000060',
+		bgColorHex: '#00c36d',
+		priColorHex: '#000060',
+		accentColorHex: '#f15d22',
 		image: '../images/rich media/manulife-vitality-tablet.png',
 		imgArray:  [
 		{

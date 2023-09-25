@@ -34,8 +34,6 @@ body {
 
 .highlight-section {
 	align-items: flex-start;
-	padding-left: 10px;
-	padding-right: 10px;
 }
 
 
@@ -242,7 +240,7 @@ img {
 
 .imgBox {
 	overflow: hidden;
-	max-height: 200px;
+	max-height: 125px;
 	margin: 5px 0px 10px;
 }
 
@@ -332,9 +330,6 @@ img {
 	padding-top: 80px; 
 }
 
-#introduction, #description {
-	max-width: 80%;
-}
 
 #description .row, #about .row:first-child  {
 	justify-content: flex-start;
