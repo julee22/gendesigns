@@ -27,6 +27,9 @@
 		padding-top: 100px; 
 	}
 
+	#introduction, #description {
+		max-width: 80%;
+	}
 
 
 	.center-section {
@@ -64,6 +67,7 @@
 
 	.imgBox {
 		margin: 15px 0px 25px;
+		max-height: 200px;
 	}
 
 

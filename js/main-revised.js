@@ -2,7 +2,7 @@ var projectList = [
 	{
 		name: "manulife-vitality",
 		color: "#f15d22",
-		bgColorHex: '#00bf66',
+		bgColorHex: '#00c36d',
 	},
 	{
 		name: "bespoke",
