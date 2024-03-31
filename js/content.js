@@ -2,7 +2,7 @@
 var projectList = [
 	{
 		name:"default",
-		bgColorHex: '#ffffff',
+		bgColorHex: '#fafafa',
 		priColorHex: '#000000',
 		accentColorHex: '#ececec'
 	},
@@ -310,7 +310,7 @@ var projectList = [
 	// },
 	{
 		name: "manulife-vitality",
-		bgColorHex: '#00c36d',
+		bgColorHex: '#00e982',
 		priColorHex: '#000060',
 		accentColorHex: '#f15d22',
 		image: '../images/rich media/manulife-vitality-tablet.png',
