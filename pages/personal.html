@@ -18,8 +18,8 @@
 
 <body>
 	<div id="background-bar" class="bg-color"></div>
-	<nav class="navbar navbar-expand-sm" id="navbar">
-		<a href="#" id="menu-image"> <!--onclick="mobNav(media)"-->
+	<nav class="navbar navbar-expand-sm bg-color navbar-light" id="navbar">
+		<a href="../index.html" id="menu-image"> <!--onclick="mobNav(media)"-->
 			<img src="../images/Genice-Designs-Logo-Square.png" height="50px" style="max-width: initial;">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,18 +54,30 @@
 
 <div class="container" id="projectList">
 
-	<div class="row project" >
-		<div class="col align-self-center">
-			<a href="breeze.html" class="main-title" id="breeze">Breeze</a>
-			<a href="hani.html" class="main-title" id="hani">HANI</a>
-			<a href="period-purse.html" class="main-title" id="period-purse">The Period Purse</a>
+	<div class="row justify-content-start" >
+		<div class="col-12 col-md col-lg-4">
+			<a href="breeze.html" class="project" id="breeze">
+				<div class="image-box">
+					<img src="../images/breeze/Breeze Main Image Trans.png" class="main-image bounce-anim" id="breeze-img">
+				</div>
+				<span>Breeze</span>
+			</a>
 		</div>
-		<div class="col-12 col-lg-7 order-lg-2">
-			<div class="main-image-box bounce-anim">
-				<img src="../images/breeze/Breeze Main Image Trans.png" class="main-image hide" id="breeze-img">
-				<img src="../images/hani/Hani Main Image Trans.png" class="main-image hide" id="hani-img">
-				<img src="../images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image hide" id="period-purse-img">
-			</div>
+		<div class="col-12 col-md col-lg-4">
+			<a href="hani.html" class="project" id="hani">
+				<div class="image-box">
+					<img src="../images/hani/Hani Main Image Trans.png" class="main-image bounce-anim" id="hani-img">
+				</div>
+				<span>HANI</span>
+			</a>
+		</div>
+		<div class="col-12 col-md col-lg-4">
+			<a href="period-purse.html" class="project" id="period-purse">
+				<div class="image-box">
+					<img src="../images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image bounce-anim" id="period-purse-img">
+				</div>
+				<span>The Period Purse</span>
+			</a>
 		</div>
 	</div>
 </div>

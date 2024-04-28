@@ -18,12 +18,12 @@
 
 <body>
 	<div id="background-bar" class="bg-color"></div>
-	<nav class="navbar navbar-expand-sm" id="navbar">
+	<nav class="navbar navbar-expand-sm bg-color navbar-light" id="navbar">
 		<a href="#" id="menu-image"> <!--onclick="mobNav(media)"-->
 			<img src="images/Genice-Designs-Logo-Square.png" height="50px" style="max-width: initial;">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
+		  <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="navbar-collapse collapse" id="menu">
 			<ul class="navbar-nav">
@@ -45,28 +45,34 @@
 				<div class="col-12">
 					<h1 class="title">Hi, my name is Genice</h1>
 					<p class="subtitle">A multi-disciplinary graphic designer with clever solutions</p>
+					<!-- <img src="images/Genice-Designs-Logo-Tilt.png" class="main-image bounce-anim" id="default-img"> -->
 				</div>
 			</div>
 		</div>
 	</header>
 
 	<div class="container" id="projectList">
-		<div class="row project" >
-			<div class="col align-self-center">
-				<a href="pages/manulife-vitality.html" class="main-title" id="manulife-vitality">Manulife Savings Tool</a>
-				<a href="pages/bespoke.html" class="main-title" id="bespoke">Bespoke Real Estate Team</a>
+		<div class="row justify-content-start" >
+			<div class="col-12 col-md col-lg-4">
+				<a href="pages/manulife-vitality.html" class="project" id="manulife-vitality">
+					<div class="image-box">
+						<img src="images/rich media/manulife-vitality.png" class="main-image bounce-anim" id="manulife-vitality-img">
+					</div>
+					<span>Manulife Savings Tool</span>
+				</a>
 			</div>
-			<div class="col-12 col-lg-5 order-lg-2">
-				<div class="main-image-box">
-					<img src="images/Genice-Designs-Logo-Tilt.png" class="main-image bounce-anim" id="default-img">
-					<img src="images/rich media/manulife-vitality.png" class="main-image bounce-anim hide" id="manulife-vitality-img">
-					<img src="images/bespoke/Bespoke Official Logo.png" class="main-image bounce-anim hide" id="bespoke-img">
-				</div>
+			<div class="col-12 col-md col-lg-4">
+				<a href="pages/bespoke.html" class="project" id="bespoke">
+					<div class="image-box">
+						<img src="images/bespoke/Bespoke Official Logo.png" class="main-image bounce-anim" id="bespoke-img">
+					</div>
+					<span>Bespoke Real Estate Team</span>
+				</a>
 			</div>
 		</div>
 	</div>
 	<footer class="container">
-		<p class="caption" style="text-align: center;">All designed content is property of Genice Chandra. This website was designed & coded by Genice Chandra.</p>
+		<p class="caption" style="text-align: center;">All personal projects are property of Genice Chandra. This website was designed & coded by Genice Chandra.</p>
 	</footer>
 
 <!--JQuery Script-->

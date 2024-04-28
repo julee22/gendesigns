@@ -161,6 +161,7 @@
 	
 	.modal-dialog {
 		max-width: 80%;
+		max-height: 80vh;
 	}
 
 	#image-bg-bar {

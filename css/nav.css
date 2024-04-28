@@ -1,12 +1,16 @@
 /* NAVIGATION */
 .navbar {
-  	/* background-color: var(--bgColor); */
+  	background-color: var(--bgColor);
   	/* background-color: transparent; */
   	padding: 15px;
 	position: sticky;
 	top: 0px;
 	z-index: 1000;
 	width: 100%;
+}
+
+.navbar-toggler {
+	border: none;
 }
 
 #menu-image img {

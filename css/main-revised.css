@@ -18,6 +18,7 @@ body {
 
 .bg-color {
 	background-color: var(--bgColor);
+	transition: .7s;
 }
 
 .divider {
@@ -119,6 +120,9 @@ a {
 
 a:hover {	
 	cursor: var(--pointer-img);
+	text-decoration: none;
+	color: initial;
+	font-weight: var(--boldWeight);
 }
 
 .small-text {
@@ -220,7 +224,6 @@ footer {
 }
 
 footer .caption {
-	text-align: center;
 	font-size: 0.8rem;
 	color: var(--grey);
 }

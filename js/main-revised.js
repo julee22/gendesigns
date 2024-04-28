@@ -37,6 +37,7 @@ function changePageLinkColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
 	if (project) {
 		borderColor = project.color;
+		barColor = project.bgColorHex;
 	}
 }
 
@@ -46,7 +47,7 @@ function changeBarColor(projectId) {
 	if (project) {
 		console.log(projectId,"project name");
 		barColor = project.bgColorHex;
-		$(".bg-color").css("background-color",barColor);
+		$(".bg-color").css("--bgColor",barColor);
 	}
 }
 
@@ -63,7 +64,7 @@ function showProject(projectId) {
 $(document).ready(function() {
 	var isMobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-	const listOfTitle = document.getElementsByClassName("main-title");
+	const listOfTitle = document.getElementsByClassName("project");
 	var mainTitle;
 	const defaultImg = document.getElementById("default-img");
 
@@ -71,18 +72,19 @@ $(document).ready(function() {
 	for (var i = 0; i < listOfTitle.length; i++) {
 		mainTitle = listOfTitle[i];
 		changePageLinkColor(mainTitle.id);
-		$(mainTitle).css("border-left-color",borderColor);
+		$(mainTitle).css("--priColor",borderColor);
+		$(mainTitle).css("--bgColor",barColor);
 
 		if (!isMobile || window.innerWidth >= 764){
 			mainTitle.addEventListener("mouseover", function() {
 				changeBarColor(this.id);
-				showProject(this.id);
-				defaultImg.classList.add("hide");
+				// showProject(this.id);
+				// defaultImg.classList.add("hide");
 			});
 			mainTitle.addEventListener("mouseout", function() {
-				$(".bg-color").css("background-color", '#fafafa');
-				showProject(this.id);
-				defaultImg.classList.remove("hide");
+				$(".bg-color").css("--bgColor", '#fafafa');
+				// showProject(this.id);
+				// defaultImg.classList.remove("hide");
 			})
 		}
 	}
@@ -98,18 +100,18 @@ $(document).ready(function() {
 			i = 1;
 		}
 		tempProj = projectList[i];
-		$('.bg-color').css("background-color",tempProj.bgColorHex);
+		$('.bg-color').css("--bgColor",tempProj.bgColorHex);
 		$('.button').css("border-left-color",tempProj.accentColorHex);
 
 		//Checks if mobile
 		if(isMobile || window.innerWidth <=764) {
-			$('.navbar').css("background-color",tempProj.bgColorHex);
+			$('.navbar').css("--bgColor",tempProj.bgColorHex);
 		}
 		i++;
 	}
 	window.addEventListener('resize', (event) => {
 		if (!isMobile || window.innerWidth >= 764){
-			$('.navbar').css("background-color",'transparent');
+			$('.navbar').css("--bgColor",'transparent');
 		}
 	}, true);
 	setInterval(() => { changeBgAnim() }, 5000);

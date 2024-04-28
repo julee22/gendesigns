@@ -340,26 +340,26 @@ var projectList = [
 			link: "../images/rich media/Manulife-Vitality-pdf.jpg",
 			caption: 'Manulife Vitality PDF sample'
 		},
-		{
-			name: "img07",
-			link: "../images/rich media/Scotia-iTrade-1.jpg",
-			caption: 'Scotiabank ETF Finder tool'
-		},
-		{
-			name: "img08",
-			link: "../images/rich media/MBNA-Balance-Transfer.jpg",
-			caption: 'MBNA Credit Card Balance Transfer Calculator'
-		},
-		{
-			name: "img09",
-			link: "../images/rich media/Sunlife-RollMax.jpg",
-			caption: 'Sun Life U.S. Dental RollMax Calculator'
-		},
-		{
-			name: "img10",
-			link: "../images/rich media/Sonnet-video.jpg",
-			caption: 'Sonnet Shift User Based Insurance Video'
-		}
+		// {
+		// 	name: "img07",
+		// 	link: "../images/rich media/Scotia-iTrade-1.jpg",
+		// 	caption: 'Scotiabank ETF Finder tool'
+		// },
+		// {
+		// 	name: "img08",
+		// 	link: "../images/rich media/MBNA-Balance-Transfer.jpg",
+		// 	caption: 'MBNA Credit Card Balance Transfer Calculator'
+		// },
+		// {
+		// 	name: "img09",
+		// 	link: "../images/rich media/Sunlife-RollMax.jpg",
+		// 	caption: 'Sun Life U.S. Dental RollMax Calculator'
+		// },
+		// {
+		// 	name: "img10",
+		// 	link: "../images/rich media/Sonnet-video.jpg",
+		// 	caption: 'Sonnet Shift User Based Insurance Video'
+		// }
 	]
 	}
 ];
