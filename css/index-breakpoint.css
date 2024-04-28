@@ -1,8 +1,5 @@
 /* BREAKPOINTS */
 @media only screen and (min-width: 768px) {
-	header {
-		position: fixed;
-	}
 
 	.container {
 		max-width: 90%;
@@ -10,16 +7,10 @@
 		padding-right: 35px;
 	}
 
-	#background-bar {
-		height: 50%;
-	}
-
 	.headerText {
 		text-align: left;
 		padding-top: 15px;
-		margin: 25px 55px;
 		max-width: 100%;
-		order: 2;
 	}
 
 	.title {
@@ -30,12 +21,11 @@
 		font-size: 1.2rem;
 	}
 
-	.main-image-box {
+	/* .main-image-box {
 		height: 50vh;
-	}
+	} */
 
-	.main-title a {
-		font-size: 2rem;
+	.project {
 		padding: 5px 10px 5px 40px;
 	}
 
@@ -47,13 +37,9 @@
 
 /* DEKSTOP LANDSCAPE*/
 @media only screen and (min-width: 992px){
-	header {
-		padding: 75px 0px 25px;
-	}
 
 	.headerText {
 		text-align: left;
-		padding: 15px 0px;
 	}
 
 	.logo {
@@ -61,38 +47,19 @@
 		min-width: 80px;
 	}
 
-	#background-bar {
-		height: 50%;
-	}
-
 	.project {
-		padding-bottom: 50px;
-		margin-left: 90px;
-		margin-right: 90px;
-	}
-
-	.main-title {
 		text-align: left;
 	}
 
-	.main-title a {
-		display: inline-block;
-	}
-
-	.main-image-box {
-		height: 55vh;
-	}
+	/* .main-image-box {
+		height: 50vh;
+	} */
 }
 
 
 /* HEIGHT BREAKPOINTS*/
 
 @media screen and (min-height: 768px){
-	.project {
-		align-content: center;
-		padding-bottom: 75px;
-		height: 75vh;
-	}
 }
 
 

@@ -2,7 +2,7 @@
 var projectList = [
 	{
 		name:"default",
-		bgColorHex: '#ffffff',
+		bgColorHex: '#fafafa',
 		priColorHex: '#000000',
 		accentColorHex: '#ececec'
 	},
@@ -310,7 +310,7 @@ var projectList = [
 	// },
 	{
 		name: "manulife-vitality",
-		bgColorHex: '#00c36d',
+		bgColorHex: '#00e982',
 		priColorHex: '#000060',
 		accentColorHex: '#f15d22',
 		image: '../images/rich media/manulife-vitality-tablet.png',
@@ -340,26 +340,26 @@ var projectList = [
 			link: "../images/rich media/Manulife-Vitality-pdf.jpg",
 			caption: 'Manulife Vitality PDF sample'
 		},
-		{
-			name: "img07",
-			link: "../images/rich media/Scotia-iTrade-1.jpg",
-			caption: 'Scotiabank ETF Finder tool'
-		},
-		{
-			name: "img08",
-			link: "../images/rich media/MBNA-Balance-Transfer.jpg",
-			caption: 'MBNA Credit Card Balance Transfer Calculator'
-		},
-		{
-			name: "img09",
-			link: "../images/rich media/Sunlife-RollMax.jpg",
-			caption: 'Sun Life U.S. Dental RollMax Calculator'
-		},
-		{
-			name: "img10",
-			link: "../images/rich media/Sonnet-video.jpg",
-			caption: 'Sonnet Shift User Based Insurance Video'
-		}
+		// {
+		// 	name: "img07",
+		// 	link: "../images/rich media/Scotia-iTrade-1.jpg",
+		// 	caption: 'Scotiabank ETF Finder tool'
+		// },
+		// {
+		// 	name: "img08",
+		// 	link: "../images/rich media/MBNA-Balance-Transfer.jpg",
+		// 	caption: 'MBNA Credit Card Balance Transfer Calculator'
+		// },
+		// {
+		// 	name: "img09",
+		// 	link: "../images/rich media/Sunlife-RollMax.jpg",
+		// 	caption: 'Sun Life U.S. Dental RollMax Calculator'
+		// },
+		// {
+		// 	name: "img10",
+		// 	link: "../images/rich media/Sonnet-video.jpg",
+		// 	caption: 'Sonnet Shift User Based Insurance Video'
+		// }
 	]
 	}
 ];

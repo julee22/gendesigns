@@ -24,7 +24,7 @@
 	}
 
 	#introduction {
-		padding-top: 100px; 
+		/* padding-top: 100px;  */
 	}
 
 	#introduction, #description {
@@ -161,6 +161,7 @@
 	
 	.modal-dialog {
 		max-width: 80%;
+		max-height: 80vh;
 	}
 
 	#image-bg-bar {

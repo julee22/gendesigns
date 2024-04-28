@@ -2,7 +2,7 @@ var projectList = [
 	{
 		name: "manulife-vitality",
 		color: "#f15d22",
-		bgColorHex: '#00c36d',
+		bgColorHex: '#00e982',
 	},
 	{
 		name: "bespoke",
@@ -29,110 +29,92 @@ var projectList = [
 var borderColor;
 var barColor;
 
+const lengthProj = projectList.length;
 
 
 
 function changePageLinkColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
-	borderColor = project.color;
+	if (project) {
+		borderColor = project.color;
+		barColor = project.bgColorHex;
+	}
 }
 
 
 function changeBarColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
-	console.log(projectId,"project name");
-	barColor = project.bgColorHex;
-	$("#background-bar").css("background-color",barColor);
-	// also change menu bar color
-	$("#navbar").css("background-color",barColor+"F7");
+	if (project) {
+		console.log(projectId,"project name");
+		barColor = project.bgColorHex;
+		$(".bg-color").css("--bgColor",barColor);
+	}
 }
 
 
 // Main function to show project
-function showProject() {
-	
-	var activeProj = $("#projectList").children(".project");
-
-	// If mobile
-	const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-	
-	// Changing parameters depending on header height
-	var headerHeight;
-	const headerOffset = $("header")[0].getBoundingClientRect();
-	headerHeight = headerOffset.bottom-25;
-
-	if (window.innerWidth >=768) {
-		$("#projectList").css("margin-top",headerHeight);
-	} 
-
-	window.addEventListener('resize', (event) => {
-		if (window.innerWidth >=768) {
-			//Get height of header
-			// const headerOffset = $("header")[0].getBoundingClientRect();
-			// headerHeight = headerOffset.bottom-25;
-			console.log("header height is "+  headerHeight);
-			$("#projectList").css("margin-top",headerHeight);
-		}	else {
-			$("#projectList").css("margin-top","0");
-		}
-	}, true);
-
-	// shows all projects immediately if mobile
-	if (isMobile) {
-		for (var i = 0; i < projectList.length; i++) {
-			$(activeProj[i]).css("opacity","1");
-		}
-	// } else {
-	// 	$(activeProj[0]).css("opacity","1");
-	}
-
-	// Checks if project is in view and decides fades in/out
-	for (var i = 0; i < projectList.length; i++){
-		var selectedProject = activeProj[i];
-		var projectOffset = selectedProject.getBoundingClientRect();
-		var top = projectOffset.top;
-		var height = projectOffset.bottom;
-
-
-		if (top < headerHeight /2 - 25) {
-			if (!isMobile && window.innerWidth >=768) {
-				$(activeProj[i]).removeAttr("style");
-				console.log("hide "+  i);
-			}
-		} else if ((top <= window.innerHeight && top > -50) || height > 100) {
-			changeBarColor(projectList[i].name);
-			if (!isMobile) {
-				$(activeProj[i]).css("opacity","1");
-				console.log("show "+  i);
-			}
-			break;
-		}
-	}
+function showProject(projectId) {
+	var mainImg;
+	mainImg = document.getElementById(projectId+"-img");
+	mainImg.classList.toggle("hide");
 }
 
 
 //JQUERY
 $(document).ready(function() {
+	var isMobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-	const listOfTitle = document.getElementsByClassName("main-title");
+	const listOfTitle = document.getElementsByClassName("project");
 	var mainTitle;
-	var mainTitleHov;
+	const defaultImg = document.getElementById("default-img");
 
 	// Change color of all titles
 	for (var i = 0; i < listOfTitle.length; i++) {
-		mainTitle = listOfTitle[i].firstElementChild;
+		mainTitle = listOfTitle[i];
 		changePageLinkColor(mainTitle.id);
-		$(mainTitle).css("border-left-color",borderColor);
-		console.log(mainTitle.id);
+		$(mainTitle).css("--priColor",borderColor);
+		$(mainTitle).css("--bgColor",barColor);
+
+		if (!isMobile || window.innerWidth >= 764){
+			mainTitle.addEventListener("mouseover", function() {
+				changeBarColor(this.id);
+				// showProject(this.id);
+				// defaultImg.classList.add("hide");
+			});
+			mainTitle.addEventListener("mouseout", function() {
+				$(".bg-color").css("--bgColor", '#fafafa');
+				// showProject(this.id);
+				// defaultImg.classList.remove("hide");
+			})
+		}
 	}
 
-	// Sets project background and shows image
-	showProject();
+
+	// Change Background
+	var tempProj;
+	var i =  1;
+
+	function changeBgAnim() {
+		console.log(i + " equals " + lengthProj);
+		if (i == lengthProj) {
+			i = 1;
+		}
+		tempProj = projectList[i];
+		$('.bg-color').css("--bgColor",tempProj.bgColorHex);
+		$('.button').css("border-left-color",tempProj.accentColorHex);
+
+		//Checks if mobile
+		if(isMobile || window.innerWidth <=764) {
+			$('.navbar').css("--bgColor",tempProj.bgColorHex);
+		}
+		i++;
+	}
+	window.addEventListener('resize', (event) => {
+		if (!isMobile || window.innerWidth >= 764){
+			$('.navbar').css("--bgColor",'transparent');
+		}
+	}, true);
+	setInterval(() => { changeBgAnim() }, 5000);
 
 });
 
-
-// Event changing the bar color and image
-$(document).scroll(function() {
-	showProject();
-});

@@ -7,19 +7,6 @@ var currProj;
 
 const lengthProj = projectList.length;
 
-function changeProj(projectName) {
-	var project = projectList.find(project => project.name == projectName);
-		mainImage = project.image;
-		bgColor = project.bgColorHex;
-		priColor = project.priColorHex;
-		accentColor = project.accentColorHex;
-		imageList = project.imgArray;
-	$(':root').css("--bgColor",bgColor);
-	$(':root').css("--priColor",priColor);
-	$(':root').css("--accentColor",accentColor);
-	currProj = projectName;
-}
-
 
 // For setting the NavColor
 var borderColor;
