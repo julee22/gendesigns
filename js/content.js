@@ -1,5 +1,5 @@
 // Project Content Files
-var projectList = [
+const projectList = [
 	{
 		name:"default",
 		bgColorHex: '#fafafa',
@@ -360,6 +360,50 @@ var projectList = [
 		// 	link: "../images/rich media/Sonnet-video.jpg",
 		// 	caption: 'Sonnet Shift User Based Insurance Video'
 		// }
+	]
+	},
+	{
+		name: "tdsb",
+		bgColorHex: '#f7b214',
+		priColorHex: '#129a55',
+		accentColorHex: '#232f66',
+		image: '../images/tdsb/SS-Cover-Page.png',
+		imgArray:  [
+		{
+			name: "img02",
+			link: "../images/tdsb/ILE-Toronto-Star-Ad.jpg",
+			caption: 'International Languages Elementary Toronto Star Ad'
+		},
+		{
+			name: "img03",
+			link: "../images/tdsb/SS-Cover+Inside.jpg",
+			caption: 'Second Street JMS Brochure'
+		},
+		{
+			name: "img04",
+			link: "../images/tdsb/SL-Cover+Inside.jpg",
+			caption: 'Stephen Leacock C.I. Brochure'
+		},
+		{
+			name: "img05",
+			link: "../images/tdsb/GRG-Banner.jpg",
+			caption: 'Pull up banner designs for school'
+		},
+		{
+			name: "img06",
+			link: "../images/tdsb/Newspaper Ad.jpg",
+			caption: 'Toronto Star Ad for Highschool Registration'
+		},
+		{
+			name: "img07",
+			link: "../images/tdsb/Cedarbrae-logo.jpg",
+			caption: 'School logo with sample materials'
+		},
+		{
+			name: "img08",
+			link: "../images/tdsb/summercamps.jpg",
+			caption: 'Information brochure with tear-away'
+		},
 	]
 	}
 ];
