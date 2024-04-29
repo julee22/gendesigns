@@ -23,7 +23,7 @@ body {
 
 .divider {
 	width: 200px;
-	margin: 0px auto 30px;
+	margin: 15px auto 15px;
 	height: 5px;
 	background-color: var(--bgColor);
 }
