@@ -1,30 +1,3 @@
-var projectList = [
-	{
-		name: "manulife-vitality",
-		color: "#f15d22",
-		bgColorHex: '#00e982',
-	},
-	{
-		name: "bespoke",
-		color: "#4c7fc1",
-		bgColorHex: '#d2ceca',
-	},
-	{
-		name: "breeze",
-		color: "#3893d6",
-		bgColorHex: '#e6f3f8',
-	},
-	{
-		name: "hani",
-		color: "#ff7900",
-		bgColorHex: '#ffe98d',
-	},
-	{
-		name: "period-purse",
-		color: "#EF3A4C",
-		bgColorHex: '#FCDAEF',
-	},
-];
 
 var borderColor;
 var barColor;
@@ -36,7 +9,7 @@ const lengthProj = projectList.length;
 function changePageLinkColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
 	if (project) {
-		borderColor = project.color;
+		borderColor = project.accentColorHex;
 		barColor = project.bgColorHex;
 	}
 }
