@@ -7,9 +7,13 @@
 		padding-right: 35px;
 	}
 
+	.main {
+		height: 80vh;
+	}
+
 	.headerText {
 		text-align: left;
-		padding-top: 15px;
+		padding-top: 50px;
 		max-width: 100%;
 	}
 
@@ -22,11 +26,11 @@
 	}
 
 	/* .main-image-box {
-		height: 50vh;
+		height: 100%;
 	} */
 
-	.project {
-		padding: 5px 10px 5px 40px;
+	#projectList {
+		text-align: left;
 	}
 
 	.main-footer {
@@ -39,15 +43,6 @@
 @media only screen and (min-width: 992px){
 
 	.headerText {
-		text-align: left;
-	}
-
-	.logo {
-		height: 80px;
-		min-width: 80px;
-	}
-
-	.project {
 		text-align: left;
 	}
 

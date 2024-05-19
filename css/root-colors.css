@@ -1,9 +1,12 @@
 :root {
-  --bgColor: #fafafa;
+  --bgColor: #efefef;
   --priColor: black;
   --accentColor: red;
   --grey: #606060;
   --boldWeight: 500;
   --cursor-img: url("../images/cursor-default.png"), auto;
   --pointer-img: url("../images/pointer-default.png"), auto;
+	--shadowRaised: inset 4px 4px 10px rgba(255, 255, 255, 0.55), inset -3px -3px 10px rgba(0, 0, 0, 0.2) , -5px -5px 15px rgba(255,255,255, 0.9), 5px 5px 15px rgba(0, 0, 0, 0.3);
+	--shadowEmbed: inset 2px 2px 5px rgba(0, 0, 00, 0.2), 5px 5px 20px rgba(255,255,255,.8), -1px -5px 20px rgba(0, 0, 0, 0.35);
+	--shadowEngraved: inset 1px 1px 3px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.9);
 }

@@ -1,8 +1,3 @@
-header {
-	/* padding-top: 70px; */
-}
-
-
 #background-bar {
 	position: fixed;
 	top: 0px;	
@@ -10,9 +5,10 @@ header {
 	z-index: -100;
 }
 
-header, #background-bar {
+#background-bar {
 	width: 100%;
 }
+
 
 .headerText {	
 	padding: 15px 10px;
@@ -23,13 +19,10 @@ header, #background-bar {
 	margin-right: 0px;
 }
 
-#main {
-	padding-top: 100px; 
-}
 
 .title {
 	font-weight: var(--boldWeight);
-	font-size: 2.4rem;
+	font-size: 2rem;
 	text-transform: none;
 }
 
@@ -59,7 +52,7 @@ footer .caption {
 
 /** Project Section**/
 #projectList {
-	/* margin-top: -80px; */
+	text-align: center;
 }
 
 /*
@@ -70,35 +63,28 @@ footer .caption {
 	padding-bottom: 0px;
 }*/
 
-.project span {
-	display: block;
-	font-size: 1.25em;
-	font-weight: calc(var(--boldWeight) - 100);
-	color: black;
-	letter-spacing: 1pt;
-	margin-top: 15px;
-	padding: 2px 30px;
-	border-left: 3px solid var(--priColor);
-	transition: border 0.1s;
-}
-
-.project:hover span {
-	border-left-width: 6px;
-	font-weight: var(--boldWeight);
-}
-
 
 .image-box {
 	display: flex;
-	/* justify-content: center; */
-	align-items: flex-end;
+	align-items: center;
+	justify-content: center;
+	height: 100vw;
 	position: relative;
-	height: 225px;
-	/* background-color: var(--bgColor); */
+	width: 100%;
+	max-width: 400px;
+	max-height: 400px;
+	margin: 15px auto;
+	box-shadow: var(--shadowEmbed);
+}
+
+.image-box a {
+	height: 100%;
 }
 
 .image-box .main-image {
-	max-width: 100%;
+	max-width: 120%;
 	max-height: 120%;
 	position: absolute;
+	transition: 1s ease;
+	opacity: 0;
 }

@@ -8,7 +8,7 @@
 <!--StyleSheets-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/root-colors.css">
-	<link rel="stylesheet" type="text/css" href="css/main-revised.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/index-breakpoint.css">
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
@@ -17,8 +17,8 @@
 
 
 <body>
-	<div id="background-bar" class="bg-color"></div>
-	<nav class="navbar navbar-expand-sm bg-color navbar-light" id="navbar">
+	<!-- <div id="background-bar" class="bg-color"></div> -->
+	<nav class="navbar navbar-light" id="navbar">
 		<a href="#" id="menu-image"> <!--onclick="mobNav(media)"-->
 			<img src="images/Genice-Designs-Logo-Square.png" style="max-width: initial;">
 		</a>
@@ -39,42 +39,30 @@
 			</ul>
 		</div>
 	</nav>
-	<header>
-		<div class="container">
-			<div class="row headerText">
-				<div class="col-12">
+	<div class="container main">
+		<div class="row">
+			<div class="col-12 col-md-7 col-lg-6 ">
+				<div class="headerText">
 					<h1 class="title">Hi, my name is Genice</h1>
 					<p class="subtitle">A multi-disciplinary graphic designer with clever solutions</p>
-					<!-- <img src="images/Genice-Designs-Logo-Tilt.png" class="main-image bounce-anim" id="default-img"> -->
+				</div>
+				<div id="projectList">
+					<div>
+						<a href="pages/manulife-vitality.html" class="project button" id="manulife-vitality">Manulife Vitality</a>
+					</div>
+					<div>
+						<a href="pages/bespoke.html" class="project button" id="bespoke">Bespoke Real Estate Team</a>
+					</div>
+					<div>
+						<a href="pages/tdsb.html" class="project button" id="tdsb">Toronto District School Board</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-
-	<div class="container" id="projectList">
-		<div class="row justify-content-start" >
-			<div class="col-12 col-md col-lg-4">
-				<a href="pages/manulife-vitality.html" class="project" id="manulife-vitality">
-					<div class="image-box">
-						<img src="images/rich media/manulife-vitality.png" class="main-image bounce-anim" id="manulife-vitality-img">
-					</div>
-					<span>Manulife Savings Tool</span>
-				</a>
-			</div>
-			<div class="col-12 col-md col-lg-4">
-				<a href="pages/bespoke.html" class="project" id="bespoke">
-					<div class="image-box">
-						<img src="images/bespoke/Bespoke Official Logo.png" class="main-image bounce-anim" id="bespoke-img">
-					</div>
-					<span>Bespoke Real Estate Team</span>
-				</a>
-			</div>
-			<div class="col-12 col-md col-lg-4">
-				<a href="pages/tdsb.html" class="project" id="tdsb">
-					<div class="image-box">
-						<img src="images/tdsb/Toronto-District-logo.png" class="main-image bounce-anim" id="tdsb-img">
-					</div>
-					<span>Toronto District School Board</span>
+			<div class="col-12 col-md" style="text-align: center;">
+				<a href="pages/manulife-vitality.html" class="image-box bg-color" id="projectImgLink">
+					<img src="images/rich media/manulife-vitality.png" class="main-image bounce-anim" id="manulife-vitality-img" style="left: 10px">
+					<img src="images/bespoke/Bespoke-Landing-Page.png" class="main-image bounce-anim" id="bespoke-img" style="left: 10px">
+					<img src="images/tdsb/SS-Cover-Page.png" class="main-image bounce-anim"  id="tdsb-img" style="right: 10px">
 				</a>
 			</div>
 		</div>
@@ -90,7 +78,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/fadeInScroll.jQuery.js"></script>
 <script src="js/content.js"></script>
-<script src="js/main-revised.js"></script>
+<script src="js/index.js"></script>
 <!-- <script type="text/javascript">changeProj("default");</script> -->
 </body>
 </html> 
