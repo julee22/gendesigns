@@ -15,8 +15,12 @@
 		padding-right: 35px;
 	}
 
-	.row {
-		padding-top: 20px;
+	.desktop-only {
+		display: block;
+	}
+
+	.mobile-only {
+		display: none;
 	}
 
 	.headingTitle {
@@ -41,7 +45,6 @@
 	}
 
 	p, .button, li {
-		font-size: 1.1rem;
 		margin-top: 0px;
 	}
 
@@ -116,6 +119,10 @@
 
 	.carousel-indicators .active {
 		width: 75px;
+	}
+
+	.accordion-list {
+		text-align: right;
 	}
 
 

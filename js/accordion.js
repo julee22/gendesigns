@@ -1,23 +1,26 @@
 
 // Opens accordion
-function openAcc(accordionId) {
+function openAcc(elem, accordionId) {
 	const allAccordions = document.getElementsByClassName("accordion-content");
 	var accordionContent = document.getElementById(accordionId);
+	var accordionTriggers = document.getElementsByClassName("accordion");
 
 	// stores bool of whether accordion was already opened
-	var alreadyOpen = false;
-	if(accordionContent.classList.contains("active")) {
-		alreadyOpen = true;
-	}
+	// var alreadyOpen = false;
+	// if(accordionContent.classList.contains("active")) {
+	// 	alreadyOpen = true;
+	// }
 	
 	// hides all open accordions first
 	for (var i = 0; i < allAccordions.length; i++) {
 		allAccordions[i].classList.remove("active");
+		accordionTriggers[i].classList.remove("active");
 	}
 	// checks if the selected accordion was already open. If yes, do nothing as all accordions should be closed
-	if (!alreadyOpen) {
+	// if (!alreadyOpen) {
 		accordionContent.classList.add("active");
-	}
+		elem.classList.add("active");
+	// }
 
 	$(accordionContent.children[0]).animate({opacity:1});
 

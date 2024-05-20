@@ -26,6 +26,8 @@ function showProject(projectId) {
 	$("#projectImgLink").attr('href', 'pages/'+projectId+'.html');
 }
 
+
+
 //JQUERY
 $(document).ready(function() {
 	var isMobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);

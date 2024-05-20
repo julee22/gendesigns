@@ -22,11 +22,11 @@
 
 
 <!--NAV-->
-<nav class="navbar navbar-expand-sm bg-color navbar-light" id="navbar">
+<nav class="navbar navbar-light" id="navbar">
 	<a href="../index.html" id="menu-image"> <!--onclick="mobNav(media)"-->
 		<img src="../images/Genice-Designs-Logo-Square.png" style="max-width: initial;">
 	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="navbar-collapse collapse" id="menu">
@@ -142,28 +142,29 @@
 <!--CASE STUDIES SECTION-->
 <div class="container" id="case-studies">
 	<div class="row headingTitle">
-	<div class="divider"></div>
-			<div class="col-12">
+		<div class="divider"></div>
+		<div class="col-12">
 			<h2>case studies</h2>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-12 col-md">
-			<button class="button accordion active" onclick="openAcc('feature-sheet')">
+	<div class="row ">
+		<div class="col-12 col-md-3 desktop-only accordion-list">
+			<button class="accordion active" onclick="openAcc(this,'feature-sheet')">
 				<h3>Feature Sheet</h3>
 			</button>
-		</div>
-		<div class="col-12 col-md">
-			<button class="button accordion" onclick="openAcc('social')">
+			<button class="accordion" onclick="openAcc(this,'social')">
 				<h3>Social Media</h3>
 			</button>
-		</div>
-		<div class="col-12 col-md">
-			<button class="button accordion" onclick="openAcc('signage')">
+			<button class="accordion" onclick="openAcc(this,'signage')">
 				<h3>Signage</h3>
 			</button>
 		</div>
-		<div class="accordion-content col-12 active" id="feature-sheet">
+		<div class="col-12 mobile-only accordion-list">
+			<button class="accordion active" onclick="openAcc(this,'feature-sheet')">
+				<h3>Feature Sheet</h3>
+			</button>
+		</div>
+		<div class="accordion-content col-12 col-md-9 active" id="feature-sheet">
 			<div class="row">
 				<div class="col-12 col-md-8">
 					<p>Feature sheets contain all of the information an interested homebuyer may need about the property and are given out during an open house.</p>
@@ -178,7 +179,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="accordion-content col-12" id="social">
+		<div class="col-12 mobile-only accordion-list">
+			<button class="accordion" onclick="openAcc(this,'social')">
+				<h3>Social Media</h3>
+			</button>
+		</div>
+		<div class="accordion-content col-12 col-md-9" id="social">
 			<div class="row">
 				<div class="col-12">
 					<p>The goal was to increase engagement with clients and create a design system for the many different types of posts and platforms we were on (with a focus on Instagram). Within the first few months of taking over the social media, the number of Instagram followers increased by <strong>300</strong>.</p>
@@ -194,7 +200,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="accordion-content col-12" id="signage">
+		<div class="col-12 mobile-only accordion-list">
+			<button class="accordion" onclick="openAcc(this,'signage')">
+				<h3>Signage</h3>
+			</button>
+		</div>
+		<div class="accordion-content col-12 col-md-9" id="signage">
 			<div class="row">
 				<div class="col-12">
 					<p>I noted other realtor's signs while scouring the target neighbourhoods; many of them were similar in design. The original signage was too similar to the others. It lacked a focal point and had too many competing elements.</p>

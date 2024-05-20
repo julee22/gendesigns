@@ -13,7 +13,6 @@ body {
 
 .row {
 	min-height: initial;
-	padding: 15px 0px 30px;
 }
 
 .bg-color {
@@ -46,13 +45,36 @@ body {
 }
 
 /* ACCORDION */
+.accordion-list {
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+
+.accordion {
+	width: 100%;
+	padding: .75em 1em;
+	margin-bottom: 1.5em;
+	text-align: left;
+	box-shadow: var(--shadowEngraved);
+	transition: box-shadow .3s ease;
+}
+
+.accordion:hover {
+	box-shadow: var(--shadowRaised);
+}
+
+.accordion.active {
+	font-weight: var(--boldWeight);
+	box-shadow: var(--shadowEmbed);
+}
+
 .accordion-content {
 	display: none;
 }
 
 .accordion-content.active:not(.row) {
 	display: block !important;
-	margin-top: 15px;
+	/* box-shadow: var(--shadowEmbed); */
 	padding: 0px 20px;
 }
 
@@ -93,7 +115,7 @@ h3 {
 	color: var(--priColor);
 }
 
-.button.accordion h3 {
+.accordion h3 {
 	font-size: 1.2em;
 	font-weight: inherit;
 	margin-bottom: 0em;
@@ -140,26 +162,24 @@ strong {
 
 
 /* BUTTONS */
-.button {
+button {
 	text-decoration: none;
+	background-color: transparent;
+	border: none;
+	cursor: var(--pointer-img);
+}
+
+.button {
+	font-weight: var(--boldWeight);
 	letter-spacing: 0.1rem;
 	word-spacing: 0.1rem;
-	font-weight: var(--boldWeight);
 	color: black;
-	background-color: transparent;
 	display: inline-block;
 	padding: .5em 1.5em;
 	margin: 10px;
 	border-radius: 20px;
-	border: none;
-	cursor: var(--pointer-img);
 	box-shadow: var(--shadowEngraved);
 	transition: 0.3s ease-in;
-}
-
-.button.accordion.active {
-	font-weight: var(--boldWeight);
-	box-shadow: var(--shadowEmbed);
 }
 
 .button:hover {
@@ -189,6 +209,8 @@ img {
 	background-image: url("../images/Genice-Designs-Logo-Square.png");
 	background-size: cover;
 }
+
+
 
 /* Animation */
 

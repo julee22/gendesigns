@@ -121,33 +121,6 @@ $(document).ready(function()
 		});
 	}
 
-	// Accordion button state
-	var accordion = document.getElementsByClassName("accordion");
-	
-	for (var i = 0; i < accordion.length; i++) {
-		accordion[i].addEventListener("click", function() {
-			if (this.classList.contains("active")) {
-				this.classList.remove("active");
-			} else {
-				for (var n = 0; n < accordion.length; n++) {
-					accordion[n].classList.remove("active");
-				}
-
-				this.classList.toggle("active");
-			}
-
-			// Checks if innerHTML is just Less/More string
-			console.log(this.innerHTML.includes("<"));
-			if(!this.innerHTML.includes("<")) {
-				if(this.classList.contains("active")) {
-					this.innerHTML = "Less";
-				} else {
-					this.innerHTML = "More";
-				}
-			}
-		});
-	} 
-
 	// Color Swatches
 	// Select all that have class colorSwatch
 	var colorPalette = document.getElementsByClassName('colorSwatch');

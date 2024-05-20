@@ -4,6 +4,14 @@
 	transition:  border-color 5s ease-in;
 }
 
+.desktop-only {
+	display: none;
+}
+
+.mobile-only {
+	display: block;
+}
+
 /** TEXT */
 .introTitle, .introSub {
 	padding-bottom: 5px;
@@ -106,6 +114,19 @@ img {
 	margin: 5px 0px 10px;
 }
 
+.imgBox-color {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vw;
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	max-height: 400px;
+	margin: 15px auto;
+	box-shadow: var(--shadowEmbed);
+}
+
 #cover {
 	position: relative;
 	width: 100%;
@@ -137,7 +158,7 @@ img {
 
 .hover-shadow:hover {
   top: -5px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--shadowRaised);
 }
 
 .clickImg {
@@ -345,9 +366,10 @@ footer a:hover {
 } 
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
-
 	min-width: 30px;
 	min-height: 30px;
+	border-radius: 50%;
+	box-shadow: var(--shadowRaised);
 	background-color: var(--priColor);
 	background-size: cover;
 }

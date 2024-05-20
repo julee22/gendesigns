@@ -20,7 +20,7 @@
 
 
 <!--NAV-->
-<nav class="navbar navbar-expand-sm bg-color navbar-light" id="navbar">
+<nav class="navbar navbar-light" id="navbar">
 	<a href="../index.html" id="menu-image"> <!--onclick="mobNav(media)"-->
 		<img src="../images/Genice-Designs-Logo-Square.png" style="max-width: initial;">
 	</a>
@@ -93,11 +93,11 @@
 	</div>
 	<div class="row">
 		<div class="col-12 col-md order-md-1">
-			<button class="button accordion" onclick="openAcc('sec-research')">
+			<button class="accordion active" onclick="openAcc(this,'sec-research')">
 				<h3>Secondary Research</h3>
 			</button>
 		</div>
-		<div class="accordion-content col-12 order-md-4" id="sec-research">
+		<div class="accordion-content active col-12 order-md-4" id="sec-research">
 			<div class="row">
 				<div class="col-md-6 col-sm-12 col-12">
 					<p>Studies have determined that food waste at the household level was the complex result of routine, preference, social expectation and convenience. Grocery shopping routines greatly contribute to food waste habits.</p>
@@ -111,7 +111,7 @@
 		</div>
 
 		<div class="col-12 col-md order-md-2">
-			<button class="button accordion" onclick="openAcc('dairy-study')">
+			<button class="accordion" onclick="openAcc(this,'dairy-study')">
 				<h3>Diary Study</h3>
 			</button>
 		</div>
@@ -144,7 +144,7 @@
 		</div>
 
 		<div class="col-12 col-md order-md-3">
-			<button class="button accordion" onclick="openAcc('expiry-map')">
+			<button class="accordion" onclick="openAcc(this,'expiry-map')">
 				<h3>Expiry Date Map</h3>
 			</button>
 		</div>
