@@ -9,17 +9,6 @@
 	width: 100%;
 }
 
-
-.headerText {	
-	padding: 15px 10px;
-}
-
-.headerText .col-12{
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-
 .title {
 	font-weight: var(--boldWeight);
 	font-size: 2rem;
@@ -64,18 +53,6 @@ footer .caption {
 }*/
 
 
-.image-box {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vw;
-	position: relative;
-	width: 100%;
-	max-width: 400px;
-	max-height: 400px;
-	margin: 15px auto;
-	box-shadow: var(--shadowEmbed);
-}
 
 .image-box a {
 	height: 100%;

@@ -69,7 +69,7 @@ $(document).ready(function()
 {
 
 	// Set cover image to mainImage
-	$("#cover").css("background-image", "url('"+ mainImage+"')");
+	$("#cover").attr('src',mainImage);
 
 
 	// Populate images in Lightbox gallery
@@ -95,7 +95,6 @@ $(document).ready(function()
 
 
   	//CAROUSEL JS
-	// Generates carousel indicators automatically
 	const listOfSlides = document.querySelectorAll(".carousel-item");
 	generateCarouselIndicators(listOfSlides.length, "#feature-slider");
 
@@ -166,9 +165,6 @@ $(document).ready(function()
 	} else {
 		randLink.innerHTML = randProj.name;
 	}
-	
-	//mobile swipe
-	//$('.carousel').bcSwipe({ threshold: 50 });
 
 	// Fade in Scroll
 	$('.row').fadeInScroll();

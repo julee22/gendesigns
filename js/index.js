@@ -35,7 +35,8 @@ $(document).ready(function() {
 	const listOfTitle = document.getElementsByClassName("project");
 	const listOfImages = document.getElementsByClassName("main-image");
 	var mainTitle;
-	const defaultImg = document.getElementById("manulife-vitality-img");
+	const defaultImg = listOfImages[0];
+	console.log(defaultImg);
 
 	// Hover for titles
 	for (var i = 0; i < listOfTitle.length; i++) {

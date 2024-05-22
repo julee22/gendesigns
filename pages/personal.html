@@ -17,7 +17,6 @@
 
 
 <body>
-	<div id="background-bar" class="bg-color"></div>
 	<nav class="navbar navbar-light" id="navbar">
 		<a href="../index.html" id="menu-image"> <!--onclick="mobNav(media)"-->
 			<img src="../images/Genice-Designs-Logo-Square.png" style="max-width: initial;">
@@ -39,44 +38,30 @@
 			</ul>
 		</div>
 	</nav>
-
-<header>
-	<div class="container">
-		<div class="row headerText">
-			<div class="col-12">
+<div class="container main">
+	<div class="row" >
+		<div class="col-12 col-md-7 col-lg-6 ">
+			<div class="headerText">
 				<h1 class="title">Hi, my name is Genice</h1>
-				<p class="subtitle">A multi-disciplinary graphic designer with clever solutions</p>
+				<p class="subtitle">A multi-disciplinary graphic designer with clever&nbsp;solutions</p>
+			</div>
+			<div id="projectList">
+				<div>
+					<a href="breeze.html" class="project button" id="breeze">Manulife Vitality</a>
+				</div>
+				<div>
+					<a href="hani.html" class="project button" id="hani">HANI</a>
+				</div>
+				<div>
+					<a href="period-purse.html" class="project button" id="period-purse">Period Purse</a>
+				</div>
 			</div>
 		</div>
-	</div>
-</header>
-
-
-<div class="container" id="projectList">
-
-	<div class="row justify-content-start" >
-		<div class="col-12 col-md col-lg-4">
-			<a href="breeze.html" class="project" id="breeze">
-				<div class="image-box">
-					<img src="../images/breeze/Breeze Main Image Trans.png" class="main-image bounce-anim" id="breeze-img">
-				</div>
-				<span class="button">Breeze</span>
-			</a>
-		</div>
-		<div class="col-12 col-md col-lg-4">
-			<a href="hani.html" class="project" id="hani">
-				<div class="image-box">
-					<img src="../images/hani/Hani Main Image Trans.png" class="main-image bounce-anim" id="hani-img">
-				</div>
-				<span class="button">HANI</span>
-			</a>
-		</div>
-		<div class="col-12 col-md col-lg-4">
-			<a href="period-purse.html" class="project" id="period-purse">
-				<div class="image-box">
-					<img src="../images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image bounce-anim" id="period-purse-img">
-				</div>
-				<span class="button">The Period Purse</span>
+		<div class="col-12 col-md" style="text-align: center;">
+			<a href="breeze.html" class="image-box bg-color" id="projectImgLink">
+				<img src="../images/breeze/Breeze Main Image Trans.png" class="main-image bounce-anim" id="breeze-img" style="left: -10px">
+				<img src="../images/hani/Hani Main Image Trans.png" class="main-image bounce-anim" id="hani-img" style="right: 10px">
+				<img src="../images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image bounce-anim"  id="period-purse-img" style="left: 10px">
 			</a>
 		</div>
 	</div>
@@ -92,7 +77,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="../js/fadeInScroll.jQuery.js"></script>
-<script src="../js/main-revised.js"></script>
+<script src="../js/content.js"></script>
+<script src="../js/index.js"></script>
 <!-- <script type="text/javascript">changeProj("default");</script> -->
 </body>
 </html> 

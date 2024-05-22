@@ -1,16 +1,8 @@
 
 /* BREAKPOINTS */
 @media screen and (min-width: 768px) {
-	#about #cover { 
-		top: 100px;
-		right: 5%;
-		width: 40%;
-		min-height: 90vh;
-		background-size: contain;
-	}
 
 	.container {
-		max-width: 90%;
 		padding-left: 35px;
 		padding-right: 35px;
 	}
@@ -22,19 +14,6 @@
 	.mobile-only {
 		display: none;
 	}
-
-	.headingTitle {
-		padding-bottom: 15px;
-	}
-
-	#introduction {
-		/* padding-top: 100px;  */
-	}
-
-	#introduction, #description {
-		max-width: 80%;
-	}
-
 
 	.center-section {
 		max-width: 90%;
@@ -54,10 +33,6 @@
 
 	.introSub {
 		font-size: 1.2rem;
-	}
-
-	.introDesc {
-		padding-right: 50px;
 	}
 
 	.brand-subheading{
@@ -82,18 +57,6 @@
 	.carousel {
 		padding-bottom: 25px;
 		max-width: 100%;
-	}
-
-	.carousel-bg {
-		padding: 50px;
-	}
-
-	.carousel-width {
-		display: flex;
-		align-items: center;
-		width: 78%;
-		max-width: 1100px;
-		margin: 0px auto;
 	}
 
 	.carousel-text {
@@ -140,30 +103,8 @@
 
 @media screen and (min-width: 992px) {
 
-	#cover {
-		position: absolute;
-		right: 0px;
-		top: 0px;
-		overflow: hidden;
-		width: 50%;
-		height: 90vh;
-		background-size: 120%;
-		background-repeat: no-repeat;
-		background-position: left center;
-	}
-
-	#description .row, #about .row:first-child  {
-		position: static;
-		top:  0px;
-	}
-
 	.container {
 		padding-top: 35px;
-		max-width: 1024px;
-	}
-
-	#about.container {
-		max-width: 80%;
 	}
 	
 	.modal-dialog {
@@ -184,8 +125,4 @@
 
 /* Large Display Screns */
 @media screen and (min-width: 1920px) {
-	#cover {
-		max-height: 70vh;
-		background-size: contain;
-	}
 }

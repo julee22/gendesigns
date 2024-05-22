@@ -8,6 +8,9 @@
 	border: none;
 	box-shadow: var(--shadowEmbed);
 }
+.navbar-toggler:hover {
+	box-shadow: var(--shadowRaised);
+}
 .navbar-toggler.collapsed {
 	border: none;
 	box-shadow: var(--shadowEngraved);
@@ -52,6 +55,7 @@
 
 .nav-item .nav-link {
 	color: inherit;
+	padding: 0;
 }
 
 @media screen and (min-width: 768px) {	

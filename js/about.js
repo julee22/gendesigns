@@ -1,60 +1,39 @@
-// Sets the color scheme for each page
-var mainImage;
-var bgColor;
-var priColor;
-var accentColor;
-var currProj;
+var borderColor;
+var barColor;
+let nIntervId;
 
 const lengthProj = projectList.length;
 
 
 // For setting the NavColor
-var borderColor;
+var barColor;
 
-function changeNavColor(projectId) {
+function changeBarColor(projectId) {
 	var project = projectList.find(project => project.name == projectId);
-	borderColor = project.priColorHex;
+	if (project) {
+		barColor = project.bgColorHex;
+		$(".bg-color").css("--bgColor",barColor);
+	}
 }
 
 
 
 $(document).ready(function()
 {
-	var isMobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	// Change Background + Projects
+	changeBarColor(projectList[0].bgColorHex);
 
-	// Change Background
-	var tempProj;
-	var i =  1;
-
-	function changeBgAnim() {
-		console.log(i + " equals " + lengthProj);
-		if (i == lengthProj) {
-			i = 1;
-		}
-		console.log(i + " is less than " + lengthProj);
-		tempProj = projectList[i];
-		$('.bg-color').css("background-color",tempProj.bgColorHex);
-		$('.button').css("border-left-color",tempProj.accentColorHex);
-
-		//Checks if mobile
-		if(isMobile || window.innerWidth <=764) {
-			$('.navbar').css("background-color",tempProj.bgColorHex);
-		}
-		console.log("changing background to " + tempProj.name);
-		i++;
+	if (!nIntervId) {		
+		nIntervId = setInterval(rotateProjects, 3000);
 	}
-	window.addEventListener('resize', (event) => {
-		if (!isMobile || window.innerWidth >= 764){
-			$('.navbar').css("background-color",'transparent');
+
+	var n = 0;
+	function rotateProjects() {
+		if (n == lengthProj) {
+			n = 0;
 		}
-	}, true);
-	setInterval(() => { changeBgAnim() }, 5000);
-
+		changeBarColor(projectList[n].name);
+		n++;
+	}
 });
 
-
-
-// Close menu when scrolling
-$(window).scroll(function() {
-	$('.collapse').collapse('hide');
-});

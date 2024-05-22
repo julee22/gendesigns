@@ -2,12 +2,12 @@ body {
 	box-sizing: border-box;
 	font-family: 'Barlow', 'Bahnschrift', 'Inter','Roboto',  sans-serif;
 	cursor: var(--cursor-img);
-	background-color: #efefef;
+	background-color: var(--defaultBg);
 }
 
 /* GENERIC SECTIONS */
 .container {
-	max-width: 95%;
+	max-width: 90%;
 	padding-bottom: 35px;
 }
 
@@ -24,7 +24,7 @@ body {
 	width: 200px;
 	margin: 15px auto 15px;
 	height: 5px;
-	background-color: var(--bgColor);
+	background-color: var(--priColor);
 }
 
 .spacer {
@@ -36,6 +36,14 @@ body {
 	min-width: 50px;
 	background-image: url("../images/Genice-Designs-Logo-Square.png");
 	background-size: cover;
+}
+
+.desktop-only {
+	display: none;
+}
+
+.mobile-only {
+	display: block;
 }
 
 /* Colored Bar*/
@@ -56,6 +64,7 @@ body {
 	margin-bottom: 1.5em;
 	text-align: left;
 	box-shadow: var(--shadowEngraved);
+	border-radius: .75em;
 	transition: box-shadow .3s ease;
 }
 
@@ -197,6 +206,11 @@ button {
 	margin: 15px 0px;
 }
 
+.button-wrapper {
+	display: flex;
+	gap: 15px;
+}
+
 /* Image */
 img {
 	max-width: 100%;
@@ -211,6 +225,22 @@ img {
 }
 
 
+.image-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vw;
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	max-height: 400px;
+	margin: 15px auto;
+	box-shadow: var(--shadowEmbed);
+}
+
+.image-box.circle {
+	border-radius: 50%;
+}
 
 /* Animation */
 

@@ -1,15 +1,11 @@
 /* Styling specific to pages */
 
-#about .button {
-	transition:  border-color 5s ease-in;
+.bg-color {
+	transition: 0s;
 }
 
-.desktop-only {
-	display: none;
-}
-
-.mobile-only {
-	display: block;
+#about #cover {
+	max-width: 400px;
 }
 
 /** TEXT */
@@ -29,9 +25,12 @@
 	font-size: 0.9rem;
 }
 
+.introDesc {
+	margin-top: 30px;
+}
+
 .headingTitle {
 	margin-top: 15px;
-	padding-bottom: 15px;
 }
 
 .highlight, .label {
@@ -127,17 +126,13 @@ img {
 	box-shadow: var(--shadowEmbed);
 }
 
-#cover {
-	position: relative;
-	width: 100%;
-	min-height: 40vh;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+.image-box {
 }
 
-#about #cover { 
-	min-height: 60vh;
+#cover {
+	position: relative;
+	max-width: 120%;
+	height: auto;
 }
 
 .gallery img {
@@ -157,8 +152,8 @@ img {
 }
 
 .hover-shadow:hover {
-  top: -5px;
-  box-shadow: var(--shadowRaised);
+  top: 5px;
+  box-shadow: var(--shadowEmbed);
 }
 
 .clickImg {
@@ -209,16 +204,8 @@ img {
 
 /*SECTIONS*/
 #introduction {
-	/* padding-top: 80px;  */
+	max-width: 90%;
 }
-
-
-#description .row, #about .row:first-child  {
-	justify-content: flex-start;
-	position: relative;
-	top:  -75px;
-}
-
 
 .center-section {
 	margin: 15px auto 25px;
@@ -228,6 +215,7 @@ img {
 #banner {
 	padding: 100px 50px;
 	text-align: center;
+	box-shadow: var(--shadowEmbossed);
 }
 
 .spacer {
@@ -287,22 +275,35 @@ footer a:hover {
 .carousel {
 	padding-bottom: 50px;
 	overflow-x: clip;
-}
-
-.carousel-inner {
-	min-height: 450px;
-	z-index: -1;
-	overflow: visible;
-}
-
-.carousel-item {
+	box-shadow: var(--shadowEmbed);
 	background-color: var(--bgColor);
-	max-width: 100%;
 }
 
 .carousel-bg {
+	overflow: visible;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel-item, .carousel-inner {
+	height: 70vh;
+}
+
+
+.carousel-bg {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 50px;
+}
+
+.carousel-width {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--defaultBg);
 	padding: 20px;
-	min-height: 300px;
+	box-shadow: var(--shadowEmbossed);
 }
 
 
@@ -331,6 +332,7 @@ footer a:hover {
 	margin: 15px 0px;
 }
 
+/*CAROUSEL NAV*/
 .carousel-nav {
 	display: flex;
 	justify-content: center;
@@ -340,9 +342,13 @@ footer a:hover {
 
 .carousel-indicators {
 	position: relative;
-	margin: 15px;
+	padding: 15px;
+	margin: 0;
 	bottom: 0px;
 	cursor: var(--pointer-img);
+	box-shadow: var(--shadowEmbossed);
+	background-color: var(--defaultBg);
+	border-radius: 20px;
 }
 
 .carousel-indicators li {
@@ -366,12 +372,15 @@ footer a:hover {
 } 
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
-	min-width: 30px;
-	min-height: 30px;
+	min-width: 40px;
+	min-height: 40px;
 	border-radius: 50%;
-	box-shadow: var(--shadowRaised);
 	background-color: var(--priColor);
-	background-size: cover;
+	background-size: contain;
+	box-shadow: var(--shadowEmbossed);
+}
+.carousel-control-prev:hover .carousel-control-prev-icon, .carousel-control-next:hover .carousel-control-next-icon {
+	box-shadow: var(--shadowRaised);
 }
 
 .carousel-control-next-icon {
