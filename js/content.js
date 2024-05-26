@@ -369,43 +369,23 @@ const projectList = [
 		bgColorHex: '#ffffff',
 		priColorHex: '#000000',
 		accentColorHex: '#efefef',
-		image: '../images/other/SS-Cover+Inside.png',
+		image: '',
 		imgArray:  [
 		{
+			name: "img01",
+			link: "../images/other/CNY-full-table.jpg",
+			caption: 'Chinese New Years Illustration, Photoshop'
+		},
+		{
 			name: "img02",
-			link: "../images/other/ILE-Toronto-Star-Ad.jpg",
-			caption: 'International Languages Elementary Toronto Star Ad'
+			link: "../images/other/self-portrait.jpg",
+			caption: 'Self-Portrait Illustration, Photoshop'
 		},
 		{
 			name: "img03",
-			link: "../images/other/SS-Cover+Inside.jpg",
-			caption: 'Second Street JMS Brochure'
-		},
-		{
-			name: "img04",
-			link: "../images/other/SL-Cover+Inside.jpg",
-			caption: 'Stephen Leacock C.I. Brochure'
-		},
-		{
-			name: "img05",
-			link: "../images/other/GRG-Banner.jpg",
-			caption: 'Pull up banner designs for school'
-		},
-		{
-			name: "img06",
-			link: "../images/other/Newspaper Ad.jpg",
-			caption: 'Toronto Star Ad for Highschool Registration'
-		},
-		{
-			name: "img07",
-			link: "../images/other/Cedarbrae-logo.jpg",
-			caption: 'School logo with sample materials'
-		},
-		{
-			name: "img08",
-			link: "../images/other/summercamps.jpg",
-			caption: 'Information brochure with tear-away'
-		},
+			link: "../images/other/Raymond.jpg",
+			caption: 'Portrait Illustration, Photoshop'
+		}
 	]
 	}
 ];
