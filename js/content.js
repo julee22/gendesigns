@@ -110,11 +110,6 @@ const projectList = [
 				caption: ''
 			},
 			{
-				name: "img12",
-				link: "../images/hani/IMG_4220.JPG",
-				caption: ''
-			},
-			{
 				name: "img13",
 				link: "../images/hani/IMG_3997.JPG",
 				caption: ''
@@ -270,7 +265,7 @@ const projectList = [
 		name: "manulife-vitality",
 		bgColorHex: '#00e982',
 		priColorHex: '#000060',
-		accentColorHex: '#f15d22',
+		accentColorHex: '#eb2660',
 		image: '../images/rich media/manulife-vitality-tablet.png',
 		imgArray:  [
 		{
@@ -328,6 +323,11 @@ const projectList = [
 		image: '../images/tdsb/SS-Cover+Inside.png',
 		imgArray:  [
 		{
+			name: "img01",
+			link: "../images/tdsb/GG-Book.png",
+			caption: "A Girl's Guide to Surviving High School"
+		},
+		{
 			name: "img02",
 			link: "../images/tdsb/ILE-Toronto-Star-Ad.jpg",
 			caption: 'International Languages Elementary Toronto Star Ad'
@@ -360,6 +360,50 @@ const projectList = [
 		{
 			name: "img08",
 			link: "../images/tdsb/summercamps.jpg",
+			caption: 'Information brochure with tear-away'
+		},
+	]
+	},
+	{
+		name: "other",
+		bgColorHex: '#ffffff',
+		priColorHex: '#000000',
+		accentColorHex: '#efefef',
+		image: '../images/other/SS-Cover+Inside.png',
+		imgArray:  [
+		{
+			name: "img02",
+			link: "../images/other/ILE-Toronto-Star-Ad.jpg",
+			caption: 'International Languages Elementary Toronto Star Ad'
+		},
+		{
+			name: "img03",
+			link: "../images/other/SS-Cover+Inside.jpg",
+			caption: 'Second Street JMS Brochure'
+		},
+		{
+			name: "img04",
+			link: "../images/other/SL-Cover+Inside.jpg",
+			caption: 'Stephen Leacock C.I. Brochure'
+		},
+		{
+			name: "img05",
+			link: "../images/other/GRG-Banner.jpg",
+			caption: 'Pull up banner designs for school'
+		},
+		{
+			name: "img06",
+			link: "../images/other/Newspaper Ad.jpg",
+			caption: 'Toronto Star Ad for Highschool Registration'
+		},
+		{
+			name: "img07",
+			link: "../images/other/Cedarbrae-logo.jpg",
+			caption: 'School logo with sample materials'
+		},
+		{
+			name: "img08",
+			link: "../images/other/summercamps.jpg",
 			caption: 'Information brochure with tear-away'
 		},
 	]

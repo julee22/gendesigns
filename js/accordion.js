@@ -1,9 +1,15 @@
 
 // Opens accordion
-function openAcc(elem, accordionId) {
-	const allAccordions = document.getElementsByClassName("accordion-content");
+function openAcc(elem, accordionId, accordionSet) {
+	var allAccordions;
 	var accordionContent = document.getElementById(accordionId);
 	var accordionTriggers = document.getElementsByClassName("accordion");
+	
+	if (accordionSet === undefined) {
+		allAccordions = document.getElementsByClassName("accordion-content");
+	} else {
+		allAccordions = document.getElementsByClassName("accordion-content "+accordionSet);
+	}
 
 	// stores bool of whether accordion was already opened
 	// var alreadyOpen = false;
@@ -11,6 +17,7 @@ function openAcc(elem, accordionId) {
 	// 	alreadyOpen = true;
 	// }
 	
+	console.log( allAccordions.length+ "LENGTH OF "+accordionSet, allAccordions);
 	// hides all open accordions first
 	for (var i = 0; i < allAccordions.length; i++) {
 		allAccordions[i].classList.remove("active");

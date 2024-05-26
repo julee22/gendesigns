@@ -32,7 +32,7 @@
 	margin-top: 15px;
 }
 
-.nav-item {
+.nav-item .nav-link {
 	text-decoration: none;
 	letter-spacing: 0.1rem;
 	word-spacing: 0.1rem;
@@ -48,14 +48,9 @@
 	transition: 0.3s ease-in;
 }
 
-.nav-item:hover {
+.nav-item .nav-link:hover {
 	box-shadow: var(--shadowRaised);
 	color: inherit;
-}
-
-.nav-item .nav-link {
-	color: inherit;
-	padding: 0;
 }
 
 @media screen and (min-width: 768px) {	
