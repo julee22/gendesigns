@@ -3,23 +3,13 @@ body {
 	font-family: 'Barlow', 'Bahnschrift', 'Inter','Roboto',  sans-serif;
 	cursor: var(--cursor-img);
 	background-color: var(--defaultBg);
+	overflow-x: hidden;
 }
 
 /* GENERIC SECTIONS */
 .container {
-	max-width: 95%;
-	padding-bottom: 35px;
-}
-
-@media screen and (min-width: 992px) {	
-	.container {
-		max-width: 1200px;
-		padding-top: 30px;
-	}
-}
-
-.row {
-	min-height: initial;
+	max-width: 100%;
+	padding-bottom: 30px;
 }
 
 .bg-color {
@@ -37,23 +27,9 @@ body {
 }
 
 .spacer {
-	height: 50px;
+	height: 1.5em;
 }
 
-.logo {
-	height: 50px;
-	min-width: 50px;
-	background-image: url("../images/Genice-Designs-Logo-Square.png");
-	background-size: cover;
-}
-
-.desktop-only {
-	display: none;
-}
-
-.mobile-only {
-	display: block;
-}
 
 /* Colored Bar*/
 .bg-color {
@@ -70,7 +46,7 @@ body {
 .accordion {
 	width: 100%;
 	padding: .75em 1em;
-	margin-bottom: 1.5em;
+	margin-bottom: .7em;
 	text-align: left;
 	box-shadow: var(--shadowEngraved);
 	border-radius: .75em;
@@ -112,6 +88,15 @@ body {
 	display: none;
 }
 
+.desktop-only {
+	display: none;
+}
+
+.mobile-only {
+	display: block;
+}
+
+
 /* TYPOGRAPHY */
 h1,h2,h3,h4 {
 	letter-spacing: 0.1rem;
@@ -144,7 +129,7 @@ h4, .h4 {
 }
 
 p {
-	margin-bottom: .7em;
+	margin-bottom: 1em;
 }
 
 ul {
@@ -193,7 +178,7 @@ button {
 	color: black;
 	display: inline-block;
 	padding: .5em 1.5em;
-	margin: 10px;
+	margin: 1em 0;
 	border-radius: 20px;
 	box-shadow: var(--shadowEngraved);
 	transition: 0.3s ease-in;
@@ -242,18 +227,18 @@ img {
 	position: relative;
 	width: 100%;
 	max-width: 500px;
-	max-height: 500px;
+	max-height: 250px;
 	margin: 15px auto;
 	box-shadow: var(--shadowEmbed);
 }
 
 .image-box.circle {
-	border-radius: 50%;
+	border-radius: 250px;
 }
 
 .image-box.small {
-	max-width: 300px;
-	max-height: 300px;
+	max-width: 250px;
+	max-height: 250px;
 }
 
 /* Animation */
@@ -293,4 +278,83 @@ footer .caption {
 	background-size: 90%;
 	transform: rotate(90deg);
 	box-shadow: var(--shadowEngraved);
+}
+
+
+/* Table only */
+@media screen and (min-width: 768px) {	
+	.image-box {
+		max-height: 350px;
+	}
+
+	.desktop-only {
+		display: block;
+	}
+
+	.mobile-only {
+		display: none;
+	}
+	.accordion {
+		margin-bottom: 1.5em;
+	}
+}
+
+/* Desktop only */
+@media screen and (min-width: 992px) {	
+	.container {
+		max-width: 1200px;
+		padding-top: 30px;
+	}
+
+	.md-mt-50 {
+		margin-top: 50px;
+	}
+	
+	.spacer {
+		height: 50px;
+	}
+
+	.image-box {
+		max-height: 500px;
+	}
+
+	.image-box.small {
+		max-width: 300px;
+		max-height: 300px;
+	}
+	
+	.image-box.small img {
+		max-width: 120%;
+	}
+
+	/* Positioning */
+	.left-top {
+		left: -5%;
+		top: -5%;
+	}
+	.left-center {
+		left: -5%;
+	}
+	.left-bottom {
+		left: -5%;
+		bottom: -5%;
+	}
+	.right-top {
+		right: -5%;
+		top: -5%;
+	}
+	.right-center {
+		right: -5%;
+	}
+	.right-bottom {
+		right: -5%;
+		bottom: -5%;
+	}
+	.center-top {
+		top: -5%;
+	}
+	.center-bottom {
+		bottom: -5%;
+	}
+
 }

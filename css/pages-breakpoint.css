@@ -7,14 +7,6 @@
 		padding-right: 35px;
 	}
 
-	.desktop-only {
-		display: block;
-	}
-
-	.mobile-only {
-		display: none;
-	}
-
 	.center-section {
 		max-width: 90%;
 	}
@@ -45,9 +37,12 @@
 
 	.imgBox {
 		margin-bottom: 25px;
-		max-height: 200px;
 	}
 
+	#cover {
+		max-height: 70vh;
+		max-width: 600px;
+	}
 
 	#image-bg-bar {
 		height: 200px;

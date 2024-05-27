@@ -40,27 +40,17 @@ footer .caption {
 }
 
 /** Project Section**/
-#projectList {
-	text-align: center;
+#projectList .project{
+	margin-left: 0;
 }
-
-/*
-.project:first-child {
-	margin-top: 20%;
-}
-.project:nth-last-child(1) {
-	padding-bottom: 0px;
-}*/
-
-
 
 .image-box a {
 	height: 100%;
 }
 
 .image-box .main-image {
-	max-width: 120%;
-	max-height: 120%;
+	max-width: 110%;
+	max-height: 115%;
 	position: absolute;
 	transition: 1s ease;
 	opacity: 0;

@@ -24,9 +24,10 @@
 		font-size: 1.2rem;
 	}
 
-	/* .main-image-box {
-		height: 100%;
-	} */
+	.image-box .main-image {
+		max-width: 120%;
+		max-height: 120%;
+	}
 
 	#projectList {
 		text-align: left;
@@ -44,10 +45,6 @@
 	.headerText {
 		text-align: left;
 	}
-
-	/* .main-image-box {
-		height: 50vh;
-	} */
 }
 
 
