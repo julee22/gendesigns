@@ -225,7 +225,7 @@ img {
 	height: 100vw;
 	position: relative;
 	width: 100%;
-	max-width: 500px;
+	max-width: 100%;
 	max-height: 250px;
 	margin: 15px auto;
 	box-shadow: var(--shadowEmbed);
@@ -238,6 +238,10 @@ img {
 .image-box.small {
 	max-width: 250px;
 	max-height: 250px;
+}
+
+.image-box img {
+	max-height: 110%;
 }
 
 /* Animation */
@@ -292,7 +296,11 @@ footer .caption {
 /* Table only */
 @media screen and (min-width: 768px) {	
 	.image-box {
+		max-width: 500px;
 		max-height: 350px;
+	}
+	.image-box img {
+		max-height: none;
 	}
 
 	.desktop-only {
