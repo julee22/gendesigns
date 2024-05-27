@@ -30,7 +30,6 @@ function showProject(projectId) {
 
 //JQUERY
 $(document).ready(function() {
-	var isMobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 	const listOfTitle = document.getElementsByClassName("project");
 	const listOfImages = document.getElementsByClassName("main-image");
@@ -42,7 +41,7 @@ $(document).ready(function() {
 	for (var i = 0; i < listOfTitle.length; i++) {
 		mainTitle = listOfTitle[i];
 
-		if (!isMobile || window.innerWidth >= 764){
+		if (window.innerWidth >= 764){
 			mainTitle.addEventListener("mouseover", function() {
 				changeBarColor(this.id);
 				showProject(this.id);
@@ -58,17 +57,27 @@ $(document).ready(function() {
 				}
 				// defaultImg.classList.remove("hide");
 			})
+		} else {
+			var project = projectList.find(project => project.name == mainTitle.id);
+			if (project) {
+				barColor = project.bgColorHex;
+			}
+			mainTitle.setAttribute("style","--bgColor: " + barColor);
+			console.log(mainTitle);
 		}
 	}
 
 
 
 
-	// Change Background + Projects
-	defaultImg.style.opacity = "1";
-	changeBarColor(listOfTitle[0].id);
-	if (!nIntervId) {		
-		nIntervId = setInterval(rotateProjects, 3000);
+	if (window.innerWidth >= 764){
+		// Change Background + Projects
+		defaultImg.style.opacity = "1";
+		changeBarColor(listOfTitle[0].id);
+
+		if (!nIntervId) {		
+			nIntervId = setInterval(rotateProjects, 3000);
+		}
 	}
 
 	var n = 0;

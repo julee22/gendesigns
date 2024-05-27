@@ -109,7 +109,6 @@ h2 {
 	text-align: center;
 	color: var(--priColor);
 	margin-bottom: 15px;
-	letter-spacing: 0.3rem;
 }
 
 h3 {
@@ -278,6 +277,15 @@ footer .caption {
 	background-size: 90%;
 	transform: rotate(90deg);
 	box-shadow: var(--shadowEngraved);
+}
+
+#scroll-down {
+	height: 50px;
+	width: 50px;
+	margin: 15px auto;
+    background: var(--priColor) url("../images/carousel-left-icon.png") center center repeat;
+	background-size: 90%;
+	transform: rotate(-90deg);
 }
 
 

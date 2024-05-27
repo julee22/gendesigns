@@ -48,7 +48,7 @@
 				<h1 class="title">Hi, my name is Genice</h1>
 				<p class="subtitle">Here are some of my personal projects!</p>
 			</div>
-			<div id="projectList">
+			<div id="projectList" class="desktop-only">
 				<div>
 					<a href="breeze.html" class="project button" id="breeze">Breeze Fridge & App</a>
 				</div>
@@ -60,12 +60,32 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-12 col-md" style="text-align: center;">
+		<div class="col-12 col-md desktop-only" style="text-align: center;">
 			<a href="breeze.html" class="image-box bg-color" id="projectImgLink">
-				<img src="../images/breeze/Breeze Main Image Trans.png" class="main-image bounce-anim" id="breeze-img" style="left: -10px">
-				<img src="../images/hani/Hani Main Image Trans.png" class="main-image bounce-anim" id="hani-img" style="right: 10px">
-				<img src="../images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image bounce-anim"  id="period-purse-img" style="left: 10px">
+				<img src="../images/breeze/Breeze Main Image Trans.png" class="main-image bounce-anim right-center" id="breeze-img">
+				<img src="../images/hani/Hani Main Image Trans.png" class="main-image bounce-anim left-center" id="hani-img">
+				<img src="../images/period purse/logos/Portfolio-Page-Period-Logo.png" class="main-image bounce-anim right-center"  id="period-purse-img">
 			</a>
+		</div>
+		<div class="col-12 mobile-only">
+			<div id="projectList">
+				<div>
+					<a href="breeze.html" class="project image-box bg-color" id="breeze">
+						<img src="../images/breeze/Breeze Main Image Trans.png" class="bounce-anim right-center" id="breeze-img">
+
+					</a>
+				</div>
+				<div>
+					<a href="hani.html" class="project image-box bg-color"  id="hani">
+						<img src="../images/hani/Hani Main Image Trans.png" class="bounce-anim left-center" id="hani-img">
+					</a>
+				</div>
+				<div>
+					<a href="period-purse.html" class="project image-box bg-color"  id="period-purse">
+						<img src="../images/period purse/logos/Portfolio-Page-Period-Logo.png" class="bounce-anim right-center"  id="period-purse-img">
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -74,7 +94,7 @@
 	<p class="caption" style="text-align: center;">All designed content is property of Genice Chandra. This website was designed & coded by Genice Chandra.</p>
 </footer>
 
-<button id="to-top" class="button" onclick="window.scrollTo(0, 0)"></a>
+<!-- <button id="to-top" class="button" onclick="window.scrollTo(0, 0)"></a> -->
 
 <!--JQuery Script-->
 
