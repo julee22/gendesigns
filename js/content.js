@@ -388,7 +388,7 @@ const projectList = [
 		},
 		{
 			name: "img04",
-			link: "../images/other/Composers-UI",
+			link: "../images/other/Composers-UI.png",
 			caption: 'Game UI Pixel Art + Sprites, Illustrator'
 		}
 	]
