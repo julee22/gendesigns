@@ -162,6 +162,8 @@ img {
 .clickImg {
 	cursor: var(--pointer-img);
 	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .modal-body, .modal-content {
