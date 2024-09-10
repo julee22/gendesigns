@@ -390,6 +390,11 @@ const projectList = [
 			name: "img04",
 			link: "../images/other/Composers-UI.png",
 			caption: 'Game UI Pixel Art + Sprites, Illustrator'
+		},
+		{
+			name: "img05",
+			link: "../images/other/Tap-a-Timer.png",
+			caption: 'Tap A Timer - <a href="https://julee22.github.io/personal-projects/tap-timer/" target="_blank">View Game</a>'
 		}
 	]
 	}
