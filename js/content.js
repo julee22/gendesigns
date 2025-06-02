@@ -130,65 +130,65 @@ const projectList = [
 		bgColorHex: '#FCDAEF',
 		priColorHex: '#EF3A4C',
 		accentColorHex: '#339999',
-		image: '../images/period purse/Style Manual.png',
+		image: '../images/period-purse/Style Manual.png',
 		imgArray:  [{
 				name: "img01",
-				link: "../images/period purse/Moodboard-pg1.jpg",
+				link: "../images/period-purse/Moodboard-pg1.jpg",
 				caption: "Moodboard - Dignified"
 			},
 			{
 				name: "img02",
-				link: "../images/period purse/Moodboard-pg2.jpg",
+				link: "../images/period-purse/Moodboard-pg2.jpg",
 				caption: 'Moodboard - Kind'
 			},
 			{
 				name: "img03",
-				link: "../images/period purse/Period-Purse-Logo-Draft-All.jpg",
+				link: "../images/period-purse/Period-Purse-Logo-Draft-All.jpg",
 				caption: 'Preliminary Icon Drafts'
 			},
 			{
 				name: "img04",
-				link: "../images/period purse/Period Purse Logo Draft_Page_3.jpg",
+				link: "../images/period-purse/Period Purse Logo Draft_Page_3.jpg",
 				caption: 'Preliminary Wordmark Drafts'
 			},
 			{
 				name: "img05",
-				link: "../images/period purse/Period Purse Logo Semi Finals.jpg",
+				link: "../images/period-purse/Period Purse Logo Semi Finals.jpg",
 				caption: 'Wordmark Second Draft'
 			},
 			{
 				name: "img06",
-				link: "../images/period purse/Style-Manual.jpg",
+				link: "../images/period-purse/Style-Manual.jpg",
 				caption: 'Style Guide'
 			},
 			{
 				name: "img07",
-				link: "../images/period purse/Period-Purse-Cards.jpg",
+				link: "../images/period-purse/Period-Purse-Cards.jpg",
 				caption: 'Information Cards with Handwritten Messages. Dimensions: 3.5"x2.5" '
 			},
 			{
 				name: "img08",
-				link: "../images/period purse/Sticker.jpg",
+				link: "../images/period-purse/Sticker.jpg",
 				caption: 'Circular Promotional Stickers'
 			},
 			{
 				name: "img09",
-				link: "../images/period purse/Period-Purse-Money-Box.jpg",
+				link: "../images/period-purse/Period-Purse-Money-Box.jpg",
 				caption: 'Donation Box 3D Mockup'
 			},
 			{
 				name: "img10",
-				link: "../images/period purse/Period-Purse-Bags-1.jpg",
+				link: "../images/period-purse/Period-Purse-Bags-1.jpg",
 				caption: 'Plastic Tote Bags Design Mockup, Blue version'
 			},
 			{
 				name: "img11",
-				link: "../images/period purse/Period-Purse-Bags.jpg",
+				link: "../images/period-purse/Period-Purse-Bags.jpg",
 				caption: 'Plastic Tote Bags Design Mockup, Pink version'
 			},
 			{
 				name: "img12",
-				link: "../images/period purse/Period-Purse-Bin.jpg",
+				link: "../images/period-purse/Period-Purse-Bin.jpg",
 				caption: 'Donation Bin 3D Mockup'
 			}]
 	},
