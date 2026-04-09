@@ -51,7 +51,19 @@ footer .caption {
 .image-box .main-image {
 	max-width: 110%;
 	max-height: 115%;
-	position: absolute;
-	transition: 1s ease;
-	opacity: 0;
+	/* position: absolute; */
+}
+
+.reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.reveal.left {
+  transform: translateX(600px);
+  will-change: transform, opacity;
+}
+.reveal.right {
+  transform: translateX(-600px);
+  will-change: transform, opacity;
 }

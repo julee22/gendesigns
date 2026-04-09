@@ -1,8 +1,4 @@
 /* NAVIGATION */
-.navbar {
-  	padding: 15px;
-	width: 100%;
-}
 
 .navbar-toggler {
 	border: none;
@@ -18,7 +14,7 @@
 
 #menu-image img {
 	width: initial;
-	height: 2em;
+	height: 3em;
 	margin: 0px auto;
 	cursor: var(--pointer-img);
 }
@@ -56,11 +52,11 @@
 
 @media screen and (min-width: 768px) {	
 	.navbar {
-		padding: 20px 25px;
+		padding-top: 20px;
 	}
 	
 	#menu-image img {
-		height: 50px;
+		height: 75px;
 	}
 	.navbar-nav {
 		flex-direction: row;

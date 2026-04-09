@@ -1,15 +1,6 @@
 /* BREAKPOINTS */
 @media only screen and (min-width: 768px) {
 
-	.container {
-		padding-left: 35px;
-		padding-right: 35px;
-	}
-
-	.main {
-		height: 80vh;
-	}
-
 	.headerText {
 		text-align: left;
 		padding-top: 50px;
