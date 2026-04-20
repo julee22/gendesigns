@@ -9,6 +9,10 @@
 	width: 100%;
 }
 
+.headerText {
+	text-align: center;
+}
+
 .title {
 	font-weight: var(--boldWeight);
 	font-size: 2rem;
@@ -41,7 +45,7 @@ footer .caption {
 
 /** Project Section**/
 #projectList .project{
-	margin-left: 0;
+	margin-top: 50px;
 }
 
 .image-box a {
@@ -56,14 +60,5 @@ footer .caption {
 
 .reveal {
   opacity: 0;
-  will-change: transform, opacity;
-}
-
-.reveal.left {
-  transform: translateX(600px);
-  will-change: transform, opacity;
-}
-.reveal.right {
-  transform: translateX(-600px);
   will-change: transform, opacity;
 }
